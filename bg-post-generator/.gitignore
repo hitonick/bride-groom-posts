@@ -1,0 +1,3 @@
+# Scan parts written by /sync-templates; assembled into templates/manifest.json
+templates/.scan/
+.DS_Store
