@@ -1,8 +1,8 @@
 {
   "$schema": "./manifest.schema.json",
   "version": 1,
-  "generatedAt": "2026-10-23T17:38:33+03:00",
-  "generatedBy": "Ilya Luzan",
+  "generatedAt": "2026-10-26T18:19:09+00:00",
+  "generatedBy": "Nick Zaitsev",
   "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
   "templatesPage": "Templates",
   "scanArgs": {
@@ -29,13 +29,13 @@
     ],
     "templatesPerCall": 10
   },
-  "hash": "216c428d3074f4e4",
+  "hash": "d2af0a88c5ede3c3",
   "scannerVersion": 4,
-  "componentCount": 104,
-  "templateCount": 38,
+  "componentCount": 109,
+  "templateCount": 40,
   "fontWidthRatios": {
     "DM Sans/Medium": 0.537,
-    "DM Sans/Regular": 0.54,
+    "DM Sans/Regular": 0.539,
     "Switzer/Medium": 0.469,
     "Switzer/Semibold": 0.495,
     "Switzer/Regular": 0.481,
@@ -56,9 +56,9 @@
         "slots": 47
       },
       "Carousel": {
-        "layouts": 8,
-        "components": 24,
-        "slots": 45
+        "layouts": 10,
+        "components": 29,
+        "slots": 57
       },
       "Story": {
         "layouts": 9,
@@ -67,7 +67,7 @@
       }
     },
     "byFormat": {
-      "feed": 74,
+      "feed": 79,
       "story": 30
     }
   },
@@ -2805,6 +2805,343 @@
       ]
     },
     {
+      "group": "Carousel / Title + Pagination",
+      "type": "Carousel",
+      "layout": "Title + Pagination",
+      "format": "feed",
+      "section": "Carousel",
+      "width": 418,
+      "height": 524,
+      "slots": [
+        {
+          "path": "text-content > tag+title > tagline",
+          "kind": "text",
+          "role": "tagline",
+          "defaultText": "Tagline goes here",
+          "defaultLength": 17,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 16,
+            "lineHeight": 24
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 24,
+            "availW": 358
+          },
+          "lines": 1,
+          "charsPerLine": 41,
+          "capacity": 36,
+          "id": "tagline"
+        },
+        {
+          "path": "text-content > tag+title > title > title",
+          "kind": "text",
+          "role": "title",
+          "defaultText": "Long title with the last line highlighted",
+          "defaultLength": 41,
+          "font": {
+            "fonts": [
+              "DM Sans/Bold"
+            ],
+            "size": 38,
+            "lineHeight": 46
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 92,
+            "availW": 358
+          },
+          "lines": 2,
+          "charsPerLine": 18,
+          "capacity": 41,
+          "id": "title"
+        },
+        {
+          "path": "text-content > tag+title > title > title-accent",
+          "kind": "text",
+          "role": "title-accent",
+          "defaultText": "in italic",
+          "defaultLength": 9,
+          "font": {
+            "fonts": [
+              "Brygada 1918/Bold Italic"
+            ],
+            "size": 38,
+            "lineHeight": 46
+          },
+          "autoResize": "NONE",
+          "box": {
+            "w": 358,
+            "h": 46,
+            "availW": 358
+          },
+          "lines": 1,
+          "charsPerLine": 18,
+          "capacity": 16,
+          "id": "title-accent"
+        },
+        {
+          "path": "text-content > body",
+          "kind": "text",
+          "role": "body",
+          "defaultText": "There are many variations of passages of Lorem I",
+          "defaultLength": 139,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 16,
+            "lineHeight": 24
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 72,
+            "availW": 358
+          },
+          "lines": 3,
+          "charsPerLine": 41,
+          "capacity": 139,
+          "id": "body"
+        },
+        {
+          "path": "footer > pagination > page-number",
+          "kind": "text",
+          "role": "page-number",
+          "auto": true,
+          "defaultText": "04",
+          "defaultLength": 2,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 14,
+            "lineHeight": 26
+          },
+          "autoResize": "WIDTH_AND_HEIGHT",
+          "box": {
+            "w": 18,
+            "h": 26,
+            "availW": 20
+          },
+          "lines": 1,
+          "charsPerLine": 2,
+          "capacity": 2,
+          "id": "page-number"
+        },
+        {
+          "path": "footer > tag > tag-label",
+          "kind": "text",
+          "role": "tag-label",
+          "auto": true,
+          "defaultText": "Bride&Groom.video",
+          "defaultLength": 17,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 14,
+            "lineHeight": 26
+          },
+          "autoResize": "WIDTH_AND_HEIGHT",
+          "box": {
+            "w": 123,
+            "h": 26,
+            "availW": 125
+          },
+          "lines": 1,
+          "charsPerLine": 17,
+          "capacity": 17,
+          "id": "tag-label"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Light",
+          "name": "Carousel / Title + Pagination / Light",
+          "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116",
+          "nodeId": "2324:22744"
+        },
+        {
+          "color": "Dark",
+          "name": "Carousel / Title + Pagination / Dark",
+          "key": "ceec03149f0b3bddb8d28dee1333b127ec914163",
+          "nodeId": "2324:22692"
+        }
+      ]
+    },
+    {
+      "group": "Carousel / Photo + Title + Pagination",
+      "type": "Carousel",
+      "layout": "Photo + Title + Pagination",
+      "format": "feed",
+      "section": "Carousel",
+      "width": 418,
+      "height": 524,
+      "slots": [
+        {
+          "path": "content > photo",
+          "kind": "image",
+          "role": "photo",
+          "shape": "RECTANGLE",
+          "box": {
+            "w": 398,
+            "h": 194
+          },
+          "aspect": 2.05,
+          "scaleMode": "FILL",
+          "id": "photo"
+        },
+        {
+          "path": "content > title+body > title > title",
+          "kind": "text",
+          "role": "title",
+          "defaultText": "Title with the last line",
+          "defaultLength": 24,
+          "font": {
+            "fonts": [
+              "DM Sans/Bold"
+            ],
+            "size": 36,
+            "lineHeight": 40
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 40,
+            "availW": 358
+          },
+          "lines": 1,
+          "charsPerLine": 19,
+          "capacity": 24,
+          "id": "title"
+        },
+        {
+          "path": "content > title+body > title > title-accent",
+          "kind": "text",
+          "role": "title-accent",
+          "defaultText": "highlighted in italic",
+          "defaultLength": 21,
+          "font": {
+            "fonts": [
+              "Brygada 1918/Bold Italic"
+            ],
+            "size": 36,
+            "lineHeight": 40
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 40,
+            "availW": 358
+          },
+          "lines": 1,
+          "charsPerLine": 19,
+          "capacity": 21,
+          "id": "title-accent"
+        },
+        {
+          "path": "content > title+body > body",
+          "kind": "text",
+          "role": "body",
+          "defaultText": "There are many variations of passages of Lorem I",
+          "defaultLength": 139,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 16,
+            "lineHeight": 24
+          },
+          "autoResize": "HEIGHT",
+          "box": {
+            "w": 358,
+            "h": 72,
+            "availW": 358
+          },
+          "lines": 3,
+          "charsPerLine": 41,
+          "capacity": 139,
+          "id": "body"
+        },
+        {
+          "path": "footer > pagination > page-number",
+          "kind": "text",
+          "role": "page-number",
+          "auto": true,
+          "defaultText": "04",
+          "defaultLength": 2,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 14,
+            "lineHeight": 26
+          },
+          "autoResize": "WIDTH_AND_HEIGHT",
+          "box": {
+            "w": 18,
+            "h": 26,
+            "availW": 20
+          },
+          "lines": 1,
+          "charsPerLine": 2,
+          "capacity": 2,
+          "id": "page-number"
+        },
+        {
+          "path": "footer > tag > tag-label",
+          "kind": "text",
+          "role": "tag-label",
+          "auto": true,
+          "defaultText": "Bride&Groom.video",
+          "defaultLength": 17,
+          "font": {
+            "fonts": [
+              "DM Sans/Regular"
+            ],
+            "size": 14,
+            "lineHeight": 26
+          },
+          "autoResize": "WIDTH_AND_HEIGHT",
+          "box": {
+            "w": 123,
+            "h": 26,
+            "availW": 125
+          },
+          "lines": 1,
+          "charsPerLine": 17,
+          "capacity": 17,
+          "id": "tag-label"
+        }
+      ],
+      "variants": [
+        {
+          "color": "Light",
+          "name": "Carousel / Photo + Title + Pagination / Light",
+          "key": "7975c119c135f8618ad3eaac1bc06ff74d1f8668",
+          "nodeId": "2324:22640",
+          "grayscale": [
+            "photo"
+          ]
+        },
+        {
+          "color": "Dark",
+          "name": "Carousel / Photo + Title + Pagination / Dark",
+          "key": "214d46f7c4d050a47b90a937ac7b6bd248d63803",
+          "nodeId": "2324:22601",
+          "grayscale": [
+            "photo"
+          ]
+        }
+      ]
+    },
+    {
       "group": "Carousel / Outro",
       "type": "Carousel",
       "layout": "Outro",
@@ -2913,6 +3250,12 @@
         }
       ],
       "variants": [
+        {
+          "color": "Light",
+          "name": "Carousel / Outro / Light",
+          "key": "746bb2be18e784a9662490fe25d91b067d6448a3",
+          "nodeId": "2324:22665"
+        },
         {
           "color": "Light Yellow",
           "name": "Carousel / Outro / Light Yellow",
@@ -5018,7 +5361,16 @@
     "Cover / Photo Overlay": [
       "Default"
     ],
+    "Carousel / Title + Pagination": [
+      "Light",
+      "Dark"
+    ],
+    "Carousel / Photo + Title + Pagination": [
+      "Light",
+      "Dark"
+    ],
     "Carousel / Outro": [
+      "Light",
       "Light Yellow",
       "Light Pink",
       "Light Purple",
@@ -5131,6 +5483,8 @@
       "Default": 1
     },
     "Carousel": {
+      "Light": 9,
+      "Dark": 8,
       "Light Yellow": 1,
       "Light Pink": 1,
       "Light Purple": 1,
@@ -5139,8 +5493,6 @@
       "Pink": 1,
       "Blue": 1,
       "Purple": 1,
-      "Dark": 6,
-      "Light": 6,
       "Light Color": 4
     },
     "Story": {
