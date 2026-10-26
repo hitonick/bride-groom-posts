@@ -1,0 +1,204 @@
+{
+  "test": true,
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Ilya Luzan",
+    "email": "luzan.ilya@gmail.com"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "c026453da5722570",
+  "answers": [],
+  "revisions": [
+    {
+      "at": "2026-10-23T02:40:00+03:00",
+      "by": {
+        "handle": "Ilya Luzan",
+        "email": "luzan.ilya@gmail.com"
+      },
+      "change": "02 title-accent \"Anything\" → \"Now!\"; photos re-applied over stacked template images and background"
+    },
+    {
+      "at": "2026-10-23T02:47:44+03:00",
+      "by": {
+        "handle": "Ilya Luzan",
+        "email": "luzan.ilya@gmail.com"
+      },
+      "change": "03 background: template photo → test-story-purple.png (Media page)",
+      "via": "/edit-run",
+      "manifestHash": "216c428d3074f4e4"
+    }
+  ],
+  "runId": "BG-20261023-0234-ilya-luzan",
+  "created": {
+    "local": "2026-10-23 02:34",
+    "tz": "Europe/Kyiv",
+    "iso": "2026-10-23T02:34:41+03:00"
+  },
+  "format": "story-set",
+  "contentType": "Mixed set",
+  "color": "Pink",
+  "contentMode": "typed",
+  "brief": null,
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Poll Card",
+      "group": "Story / Poll Card",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Story / Poll Card / Pink",
+        "key": "640855e8ef980b3bd21fcb2db39b23406079caab"
+      },
+      "text": {
+        "title": {
+          "value": "Poll",
+          "source": "kept-default"
+        },
+        "title-accent": {
+          "value": "Time!",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "file": "test-story-purple.png",
+          "width": 1080,
+          "height": 1920,
+          "crop": 0.16
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Question Card",
+      "group": "Story / Question Card",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Story / Question Card / Pink",
+        "key": "0d44fd3ac3f315429a6fd3088e56e98b31254758"
+      },
+      "text": {
+        "title": {
+          "value": "Ask us",
+          "source": "typed"
+        },
+        "title-accent": {
+          "value": "Now!",
+          "source": "edited"
+        },
+        "tag-label": {
+          "value": "???",
+          "source": "auto"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "file": "test-portrait-pink.png",
+          "width": 1080,
+          "height": 1350,
+          "crop": 0.03
+        }
+      }
+    },
+    {
+      "index": 3,
+      "label": "03 Share Opinion",
+      "group": "Story / Share Opinion",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Story / Share Opinion / Pink",
+        "key": "f426a91790fbbadfa0e924704994507a4e3a49e0"
+      },
+      "text": {
+        "title": {
+          "value": "Share",
+          "source": "kept-default"
+        },
+        "title-2": {
+          "value": "Your",
+          "source": "kept-default"
+        },
+        "title-accent": {
+          "value": "Opinion",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "background": {
+          "source": "media",
+          "mediaNodeId": "2147:249",
+          "file": "test-story-purple.png",
+          "width": 1080,
+          "height": 1920,
+          "crop": 0
+        }
+      }
+    }
+  ],
+  "caption": "TEST — tell us what you think in the poll!",
+  "hashtags": [
+    "#weddingfilm",
+    "#test"
+  ],
+  "warnings": [
+    {
+      "kind": "test",
+      "detail": "TEST run — delete after review."
+    }
+  ],
+  "figma": {
+    "sectionId": "2148:77",
+    "summaryCardId": "2156:108",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261023-0234-ilya-luzan_01",
+        "nodeId": "2152:156"
+      },
+      {
+        "index": 2,
+        "name": "BG-20261023-0234-ilya-luzan_02",
+        "nodeId": "2152:169"
+      },
+      {
+        "index": 3,
+        "name": "BG-20261023-0234-ilya-luzan_03",
+        "nodeId": "2156:157"
+      }
+    ],
+    "mediaSectionId": "2148:2",
+    "media": [
+      {
+        "nodeId": "2147:249",
+        "file": "test-story-purple.png",
+        "imageHash": "814fa48a7c83e8750603b6dc479f792387e83334"
+      },
+      {
+        "nodeId": "2147:76",
+        "file": "test-portrait-pink.png",
+        "imageHash": "83ff0d4828f1cded58654f782e2281890e3702f3"
+      }
+    ]
+  },
+  "verification": {
+    "at": "2026-10-23T02:48:30+03:00",
+    "errors": 0,
+    "warnings": [],
+    "history": [
+      "first build: template photo still visible (stacked placeholder images + repeated as story background) on 01–02, and \"Anything\" overflowed by 105px on 02 — caught by screenshot, then by the improved verify; builder fixed, accent shortened to \"Now!\", re-verified clean",
+      "/edit-run: 03 background replaced (optional background slot), re-verified clean"
+    ]
+  },
+  "notes": "Phase C/D test. Built by Claude following the skill, not through the interactive questionnaire."
+}

@@ -1,0 +1,307 @@
+{
+  "test": true,
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Ilya Luzan",
+    "email": "luzan.ilya@gmail.com"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "c026453da5722570",
+  "answers": [],
+  "revisions": [],
+  "runId": "BG-20261023-0227-ilya-luzan",
+  "created": {
+    "local": "2026-10-23 02:27",
+    "tz": "Europe/Kyiv",
+    "iso": "2026-10-23T02:27:38+03:00"
+  },
+  "format": "carousel",
+  "contentType": "Carousel article",
+  "color": "Purple",
+  "contentMode": "typed",
+  "brief": null,
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Swipe Centered",
+      "group": "Cover / Swipe Centered",
+      "color": "Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Swipe Centered / Purple",
+        "key": "53b06f3eeca2eade151e13d694b9861efe347f80"
+      },
+      "text": {
+        "tagline": {
+          "value": "TEST · Wedding film tips",
+          "source": "typed"
+        },
+        "title": {
+          "value": "Five things your",
+          "source": "typed"
+        },
+        "title-accent": {
+          "value": "film needs",
+          "source": "typed"
+        },
+        "button-label": {
+          "value": "Swipe",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "file": "test-portrait-blue.png",
+          "width": 1080,
+          "height": 1350,
+          "crop": 0
+        },
+        "photo[1]": {
+          "source": "file",
+          "file": "test-landscape-yellow.png",
+          "width": 1600,
+          "height": 1150,
+          "crop": 0.22
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Intro List",
+      "group": "Carousel / Intro List",
+      "color": "Light",
+      "colorFallback": "Purple → Light",
+      "component": {
+        "name": "Carousel / Intro List / Light",
+        "key": "7407d5a26976b8b689625fbec607b30a83caa336"
+      },
+      "text": {
+        "page-number": {
+          "value": "02",
+          "source": "auto"
+        },
+        "title": {
+          "value": "Before",
+          "source": "typed"
+        },
+        "title-accent": {
+          "value": "You Book",
+          "source": "typed"
+        },
+        "body": {
+          "value": "Great wedding films are planned well before the big day.",
+          "source": "typed"
+        },
+        "bullet-1": {
+          "value": "Share your timeline so we never miss a key moment.",
+          "source": "typed"
+        },
+        "bullet-2": {
+          "value": "Send us two or three wedding films you love.",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    },
+    {
+      "index": 3,
+      "label": "03 Photo + Title",
+      "group": "Carousel / Photo + Title",
+      "color": "Light Color",
+      "colorFallback": "Purple → Light Color",
+      "component": {
+        "name": "Carousel / Photo + Title / Light Color",
+        "key": "3f464a88e6b6e33b0371eb1e506fd85434d99599"
+      },
+      "text": {
+        "title": {
+          "value": "Light sets",
+          "source": "typed"
+        },
+        "title-accent": {
+          "value": "the mood",
+          "source": "typed"
+        },
+        "body": {
+          "value": "Golden hour gives skin a soft, warm glow. Plan portraits for the last hour before sunset and let the light do the work.",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "file": "test-landscape-yellow.png",
+          "width": 1600,
+          "height": 1150,
+          "crop": 0.01
+        }
+      }
+    },
+    {
+      "index": 4,
+      "label": "04 Two Photos + Text",
+      "group": "Carousel / Two Photos + Text",
+      "color": "Light Color",
+      "colorFallback": "Purple → Light Color",
+      "component": {
+        "name": "Carousel / Two Photos + Text / Light Color",
+        "key": "920501f726151bea7c655401b29cc31111024c09"
+      },
+      "text": {
+        "tagline": {
+          "value": "Tip 03",
+          "source": "typed"
+        },
+        "title": {
+          "value": "Vows you can hear",
+          "source": "typed"
+        },
+        "body": {
+          "value": "Ask your officiant to wear a small mic. Clear audio of the vows is the part couples rewatch most, years after the day.",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "file": "test-portrait-pink.png",
+          "width": 1080,
+          "height": 1350,
+          "crop": 0.11,
+          "grayscale": true
+        },
+        "photo[1]": {
+          "source": "file",
+          "file": "test-portrait-blue.png",
+          "width": 1080,
+          "height": 1350,
+          "crop": 0.11,
+          "grayscale": true
+        }
+      }
+    },
+    {
+      "index": 5,
+      "label": "05 Outro",
+      "group": "Carousel / Outro",
+      "color": "Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Outro / Purple",
+        "key": "470441b84c2c4543d9dbe68ff41ccaaf644ea4f6"
+      },
+      "text": {
+        "page-number": {
+          "value": "05",
+          "source": "auto"
+        },
+        "title": {
+          "value": "See you",
+          "source": "typed"
+        },
+        "title-accent": {
+          "value": "on set",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    }
+  ],
+  "caption": "TEST — five things your wedding film needs. Swipe through and save this for later.",
+  "hashtags": [
+    "#weddingfilm",
+    "#weddingvideographer",
+    "#test"
+  ],
+  "warnings": [
+    {
+      "kind": "test",
+      "detail": "TEST run — delete after review."
+    },
+    {
+      "slide": 2,
+      "kind": "color-fallback",
+      "detail": "Purple → Light"
+    },
+    {
+      "slide": 3,
+      "kind": "color-fallback",
+      "detail": "Purple → Light Color"
+    },
+    {
+      "slide": 4,
+      "kind": "color-fallback",
+      "detail": "Purple → Light Color"
+    }
+  ],
+  "figma": {
+    "sectionId": "2142:27",
+    "summaryCardId": "2146:76",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261023-0227-ilya-luzan_01",
+        "nodeId": "2142:93"
+      },
+      {
+        "index": 2,
+        "name": "BG-20261023-0227-ilya-luzan_02",
+        "nodeId": "2146:141"
+      },
+      {
+        "index": 3,
+        "name": "BG-20261023-0227-ilya-luzan_03",
+        "nodeId": "2142:120"
+      },
+      {
+        "index": 4,
+        "name": "BG-20261023-0227-ilya-luzan_04",
+        "nodeId": "2142:129"
+      },
+      {
+        "index": 5,
+        "name": "BG-20261023-0227-ilya-luzan_05",
+        "nodeId": "2142:139"
+      }
+    ],
+    "mediaSectionId": "2140:202",
+    "media": [
+      {
+        "nodeId": "2140:201",
+        "file": "test-portrait-blue.png",
+        "imageHash": "c0b44e0e92a9f3db6ba1a93877bb35630ed39900"
+      },
+      {
+        "nodeId": "2140:200",
+        "file": "test-landscape-yellow.png",
+        "imageHash": "489b946b8dfdbc2aef444d2095a1f55cae63e598"
+      },
+      {
+        "nodeId": "2140:2",
+        "file": "test-portrait-pink.png",
+        "imageHash": "83ff0d4828f1cded58654f782e2281890e3702f3"
+      }
+    ]
+  },
+  "verification": {
+    "at": "2026-10-23T02:42:00+03:00",
+    "errors": 0,
+    "warnings": [],
+    "history": [
+      "first build failed on the mixed-font cover title (frozen array) and rolled back; fixed",
+      "screenshot: slide 02 bullets doubled (\"• 1.\") — template adds bullets; copy fixed, manifest now marks list slots"
+    ]
+  },
+  "notes": "Phase C/D test. Composed as auto-compose would for Purple; built by Claude following the skill, not through the interactive questionnaire."
+}

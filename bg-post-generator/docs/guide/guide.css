@@ -1,0 +1,41 @@
+@page { size: A4; margin: 22mm 20mm 20mm 20mm; }
+
+:root {
+  --ink: #23222b;
+  --ink-soft: #3a3946;
+  --muted: #6b6a78;
+  --accent: #5b3fa8;
+  --code: #3d2a7a;
+  --code-bg: #f3f1f8;
+  --line: #d6d0e6;
+  --head-bg: #ece8f6;
+  --note-bg: #fff7e0;
+  --note-line: #ecd9a0;
+  --tip-bg: #eaf6ef;
+  --tip-line: #b9dfc8;
+}
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: var(--ink); background: #fff; margin: 0; }
+h1 { font-size: 20pt; margin: 26pt 0 8pt 0; break-after: avoid; }
+h1.page { break-before: page; margin-top: 0; }
+h2 { font-size: 13pt; color: var(--accent); margin: 16pt 0 4pt 0; break-after: avoid; }
+h3 { font-size: 10.5pt; margin: 10pt 0 2pt 0; break-after: avoid; }
+p { margin: 0 0 6pt 0; }
+ul, ol { margin: 0 0 6pt 0; padding-left: 18pt; }
+li { margin-bottom: 3pt; break-inside: avoid; }
+ul { break-inside: avoid; }
+code { font-family: Menlo, "Courier New", monospace; font-size: 8.8pt; color: var(--code); }
+pre { font-family: Menlo, "Courier New", monospace; font-size: 8.3pt; line-height: 1.4; background: var(--code-bg); padding: 8pt 10pt; margin: 4pt 0 8pt 0; border: 0.5pt solid #ddd8ea; border-radius: 4pt; break-inside: avoid; white-space: pre-wrap; }
+table { border-collapse: collapse; width: 100%; margin: 4pt 0 10pt 0; }
+tr { break-inside: avoid; }
+th { background: var(--head-bg); text-align: left; font-size: 9pt; padding: 4pt 6pt; border: 0.5pt solid var(--line); }
+td { font-size: 9pt; padding: 4pt 6pt; border: 0.5pt solid var(--line); vertical-align: top; }
+.lead { font-size: 11pt; color: var(--ink-soft); }
+.note, .tip { padding: 6pt 9pt; margin: 6pt 0 10pt 0; font-size: 9.5pt; border-radius: 4pt; break-inside: avoid; }
+.note { background: var(--note-bg); border: 0.5pt solid var(--note-line); }
+.tip { background: var(--tip-bg); border: 0.5pt solid var(--tip-line); }
+.cover { height: 240mm; display: flex; flex-direction: column; justify-content: center; }
+.cover-title { font-size: 34pt; font-weight: bold; margin: 0 0 10pt 0; line-height: 1.1; }
+.cover-sub { font-size: 14pt; color: var(--accent); margin: 0 0 32pt 0; }
+.cover-meta { font-size: 10pt; color: var(--muted); }

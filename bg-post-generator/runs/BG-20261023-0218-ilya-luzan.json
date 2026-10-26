@@ -1,0 +1,116 @@
+{
+  "runId": "BG-20261023-0218-ilya-luzan",
+  "test": true,
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Ilya Luzan",
+    "email": "luzan.ilya@gmail.com"
+  },
+  "created": {
+    "local": "2026-10-23 02:18",
+    "tz": "Europe/Kyiv",
+    "iso": "2026-10-23T02:18:42+03:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "c026453da5722570",
+  "format": "feed",
+  "contentType": "Review",
+  "color": "Default",
+  "contentMode": "typed",
+  "brief": null,
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Platform / Google Photo",
+      "group": "Review / Platform / Google Photo",
+      "color": "Default",
+      "colorFallback": null,
+      "component": {
+        "name": "Review / Platform / Google Photo",
+        "key": "027abbb49e6ffdb65d18db1608d126af73aab6eb"
+      },
+      "text": {
+        "quote-text": {
+          "value": "“TEST — sample review used to check the post generator. It is written long enough to fill all four lines of this card, so the photo sits where it should.”",
+          "source": "typed"
+        },
+        "author-name": {
+          "value": "Test Author",
+          "source": "typed"
+        },
+        "source-label": {
+          "value": "Google review",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": 4,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "file": "test-portrait-pink.png",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 125647,
+          "crop": 0
+        },
+        "photo[1]": {
+          "source": "file",
+          "file": "test-landscape-yellow.png",
+          "width": 1600,
+          "height": 1150,
+          "bytes": 154792,
+          "crop": 0.08
+        }
+      }
+    }
+  ],
+  "caption": "TEST caption — not for publishing.",
+  "hashtags": [
+    "#test"
+  ],
+  "warnings": [
+    {
+      "slide": null,
+      "slot": null,
+      "kind": "test",
+      "detail": "TEST run — delete after review."
+    }
+  ],
+  "answers": [],
+  "figma": {
+    "sectionId": "2135:2",
+    "summaryCardId": "2138:27",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261023-0218-ilya-luzan_01",
+        "nodeId": "2138:65",
+        "labelId": "2138:92"
+      }
+    ],
+    "media": [
+      {
+        "nodeId": "2134:2",
+        "name": "media/BG-20261023-0218-ilya-luzan/test-portrait-pink.png",
+        "imageHash": "83ff0d4828f1cded58654f782e2281890e3702f3"
+      },
+      {
+        "nodeId": "2134:175",
+        "name": "media/BG-20261023-0218-ilya-luzan/test-landscape-yellow.png",
+        "imageHash": "489b946b8dfdbc2aef444d2095a1f55cae63e598"
+      }
+    ],
+    "mediaSectionId": "2134:176"
+  },
+  "revisions": [],
+  "notes": "Phase C/D test. Built by Claude following the skill, not through the interactive questionnaire.",
+  "verification": {
+    "at": "2026-10-23T02:42:00+03:00",
+    "errors": 0,
+    "warnings": [],
+    "history": [
+      "first build: underfill 24px under the quote (3 lines for a 4-line design) → quote lengthened, re-verified clean"
+    ]
+  }
+}

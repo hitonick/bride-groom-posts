@@ -1,0 +1,336 @@
+{
+  "runId": "BG-20261023-1728-ilya-luzan",
+  "test": true,
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Ilya Luzan",
+    "email": "luzan.ilya@gmail.com"
+  },
+  "created": {
+    "local": "2026-10-23 17:28",
+    "tz": "Europe/Kyiv",
+    "iso": "2026-10-23T17:28:00+03:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "216c428d3074f4e4",
+  "format": "carousel",
+  "contentType": "Carousel article",
+  "color": "Pink",
+  "contentMode": "draft",
+  "brief": {
+    "topic": "How to choose your wedding videographer",
+    "keyMessage": "Book early and ask to see full films, not just highlight reels",
+    "audience": "Couples planning a 2027 wedding",
+    "tone": "Warm",
+    "cta": "Send us your wedding date"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Swipe",
+      "group": "Cover / Swipe",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Swipe / Pink",
+        "key": "20cc347cf7b9a67cba51819a223afcb6407b34da"
+      },
+      "text": {
+        "tagline": {
+          "value": "TEST · Wedding planning",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Choose your",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "videographer",
+          "source": "draft"
+        },
+        "button-label": {
+          "value": "Swipe",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "folder",
+          "path": "/private/tmp/claude-501/-Users-koristuvac-Desktop-bride-groom-smm/70be4842-065f-4501-83e8-b528bf1fe69a/scratchpad/testimg/walkthrough/IMG_2041.png",
+          "file": "IMG_2041.png",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 125647,
+          "crop": 0
+        },
+        "photo[1]": {
+          "source": "folder",
+          "path": "/private/tmp/claude-501/-Users-koristuvac-Desktop-bride-groom-smm/70be4842-065f-4501-83e8-b528bf1fe69a/scratchpad/testimg/walkthrough/IMG_2055.png",
+          "file": "IMG_2055.png",
+          "width": 1600,
+          "height": 1150,
+          "bytes": 154792,
+          "crop": 0.19
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Photo + Text",
+      "group": "Carousel / Photo + Text",
+      "color": "Light Color",
+      "colorFallback": "Pink → Light Color",
+      "component": {
+        "name": "Carousel / Photo + Text / Light Color",
+        "key": "1e613bc9ada6770029b62632ddbd6cd10a47ec00"
+      },
+      "text": {
+        "tagline": {
+          "value": "Tip 01",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Watch full films",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Highlight reels show the best ten seconds. Ask to see two complete wedding films to judge the story, the sound and the pacing.",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "folder",
+          "path": "/private/tmp/claude-501/-Users-koristuvac-Desktop-bride-groom-smm/70be4842-065f-4501-83e8-b528bf1fe69a/scratchpad/testimg/walkthrough/IMG_2055.png",
+          "file": "IMG_2055.png",
+          "width": 1600,
+          "height": 1150,
+          "bytes": 154792,
+          "crop": 0.05
+        }
+      }
+    },
+    {
+      "index": 3,
+      "label": "03 Outro",
+      "group": "Carousel / Outro",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Outro / Pink",
+        "key": "bb7b8d813196f2d479451a42ac443d8eaba52191"
+      },
+      "text": {
+        "page-number": {
+          "value": "03",
+          "source": "auto"
+        },
+        "title": {
+          "value": "Send your",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "date",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    }
+  ],
+  "caption": "Choosing a videographer? Ask to see two full wedding films, not just a highlight reel: that is where the story, the sound and the pacing show. Planning a 2027 wedding? Send us your date. (TEST)",
+  "hashtags": [
+    "#weddingvideographer",
+    "#weddingfilm",
+    "#2027wedding",
+    "#test"
+  ],
+  "warnings": [
+    {
+      "kind": "test",
+      "detail": "TEST run (guide walkthrough) — delete after review."
+    },
+    {
+      "slide": 2,
+      "kind": "color-fallback",
+      "detail": "Photo + Text: not available in Pink → Light Color"
+    }
+  ],
+  "answers": [
+    {
+      "step": "1/9",
+      "question": "Which format?",
+      "answer": "Carousel"
+    },
+    {
+      "step": "2/9",
+      "question": "Content type?",
+      "answer": "Carousel article"
+    },
+    {
+      "step": "3/9",
+      "question": "Color?",
+      "answer": "Pink (typed via Other; not among the first three options)"
+    },
+    {
+      "step": "4/9",
+      "question": "How many slides?",
+      "answer": "3"
+    },
+    {
+      "step": "4/9",
+      "question": "Auto-compose or manual?",
+      "answer": "Auto-compose"
+    },
+    {
+      "step": "4/9",
+      "question": "Use this composition?",
+      "answer": "Use this"
+    },
+    {
+      "step": "5/9",
+      "question": "Content mode?",
+      "answer": "Draft it from a brief"
+    },
+    {
+      "step": "5/9",
+      "question": "Topic?",
+      "answer": "How to choose your wedding videographer"
+    },
+    {
+      "step": "5/9",
+      "question": "Key message?",
+      "answer": "Book early and ask to see full films, not just highlight reels"
+    },
+    {
+      "step": "5/9",
+      "question": "Audience?",
+      "answer": "Couples planning a 2027 wedding"
+    },
+    {
+      "step": "5/9",
+      "question": "Tone?",
+      "answer": "Warm"
+    },
+    {
+      "step": "5/9",
+      "question": "Call to action?",
+      "answer": "Send us your wedding date"
+    },
+    {
+      "step": "5/9",
+      "question": "Use this draft?",
+      "answer": "Use this draft"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · button-label",
+      "answer": "Keep \"Swipe\""
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · photo — portrait 4:5, best ≥ 1080 px wide",
+      "answer": "/private/tmp/claude-501/-Users-koristuvac-Desktop-bride-groom-smm/70be4842-065f-4501-83e8-b528bf1fe69a/scratchpad/testimg/walkthrough"
+    },
+    {
+      "step": "7/9",
+      "question": "Assign in order or choose per slot?",
+      "answer": "Choose per slot"
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · photo[0]",
+      "answer": "IMG_2041.png"
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · photo[1]",
+      "answer": "IMG_2055.png"
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 02 · photo",
+      "answer": "IMG_2055.png"
+    },
+    {
+      "step": "8/9",
+      "question": "Caption & hashtags?",
+      "answer": "Draft it for me"
+    },
+    {
+      "step": "8/9",
+      "question": "Use this caption?",
+      "answer": "Use it"
+    },
+    {
+      "step": "9/9",
+      "question": "Build it?",
+      "answer": "Build it"
+    },
+    {
+      "step": "5.2",
+      "question": "Slide 01 · both title lines show \"videographer\" (template defect) — pick another layout?",
+      "answer": "Pick another layout: Cover / Text / Pink"
+    }
+  ],
+  "figma": {
+    "sectionId": "2173:109",
+    "summaryCardId": "2180:138",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261023-1728-ilya-luzan_01",
+        "nodeId": "2180:197"
+      },
+      {
+        "index": 2,
+        "name": "BG-20261023-1728-ilya-luzan_02",
+        "nodeId": "2173:180"
+      },
+      {
+        "index": 3,
+        "name": "BG-20261023-1728-ilya-luzan_03",
+        "nodeId": "2173:188"
+      }
+    ],
+    "mediaSectionId": "2173:2",
+    "media": [
+      {
+        "nodeId": "2172:281",
+        "file": "IMG_2041.png",
+        "imageHash": "83ff0d4828f1cded58654f782e2281890e3702f3"
+      },
+      {
+        "nodeId": "2172:2",
+        "file": "IMG_2055.png",
+        "imageHash": "489b946b8dfdbc2aef444d2095a1f55cae63e598"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "at": "2026-10-23T17:38:45+03:00",
+      "by": {
+        "handle": "Ilya Luzan",
+        "email": "luzan.ilya@gmail.com"
+      },
+      "via": "/edit-run",
+      "change": "01 layout: Cover / Text / Pink → Cover / Swipe / Pink (template fixed: title-accent has its own text property); title \"Choose your | videographer\"; photos IMG_2041 / IMG_2055"
+    }
+  ],
+  "verification": {
+    "at": "2026-10-23T17:40:30+03:00",
+    "errors": 0,
+    "warnings": [],
+    "history": [
+      "first build: slide 01 title showed the accent text twice — Cover / Swipe / Pink binds title and title-accent to one text property; detected by verify (mismatch) and screenshot; switched layout, re-verified clean",
+      "after the template fix: slide 01 rebuilt on Cover / Swipe / Pink via /edit-run, re-verified clean"
+    ]
+  },
+  "notes": "Operator-guide walkthrough (v1.0 check). Claude acted as the operator; answers recorded verbatim."
+}

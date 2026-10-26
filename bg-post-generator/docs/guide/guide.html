@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Bride&amp;Groom Post Generator — Operator Guide</title><link rel="stylesheet" href="guide.css"></head><body>
+
+<div class="cover">
+<p class="cover-title">Bride&amp;Groom<br/>Post Generator</p>
+<p class="cover-sub">Operator Guide: creating Instagram posts with Claude Code and Figma</p>
+<p class="cover-meta">Version 1.0 · October 2026<br/>For: anyone on the team who creates Instagram content<br/>No design or coding skills required</p>
+</div>
+
+<h1 class="page">1. How it works</h1>
+<p class="lead">You describe the post in a conversation with Claude Code. Claude builds it in Figma from the approved Bride&amp;Groom templates and places the result on the <b>Generated</b> page. You never need to design anything in Figma; you only open it to review and export.</p>
+
+<h2>The workflow at a glance</h2>
+<ol>
+<li><b>Start</b>: in Claude Code, type <code>/new-post</code>.</li>
+<li><b>Answer the questions.</b> Claude asks one question at a time: format, content type, color, slide structure, text, images, caption.</li>
+<li><b>Add images</b> by dragging files into the Claude Code window or giving a file or folder path.</li>
+<li><b>Review.</b> Claude shows a summary table of everything it will build. Confirm it, or jump back to any step.</li>
+<li><b>Claude builds and checks the post</b> in Figma: correct template, your text, your photos, no leftover placeholder text, no text overflow.</li>
+<li><b>Open the link</b> Claude gives you, check the slides, and export the PNG files for Instagram.</li>
+</ol>
+
+<h2>What you get in Figma</h2>
+<p>Each request (a <b>run</b>) becomes one section on the <b>Generated</b> page, named like <code>BG-20261023-1430-anna · Carousel · Wedding film tips</code>. Inside it:</p>
+<ul>
+<li>a <b>summary card</b>: who requested the post, when, which templates were used, all your answers word for word, the images used, the caption and hashtags, and any warnings;</li>
+<li>the <b>slides</b>, in order, each with a label underneath (<code>01 Cover</code>, <code>02 Photo + Title</code>, ...) and export settings already applied.</li>
+</ul>
+
+<h2>What Claude will never do</h2>
+<ul>
+<li>Change fonts, font sizes, colors or layout to make text fit. If text is too long, Claude tells you and asks you to shorten it or pick another layout.</li>
+<li>Ship template placeholder text (for example "Noah Kokensparger" or lorem ipsum), unless you explicitly choose to keep it.</li>
+<li>Modify the <b>Templates</b> or <b>Design system</b> pages without asking you first in that session.</li>
+</ul>
+
+<h1 class="page">2. One-time setup</h1>
+<p>Setup takes about 10 minutes and is the same for every person and every Claude account.</p>
+
+<h2>What you need</h2>
+<table>
+<thead><tr><th>Item</th><th>Details</th></tr></thead>
+<tr><td>Claude account with Claude Code</td><td>A personal plan (Pro or Max) or a company plan (Team or Enterprise) that includes Claude Code.</td></tr>
+<tr><td>Claude Code</td><td>The Claude desktop app (Code tab) or the Claude Code terminal app. Both work the same way.</td></tr>
+<tr><td>Figma account</td><td>Any Figma account with <b>edit</b> access to the Bride&amp;Groom templates file. View-only access is not enough, because Claude writes to the Generated and Media pages.</td></tr>
+<tr><td>The project folder</td><td><code>bg-post-generator</code>, shared by your team (Git repository or zip archive).</td></tr>
+</table>
+
+<h2>Step 1. Install Claude Code</h2>
+<p><b>Desktop app:</b> download the Claude app from <code>claude.ai/download</code>, sign in, and open the <b>Code</b> tab.</p>
+<p><b>Terminal (macOS / Linux):</b></p>
+<pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
+<p>For Windows and other options, see <code>docs.claude.com</code> → Claude Code → Setup.</p>
+
+<h2>Step 2. Get the project folder</h2>
+<p>Clone the team repository, or unzip the archive you received, to a convenient place, for example your Desktop:</p>
+<pre>git clone &lt;team-repository-url&gt; bg-post-generator</pre>
+
+<h2>Step 3. Open the folder in Claude Code</h2>
+<p><b>Desktop app:</b> in the Code tab, choose the <code>bg-post-generator</code> folder as the working folder.<br/>
+<b>Terminal:</b></p>
+<pre>cd bg-post-generator
+claude</pre>
+<p>If Claude Code asks whether to trust the folder, or whether to use the project's <b>figma</b> server (found in <code>.mcp.json</code>), say yes.</p>
+
+<h2>Step 4. Connect your Figma account</h2>
+<p>The project uses the official Figma server (<code>https://mcp.figma.com/mcp</code>). You sign in with your own Figma account. No passwords or tokens are stored in the project folder.</p>
+<ul>
+<li><b>Terminal and desktop app:</b> type <code>/mcp</code>, select <b>figma</b>, then <b>Authenticate</b>. A browser window opens. Sign in to Figma and click <b>Allow access</b>.</li>
+<li><b>Desktop app, alternative:</b> connect the <b>Figma</b> connector in the Claude settings (<b>Settings → Connectors</b>). If your account already has it connected, there is nothing to do: Claude uses whichever Figma connection is available.</li>
+</ul>
+
+<h2>Step 5. Check access to the file, then start</h2>
+<p>Open the Figma file link in your browser. If you see "View only" or cannot edit, ask the file owner to share it with you as <b>can edit</b>. Then, in Claude Code, type:</p>
+<pre>/new-post</pre>
+<p>Before the first question, Claude checks everything automatically: the Figma connection, your identity, the file, the required pages and the template list. If something is missing, it tells you exactly what to fix.</p>
+
+<h1>3. Creating a post with /new-post</h1>
+<p>Claude asks one question per step and shows a counter such as <code>3/9</code>. For multiple-choice questions, pick an option with the arrow keys and Enter (or click it). A list shows at most four options. When there are more, the last one is <b>More…</b>, and the question names the rest. You can also choose <b>Other</b> and type any option by name (for example a color). For free-text questions, just type and press Enter. Steps that don't apply are skipped, so the counter may jump (for example 4/9 → 6/9 for a review, which is always typed and skips the content-mode question).</p>
+
+<div class="tip"><b>At any step</b> you can type <code>back</code> to return to the previous question, or <code>cancel</code> to stop without building anything.</div>
+
+<table>
+<thead><tr><th>Step</th><th>What Claude asks</th><th>Notes</th></tr></thead>
+<tr><td>1. Format</td><td>Feed post (single), Carousel, Story, or Story set</td><td>Feed posts are 4:5 portrait. Stories are 9:16.</td></tr>
+<tr><td>2. Content type</td><td>Review, Cover, Carousel article, Poll / Question / Opinion story, ...</td><td>Only types that exist for the chosen format are offered.</td></tr>
+<tr><td>3. Color</td><td>Brand palette, with how many layouts exist in each color</td><td>A slide whose layout lacks your color uses the lighter/darker version (Pink ↔ Light Pink), then a neutral (Light Color, Light, Dark). Claude tells you which slides, and never switches to a different hue without asking.</td></tr>
+<tr><td>4. Structure</td><td><b>Single post or story:</b> the layout. <b>Carousel / story set:</b> number of slides, then the layout of each slide</td><td>Carousels have 2–20 slides (Instagram's limit). Choose <b>auto-compose</b> (Claude picks a varied sequence: cover → content → outro) or <b>manual</b>.</td></tr>
+<tr><td>5. Content mode</td><td>"I'll type the text" or "Draft it from a brief"</td><td>For a draft, you give the topic, key message, audience, tone and call to action. You can edit the draft before anything is built. Reviews are always typed: Claude never invents quotes, names or ratings.</td></tr>
+<tr><td>6. Text</td><td>Each text field, one by one, with a character budget. After a draft, only the fields the draft did not fill (for example "keep the template's <i>Swipe</i> button?")</td><td>See "Typing text" below. Page numbers and brand tags are filled in automatically.</td></tr>
+<tr><td>7. Images</td><td>One image for each photo or avatar slot, plus an optional background on some stories</td><td>See section 4.</td></tr>
+<tr><td>8. Caption</td><td>Instagram caption and hashtags (optional)</td><td>Write your own, or ask Claude to draft them. Instagram allows at most 5 hashtags per post.</td></tr>
+<tr><td>9. Review</td><td>A compact table of everything that will be built</td><td>Confirm to build, or name the step you want to change.</td></tr>
+</table>
+
+<h2>Typing text</h2>
+<p>Each question shows how much text fits, for example <code>title (≈30 chars, 2 lines; the last part is italic)</code>. For quotes and longer texts it also says how much fills the design: a much shorter text leaves an empty gap.</p>
+<table>
+<thead><tr><th>You type</th><th>What happens</th></tr></thead>
+<tr><td><code>Five things your | film needs</code></td><td>The part after <code>|</code> is set in the italic accent style. Without <code>|</code>, Claude picks the last words that fit the accent line and shows you the split.</td></tr>
+<tr><td><code>keep</code></td><td>Keeps the template's own text for this field (useful for story headlines such as "Poll Time!"). Claude offers this as a choice where it makes sense.</td></tr>
+<tr><td><code>hide</code></td><td>Hides an optional field instead of leaving placeholder text.</td></tr>
+</table>
+<p>Bullets in list fields are added by the template, so don't type <code>1.</code> or <code>•</code>. If a text is longer than the budget, Claude asks you to shorten it, keep it and check the real fit when building, or pick another layout.</p>
+
+<h2>Reviews: what to prepare</h2>
+<p>For a review post, have these ready: the review text (quote), the author's name, their Instagram handle (if the layout shows one), the source (Google or Facebook), the star rating, and the author's photo (if the layout has an avatar).</p>
+
+<h2>Example (from a real run, shortened)</h2>
+<pre>you:    /new-post
+Claude: 1/9 · Which format?   (type back or cancel at any step)
+        › Feed post (single) · Carousel · Story · Story set
+you:    Carousel
+Claude: 2/9 · Content type?  › Carousel article · Reviews carousel
+you:    Carousel article
+Claude: 3/9 · Color?  › Dark — 9 layouts · Light — 8 layouts
+                      · Purple — 4 layouts · More…
+you:    Pink                      (typed under Other)
+Claude: 4/9 · How many slides?  › 5 (recommended) · 3 · 7
+you:    3
+Claude: 4/9 · Auto-compose or manual?  → 01 Cover · Text · Pink
+        02 Photo + Text · Light Color (no Pink version) · 03 Outro · Pink
+you:    Use this
+Claude: 5/9 · Content mode?  › I'll type the text · Draft it from a brief
+you:    Draft it from a brief
+        (topic, key message, audience, tone, call to action …)
+Claude: [shows the drafted text for every field]  › Use this draft
+Claude: 7/9 · Slide 02 · photo — landscape 1.46:1, best ≥ 1028 px wide.
+        Drag a file here, or type a path, a folder, a URL,
+        a name from the Media page, or skip.
+you:    ~/Desktop/shoot-oct
+Claude: IMG_2041.png 1080×1350 · IMG_2055.png 1600×1150 (notes.md skipped)
+        › Assign in order · Choose per slot
+Claude: 8/9 · Caption & hashtags?  › Write my own · Draft it for me · Skip
+Claude: 9/9 · [table of everything]  › Build it · Change something · Cancel
+Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
+        https://www.figma.com/design/…?node-id=…</pre>
+
+<h1>4. Adding images</h1>
+<p>When Claude reaches an image slot, you can provide the image in any of these ways:</p>
+<table>
+<thead><tr><th>Method</th><th>How</th></tr></thead>
+<tr><td>Drag and drop</td><td>Drag the file from Finder / Explorer into the Claude Code window. This inserts the file's path. Press Enter.</td></tr>
+<tr><td>File path</td><td>Type or paste the path, for example <code>~/Desktop/shoot/IMG_2041.jpg</code>.</td></tr>
+<tr><td>Folder</td><td>Give a folder path. Claude lists its PNG/JPG/WebP images with their sizes (other files are skipped) and asks: <b>Assign in order</b> or <b>Choose per slot</b>.</td></tr>
+<tr><td>URL</td><td>A direct link to an image file (it must open as an image in the browser).</td></tr>
+<tr><td>Already in Figma</td><td>The name of an image already on the file's <b>Media</b> page.</td></tr>
+<tr><td>Skip</td><td>Keep the template placeholder image. This is listed as a warning on the summary card.</td></tr>
+</table>
+
+<p><b>Story backgrounds.</b> Some story designs (Share Opinion, What Do You Think, Photo Talk, Photo Poll) have a photo behind the whole story. Claude asks whether to <b>keep the template photo</b> or <b>use your own</b>. Keeping it is fine and is not a warning.</p>
+<p><b>Black-and-white designs.</b> Some layouts show photos in black and white on purpose, for example the Light and Dark versions of the carousel photo slides. Claude tells you before you pick the photo.</p>
+
+<div class="note"><b>Use files, not clipboard pastes.</b> A screenshot pasted straight from the clipboard is visible to Claude but is not saved as a file, so it cannot be uploaded to Figma. Save it as a file first, then drag that file in.</div>
+
+<h2>Image requirements</h2>
+<ul>
+<li>Formats: <b>PNG, JPG or WebP</b>. Maximum <b>10 MB</b> per file.</li>
+<li>Resolution: Claude tells you the ideal width for each photo slot (about 1080 px for a full-slide photo) and warns you if an image is smaller.</li>
+<li>Orientation: Claude describes each slot (portrait, landscape, square). If more than about a quarter of the image would be cropped away, it warns you and lets you pick another one.</li>
+<li>Uploaded images are stored on the Figma <b>Media</b> page as <code>media/&lt;run ID&gt;/&lt;file name&gt;</code>, so they can be reused later.</li>
+</ul>
+
+<h1>5. Reviewing and exporting</h1>
+<h2>Check the result</h2>
+<p>Claude checks every slide before it reports success:</p>
+<ul>
+<li>every field shows exactly what you typed, with no template placeholder text left;</li>
+<li>no text is cut off or runs outside its box or card;</li>
+<li>no template photo is left anywhere on the slide, including story backgrounds;</li>
+<li>no text is so short that it leaves a visible gap in the design;</li>
+<li>a screenshot of the whole run looks right.</li>
+</ul>
+<p>If something cannot be fixed automatically, Claude names the slide and the field and offers options: shorten or extend the text, switch layout, or use a different image.</p>
+<p>Open the link from Claude's final message. It takes you straight to your run's section on the <b>Generated</b> page.</p>
+
+<h2>Export for Instagram</h2>
+<ol>
+<li>In Figma, select the slides of your run (not the summary card). Slides are named <code>&lt;run ID&gt;_01</code>, <code>_02</code>, ...</li>
+<li>Export settings are already applied. In the right panel, click <b>Export</b>.</li>
+<li>The files are numbered in slide order, ready to upload as a carousel.</li>
+</ol>
+<table>
+<thead><tr><th>Format</th><th>Exported size</th></tr></thead>
+<tr><td>Feed post / carousel slide</td><td>1080 px wide (about 1080 × 1354, 4:5), PNG</td></tr>
+<tr><td>Story</td><td>1080 px wide (about 1080 × 1922, 9:16), PNG</td></tr>
+</table>
+<p>Copy the caption and hashtags from the summary card, or from Claude's final message.</p>
+
+<h1>6. Changing an existing post: /edit-run</h1>
+<p>To change a post that has already been generated, type:</p>
+<pre>/edit-run</pre>
+<p>Give the run ID (for example <code>BG-20261023-1430-anna</code>) or paste the Figma link to the run's section. Then tell Claude what to change:</p>
+<ul>
+<li>a text on a specific slide;</li>
+<li>a photo, including a story background;</li>
+<li>the color of the whole run;</li>
+<li>add, remove or reorder slides;</li>
+<li>the caption or hashtags.</li>
+</ul>
+<p>Claude shows you before → after and asks you to confirm. It then edits the run in place (the section stays where it is), checks it again, and adds a <b>Revisions</b> entry to the summary card: who changed what, and when. Slides that are rebuilt lose any manual edits made to them in Figma; Claude reminds you before applying.</p>
+<div class="tip">Prefer <code>/edit-run</code> over editing by hand in Figma. Manual edits work, but they are not recorded on the summary card, and detaching instances breaks the link to the templates.</div>
+
+<h1>7. Templates and designers</h1>
+<p>Templates live on the Figma <b>Templates</b> page. Claude reads their names and layers every time, so a designer can add or update templates without touching the project folder.</p>
+<ul>
+<li>At the start of every <code>/new-post</code>, Claude checks whether templates have changed and refreshes its template list automatically.</li>
+<li>To refresh manually, for example right after a designer's change, type <code>/sync-templates</code>. Claude reports new templates and any naming problems.</li>
+</ul>
+<h2>Rules for designers</h2>
+<ul>
+<li>Name components <code>Type / Layout / Color</code>, for example <code>Review / Hashtag / Light Pink</code>.</li>
+<li>Keep layer names meaningful. Claude fills layers named <code>tagline</code>, <code>title</code>, <code>body</code>, <code>quote-text</code>, <code>author-name</code>, <code>author-handle</code>, <code>author-role</code>, <code>source-label</code>, <code>paragraph</code>, <code>bullet</code>, <code>button-label</code>, <code>photo</code>, <code>avatar</code> and <code>rating</code>. Brand tags (<code>tag-label</code>) and page numbers (<code>page-number</code>) are filled automatically.</li>
+<li>Name the italic highlighted part <code>…-accent</code> (<code>title-accent</code>, <code>quote-text-accent</code>), and number repeated fields (<code>body-1</code>, <code>body-2</code>, <code>bullet-1</code>). Two layers with the same name are still handled, but by position only.</li>
+<li>Use the text's list formatting for bullets; Claude never types bullet characters.</li>
+<li>Put decorative artwork inside layers named <code>decor</code>, <code>bg</code>, <code>card-bg</code>, <code>mockup</code> or <code>photoshop</code>, so Claude does not treat it as content. The list is in <code>config.json</code> (<code>scan.decorContainers</code>).</li>
+<li>A photo fill on the component itself (a story background) becomes an optional <b>background</b> photo, unless it repeats the photo layer's own image, in which case it is replaced together with the photo.</li>
+<li>Frames whose name contains <code>(CLAUDE - IGNORE)</code> are never read or changed.</li>
+<li><code>/sync-templates</code> reports naming problems and proposes renames. It changes the Templates page only after you confirm.</li>
+</ul>
+
+<h1 class="page">8. Using another Claude account or a team</h1>
+<p>Nothing in the project folder is tied to a person or an account. There are no personal tokens, IDs or paths in it. The same folder works for anyone.</p>
+
+<h2>Switching to another Claude account (for example a corporate one)</h2>
+<ol>
+<li>Sign in to Claude Code with the new account. Terminal: <code>/login</code>. Desktop app: sign out, then sign in again.</li>
+<li>Open the same <code>bg-post-generator</code> folder.</li>
+<li>Reconnect Figma if asked (setup, step 4).</li>
+<li>Run <code>/new-post</code>.</li>
+</ol>
+<div class="note"><b>Company plans (Team / Enterprise):</b> administrators can restrict which external servers Claude Code may use. If the figma server does not appear or is blocked, ask your Claude admin to allow the Figma server <code>https://mcp.figma.com/mcp</code>.</div>
+
+<h2>Sharing with the team</h2>
+<ul>
+<li>Keep the folder in a private Git repository (recommended) or share it as a zip.</li>
+<li>Each person connects their <b>own</b> Figma account and needs edit access to the file.</li>
+<li>Several people can generate posts at the same time. Each run gets its own section, placed below the previous ones.</li>
+<li>Every run is also logged locally in <code>runs/</code>. You can commit these logs to share the history. <code>/edit-run</code> also works without them, by reading the run straight from Figma.</li>
+</ul>
+
+<h2>Using a copy of the Figma file</h2>
+<p>If the team works in a duplicate of the templates file, open <code>config.json</code>, replace <code>fileKey</code> with the key of the new file, then run <code>/sync-templates</code>. The key is the part of the file link after <code>/design/</code>. No other change is needed.</p>
+
+<h1>9. Troubleshooting</h1>
+<table>
+<thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+<tr><td>Claude says Figma is not connected, or the Figma tools are missing</td><td>Type <code>/mcp</code> → figma → Authenticate (terminal and desktop app), or connect the Figma connector in Settings → Connectors (desktop app). Then run <code>/new-post</code> again.</td></tr>
+<tr><td>"The text is shorter than the design expects"</td><td>The design leaves an empty gap under short text. Add a little more text (Claude says roughly how much), or keep the gap.</td></tr>
+<tr><td>"Permission" or "seat" error when building</td><td>Your Figma account cannot edit the file. Ask the owner for "can edit" access. Claude tells you which access is missing.</td></tr>
+<tr><td>"Text does not fit"</td><td>Shorten the text, or choose a layout with more room. Font sizes are never reduced, to keep the brand consistent.</td></tr>
+<tr><td>Image rejected</td><td>Check the format (PNG/JPG/WebP) and size (≤ 10 MB). Save clipboard screenshots as files first.</td></tr>
+<tr><td>"Heavy crop" warning</td><td>The image orientation does not match the slot. Choose a better-matching photo, or accept the crop.</td></tr>
+<tr><td>A color you want is not offered for a layout</td><td>That layout does not exist in that color. Accept the suggested closest color, or pick another layout.</td></tr>
+<tr><td>Two text fields of a layout always show the same text</td><td>A template defect: both layers are bound to the same text property in Figma. <code>/sync-templates</code> reports it, Claude doesn't auto-pick such a layout, and it stops with a clear message if one is chosen. Pick another layout, or ask a designer to give the accent layer its own text property, then run <code>/sync-templates</code>.</td></tr>
+<tr><td>Figma rate-limit message</td><td>Wait a few minutes and repeat the last step. Your answers are kept.</td></tr>
+<tr><td>Templates were just changed by a designer</td><td>Nothing to do: Claude refreshes automatically. You can also run <code>/sync-templates</code>.</td></tr>
+</table>
+
+<h1>10. Quick reference</h1>
+<table>
+<thead><tr><th>Command / word</th><th>What it does</th></tr></thead>
+<tr><td><code>/new-post</code></td><td>Start the guided questionnaire and build a new post.</td></tr>
+<tr><td><code>/edit-run</code></td><td>Change an existing run (by run ID or Figma link).</td></tr>
+<tr><td><code>/sync-templates</code></td><td>Refresh the template list from Figma.</td></tr>
+<tr><td><code>back</code></td><td>Return to the previous question.</td></tr>
+<tr><td><code>cancel</code></td><td>Stop the current run. Nothing is built.</td></tr>
+<tr><td><code>|</code> in a title</td><td>Marks where the italic accent part starts.</td></tr>
+<tr><td><code>keep</code> / <code>hide</code></td><td>Keep the template's text for a field / hide an optional field.</td></tr>
+<tr><td><code>skip</code></td><td>Keep the template photo for an image slot (listed as a warning).</td></tr>
+<tr><td><code>/mcp</code></td><td>Check or reconnect the Figma connection.</td></tr>
+</table>
+
+<h2>Glossary</h2>
+<table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tr><td>Run</td><td>One request: one post, carousel or story set.</td></tr>
+<tr><td>Run ID</td><td><code>BG-YYYYMMDD-HHMM-&lt;figma handle&gt;</code>, for example <code>BG-20261023-1430-anna</code>.</td></tr>
+<tr><td>Template</td><td>An approved design on the Templates page, for example <code>Cover / Text + Body / Light Blue</code>.</td></tr>
+<tr><td>Slot</td><td>A replaceable part of a template: a text field, a photo or a rating.</td></tr>
+<tr><td>Summary card</td><td>The card at the left of each run with all its details and warnings.</td></tr>
+<tr><td>Generated page</td><td>The Figma page where all runs are placed.</td></tr>
+<tr><td>Media page</td><td>The Figma page where uploaded images are stored.</td></tr>
+</table>
+
+</body></html>

@@ -1,0 +1,47 @@
+{
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "pages": {
+    "designSystem": "Design system",
+    "templates": "Templates",
+    "media": "Media",
+    "generated": "Generated"
+  },
+  "scan": {
+    "ignoreMarker": "(CLAUDE - IGNORE)",
+    "decorContainers": ["mockup", "photoshop", "decor", "bg", "card-bg"],
+    "colorTokens": ["Purple", "Light Purple", "Pink", "Light Pink", "Blue", "Light Blue", "Yellow", "Light Yellow", "Dark", "Light", "Light Color"],
+    "templatesPerCall": 10
+  },
+  "colorFallback": {
+    "neutrals": ["Light", "Dark"]
+  },
+  "export": {
+    "format": "PNG",
+    "feed": { "constraint": "WIDTH", "value": 1080, "label": "1080×1350" },
+    "story": { "constraint": "WIDTH", "value": 1080, "label": "1080×1920" }
+  },
+  "layout": {
+    "runOrder": "append",
+    "sectionGap": 200,
+    "sectionPadding": 80,
+    "slideGap": 40,
+    "labelGap": 16,
+    "summaryCardWidth": 600
+  },
+  "instagram": {
+    "carouselMinSlides": 2,
+    "carouselMaxSlides": 20,
+    "hashtagsMax": 5,
+    "captionMaxChars": 2200,
+    "verifiedAt": "2026-10-23",
+    "sources": [
+      "https://socialrails.com/blog/instagram-carousel-posts-guide",
+      "https://www.socialmediatoday.com/news/instagram-implements-new-limits-on-hashtag-use/808309/"
+    ]
+  },
+  "media": {
+    "maxBytes": 10485760,
+    "types": ["image/png", "image/jpeg", "image/webp"]
+  },
+  "uiLanguage": "en"
+}
