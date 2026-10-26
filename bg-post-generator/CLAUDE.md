@@ -3,7 +3,7 @@
 Operators answer a questionnaire (`/new-post`); Claude assembles posts from Figma template components and places them on the `Generated` page. `/sync-templates` rebuilds the template manifest; `/edit-run` changes an existing run.
 
 ## Hard rules
-- **Any account.** No personal tokens, IDs or paths in the repo. Figma goes through the remote Figma MCP (`.mcp.json`, per-user OAuth). The only file-specific value is `config.json → fileKey`.
+- **Any account.** No personal tokens, IDs or paths in the repo. Figma goes through the remote Figma MCP (`.mcp.json` at the repository root, per-user OAuth). The only file-specific value is `config.json → fileKey`.
 - **Resolve templates at runtime.** Use `templates/manifest.json` (component keys + slot paths); never hardcode node IDs. Choice lists always come from the manifest.
 - **Never modify `Templates` or `Design system`** without explicit confirmation from the operator in this session. Frames whose name contains `(CLAUDE - IGNORE)` are never read as templates or modified.
 - **Brand safety.** Never change font sizes, colors or layout of a template to make content fit. If text overflows, report the slide + slot and ask the operator to shorten it or pick another layout.

@@ -5,6 +5,8 @@ description: Rebuild templates/manifest.json from the Figma Templates page. Use 
 
 # /sync-templates
 
+All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply.
+
 Rebuilds `templates/manifest.json` from the live **Templates** page. Read-only on Figma unless the operator confirms a rename.
 Follow every rule in `CLAUDE.md` (Figma MCP rules especially).
 

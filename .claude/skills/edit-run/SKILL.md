@@ -5,7 +5,9 @@ description: Change an existing Bride&Groom run on the Figma Generated page (tex
 
 # /edit-run
 
-Edits one run in place. `CLAUDE.md` rules apply; the conversation rules (one question at a time, `back` / `cancel`, choices from the manifest) are the same as in `.claude/skills/new-post/SKILL.md`, which also defines the build spec, verify inputs, image handling and run-log shape reused here.
+All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply.
+
+Edits one run in place. `CLAUDE.md` rules apply; the conversation rules (one question at a time, `back` / `cancel`, choices from the manifest) are the same as in `/new-post` (`.claude/skills/new-post/SKILL.md` at the repository root), which also defines the build spec, verify inputs, image handling and run-log shape reused here.
 
 ## 1. Preflight
 Same as /new-post step 0 (Figma connected, `whoami`, `create_session`, `figma-use` skill, `scan-hash.js` drift check → re-sync if needed, `scripts/local-time.sh`).

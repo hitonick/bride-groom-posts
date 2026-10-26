@@ -43,7 +43,7 @@
 <tr><td>Claude account with Claude Code</td><td>A personal plan (Pro or Max) or a company plan (Team or Enterprise) that includes Claude Code.</td></tr>
 <tr><td>Claude Code</td><td>The Claude desktop app (Code tab) or the Claude Code terminal app. Both work the same way.</td></tr>
 <tr><td>Figma account</td><td>Any Figma account with <b>edit</b> access to the Bride&amp;Groom templates file. View-only access is not enough, because Claude writes to the Generated and Media pages.</td></tr>
-<tr><td>The project folder</td><td><code>bg-post-generator</code>, shared by your team (Git repository or zip archive).</td></tr>
+<tr><td>The project folder</td><td><code>bride-groom-posts</code> (with <code>bg-post-generator</code> inside it), shared by your team (Git repository or zip archive).</td></tr>
 </table>
 
 <h2>Step 1. Install Claude Code</h2>
@@ -54,14 +54,15 @@
 
 <h2>Step 2. Get the project folder</h2>
 <p>Clone the team repository, or unzip the archive you received, to a convenient place, for example your Desktop:</p>
-<pre>git clone &lt;team-repository-url&gt; bg-post-generator</pre>
+<pre>git clone &lt;team-repository-url&gt; bride-groom-posts</pre>
 
 <h2>Step 3. Open the folder in Claude Code</h2>
-<p><b>Desktop app:</b> in the Code tab, choose the <code>bg-post-generator</code> folder as the working folder.<br/>
+<p>Open the top folder, <code>bride-groom-posts</code>, not the <code>bg-post-generator</code> folder inside it: <code>/new-post</code> and the Figma connection only load from the top folder.</p>
+<p><b>Desktop app:</b> in the Code tab, choose the <code>bride-groom-posts</code> folder as the working folder.<br/>
 <b>Terminal:</b></p>
-<pre>cd bg-post-generator
+<pre>cd bride-groom-posts
 claude</pre>
-<p>If Claude Code asks whether to trust the folder, or whether to use the project's <b>figma</b> server (found in <code>.mcp.json</code>), say yes.</p>
+<p>If Claude Code asks whether to trust the folder, or whether to use the project's <b>figma</b> server (found in <code>.mcp.json</code> at the repository root), say yes.</p>
 
 <h2>Step 4. Connect your Figma account</h2>
 <p>The project uses the official Figma server (<code>https://mcp.figma.com/mcp</code>). You sign in with your own Figma account. No passwords or tokens are stored in the project folder.</p>
@@ -225,7 +226,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <h2>Switching to another Claude account (for example a corporate one)</h2>
 <ol>
 <li>Sign in to Claude Code with the new account. Terminal: <code>/login</code>. Desktop app: sign out, then sign in again.</li>
-<li>Open the same <code>bg-post-generator</code> folder.</li>
+<li>Open the same <code>bride-groom-posts</code> folder.</li>
 <li>Reconnect Figma if asked (setup, step 4).</li>
 <li>Run <code>/new-post</code>.</li>
 </ol>

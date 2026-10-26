@@ -5,6 +5,8 @@ description: Guided questionnaire that builds a Bride&Groom Instagram post (feed
 
 # /new-post
 
+All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply.
+
 Ask the operator one question at a time, build the post from `templates/manifest.json` on the **Generated** page, verify it, and log the run.
 `CLAUDE.md` rules always apply. Speak plainly: operators are not designers or developers.
 

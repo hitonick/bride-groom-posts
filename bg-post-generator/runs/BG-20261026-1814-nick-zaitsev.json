@@ -1,0 +1,199 @@
+{
+  "runId": "BG-20261026-1814-nick-zaitsev",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-26 18:14",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-26T18:14:09+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Cover",
+  "color": "Purple",
+  "contentMode": "typed",
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover · Swipe Centered · Purple",
+      "group": "Cover / Swipe Centered",
+      "color": "Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Swipe Centered / Purple",
+        "key": "53b06f3eeca2eade151e13d694b9861efe347f80"
+      },
+      "text": {
+        "tagline": {
+          "value": "Parrot Jako Purple",
+          "source": "typed"
+        },
+        "title": {
+          "value": "Meet our",
+          "accent": "Jako Bird",
+          "source": "typed"
+        },
+        "button-label": {
+          "value": "Swipe",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "path": "images/1.jpg",
+          "file": "1.jpg",
+          "width": 475,
+          "height": 720,
+          "bytes": 99855,
+          "crop": 0.18
+        },
+        "photo[1]": {
+          "source": "file",
+          "path": "images/2.jpg",
+          "file": "2.jpg",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 107045,
+          "crop": 0.08
+        }
+      }
+    }
+  ],
+  "caption": "Meet our Jako Bird 🦜💜\nBright feathers, a big personality, and always the first to say hello. Swipe to see more of our new feathered friend!",
+  "hashtags": [
+    "#parrot",
+    "#jako",
+    "#birdsofinstagram",
+    "#parrotlove",
+    "#purple"
+  ],
+  "warnings": [
+    {
+      "slide": 1,
+      "kind": "low-resolution",
+      "detail": "photo[0]: 475 px wide, best ≥ 1080 px; operator chose Use it anyway"
+    }
+  ],
+  "answers": [
+    {
+      "step": "1/9",
+      "question": "Which format?",
+      "answer": "Feed post (single)"
+    },
+    {
+      "step": "2/9",
+      "question": "What kind of post?",
+      "answer": "Cover"
+    },
+    {
+      "step": "3/9",
+      "question": "Which color?",
+      "answer": "Purple"
+    },
+    {
+      "step": "4/9",
+      "question": "Which Purple cover layout?",
+      "answer": "Swipe Centered"
+    },
+    {
+      "step": "5/9",
+      "question": "How do you want to fill in the text?",
+      "answer": "I'll type the text"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · tagline",
+      "answer": "Parrot Jako Purple"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · title",
+      "answer": "Meet our. Jako Bird"
+    },
+    {
+      "step": "6/9",
+      "question": "Title split: Meet our. / Jako Bird (italic)?",
+      "answer": "Drop the period"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · button-label",
+      "answer": "Keep \"Swipe\" (default stated, operator did not change it)"
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · photo[0] — portrait 4:5, best ≥ 1080 px wide",
+      "answer": "1.jpg (attached)"
+    },
+    {
+      "step": "7/9",
+      "question": "photo[0] is 475 px wide, below 1080 px",
+      "answer": "Use it anyway"
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · photo[1] — near-square 1.09:1, best ≥ 904 px wide",
+      "answer": "2.jpg (attached)"
+    },
+    {
+      "step": "8/9",
+      "question": "Caption?",
+      "answer": "Draft it for me"
+    },
+    {
+      "step": "8/9",
+      "question": "Use this caption?",
+      "answer": "Use it"
+    },
+    {
+      "step": "9/9",
+      "question": "Build it?",
+      "answer": "Build it"
+    }
+  ],
+  "figma": {
+    "sectionId": "2381:1158",
+    "summaryCardId": "2381:1159",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261026-1814-nick-zaitsev_01",
+        "nodeId": "2381:1196"
+      }
+    ],
+    "mediaSectionId": "2380:1332",
+    "media": [
+      {
+        "file": "1.jpg",
+        "nodeId": "2380:2",
+        "imageHash": "3f148293ef1eb836916013cde520c7d46e19e94e"
+      },
+      {
+        "file": "2.jpg",
+        "nodeId": "2380:1331",
+        "imageHash": "f6b90506ec586ae02153e5455ff8e2a3ed6f8ab9"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-26T20:16:01+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-26T20:16:01+00:00",
+        "errors": 0,
+        "warnings": 0,
+        "screenshot": "checked"
+      }
+    ]
+  }
+}
