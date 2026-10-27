@@ -52,7 +52,9 @@ To allow a host: the cloud environment menu in the session title bar → **Edit*
 
 | Command | What it does |
 |---|---|
-| `/new-post` | Guided questionnaire → builds and checks a new post on the Generated page |
+| `/new-post` | Builds and checks a new post on the Generated page. Asks which mode you want: |
+| `/new-post detailed` | 9 short questions; you choose format, color, layouts and text, with pictures of the templates to pick from |
+| `/new-post quick` | Describe the post and add photos; Claude picks the rest and shows you one summary to approve |
 | `/edit-run` | Change an existing run (by run ID or Figma link); adds a Revisions entry |
 | `/sync-templates` | Refresh the template list after designers change the Templates page (also runs automatically) |
 
