@@ -1,0 +1,417 @@
+{
+  "runId": "BG-20261027-1153-nick-zaitsev",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 11:53",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T11:53:05+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Carousel article",
+  "color": "Light Purple",
+  "contentMode": "draft",
+  "brief": {
+    "topic": "Who Bride&Groom.video is (from the reference carousel screenshots)",
+    "keyMessage": "We handle the edit so wedding filmmakers get their time back, in their own style",
+    "audience": "Wedding filmmakers",
+    "tone": "Warm, confident",
+    "callToAction": "Let's grow together"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover · Photo Card Tall · Light Purple",
+      "group": "Cover / Photo Card Tall",
+      "color": "Light Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Photo Card Tall / Light Purple",
+        "key": "0a3f07c0db38aede8bd5466f4e2e982def99ead8"
+      },
+      "text": {
+        "tagline": {
+          "value": "Who We Are",
+          "source": "draft"
+        },
+        "title": {
+          "value": "We give wedding filmmakers",
+          "source": "draft",
+          "accent": "time back"
+        },
+        "page-number": {
+          "value": "01",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "auto"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "images/6.webp",
+          "file": "6.jpg",
+          "convertedFrom": "6.webp",
+          "width": 987,
+          "height": 1481,
+          "bytes": 102941,
+          "crop": 0.17
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Content · Photo + Title · Light Color",
+      "group": "Carousel / Photo + Title",
+      "color": "Light Color",
+      "colorFallback": "Light Purple → Light Color",
+      "component": {
+        "name": "Carousel / Photo + Title / Light Color",
+        "key": "3f464a88e6b6e33b0371eb1e506fd85434d99599"
+      },
+      "text": {
+        "title": {
+          "value": "You're behind",
+          "source": "draft",
+          "accent": "because you're good"
+        },
+        "body": {
+          "value": "More bookings meant less time to edit. We built Bride&Groom because that cycle shouldn't be the cost of doing good work →",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "images/7.webp",
+          "file": "7.jpg",
+          "convertedFrom": "7.webp",
+          "width": 2000,
+          "height": 1333,
+          "bytes": 323704,
+          "crop": 0.07
+        }
+      }
+    },
+    {
+      "index": 3,
+      "label": "03 Content · Two Photos + Text · Light Color",
+      "group": "Carousel / Two Photos + Text",
+      "color": "Light Color",
+      "colorFallback": "Light Purple → Light Color",
+      "component": {
+        "name": "Carousel / Two Photos + Text / Light Color",
+        "key": "920501f726151bea7c655401b29cc31111024c09"
+      },
+      "text": {
+        "tagline": {
+          "value": "Our work",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Edited like\nyou would",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Full-service post-production for wedding filmmakers: highlights, features, social cuts. We handle the timeline so you can grow →",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "path": "images/8.webp",
+          "file": "8.jpg",
+          "convertedFrom": "8.webp",
+          "width": 987,
+          "height": 1480,
+          "bytes": 465141,
+          "crop": 0.06
+        },
+        "photo[1]": {
+          "source": "file",
+          "path": "images/9.webp",
+          "file": "9.jpg",
+          "convertedFrom": "9.webp",
+          "width": 987,
+          "height": 1481,
+          "bytes": 398080,
+          "crop": 0.06
+        }
+      }
+    },
+    {
+      "index": 4,
+      "label": "04 Content · Photo + Text · Light Color",
+      "group": "Carousel / Photo + Text",
+      "color": "Light Color",
+      "colorFallback": "Light Purple → Light Color",
+      "component": {
+        "name": "Carousel / Photo + Text / Light Color",
+        "key": "1e613bc9ada6770029b62632ddbd6cd10a47ec00"
+      },
+      "text": {
+        "tagline": {
+          "value": "Your way",
+          "source": "draft"
+        },
+        "title": {
+          "value": "We edit\nto you",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Before we touch a clip, we learn how you tell a story: pacing, color, instincts. Edits that don't feel outsourced, they feel like you →",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "images/10.webp",
+          "file": "10.jpg",
+          "convertedFrom": "10.webp",
+          "width": 2000,
+          "height": 1333,
+          "bytes": 225466,
+          "crop": 0.03
+        }
+      }
+    },
+    {
+      "index": 5,
+      "label": "05 Outro · Outro · Light Purple",
+      "group": "Carousel / Outro",
+      "color": "Light Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Outro / Light Purple",
+        "key": "633bde46ac7e2819615deb8842157f14c01a47d1"
+      },
+      "text": {
+        "title": {
+          "value": "Let's grow",
+          "source": "draft",
+          "accent": "together"
+        },
+        "page-number": {
+          "value": "05",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "auto"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    }
+  ],
+  "caption": null,
+  "hashtags": [],
+  "warnings": [
+    {
+      "slide": 2,
+      "kind": "color-fallback",
+      "detail": "Light Purple → Light Color (no Light Purple content layouts)"
+    },
+    {
+      "slide": 3,
+      "kind": "color-fallback",
+      "detail": "Light Purple → Light Color (no Light Purple content layouts)"
+    },
+    {
+      "slide": 4,
+      "kind": "color-fallback",
+      "detail": "Light Purple → Light Color (no Light Purple content layouts)"
+    },
+    {
+      "slide": 1,
+      "kind": "watermark",
+      "detail": "photo: 6.webp carries Unsplash+ watermarks; operator chose Use as is for now (replace later with /edit-run)"
+    },
+    {
+      "slide": 3,
+      "kind": "watermark",
+      "detail": "photo[1]: 9.webp carries Unsplash+ watermarks; operator chose Use as is for now (replace later with /edit-run)"
+    },
+    {
+      "slide": 1,
+      "kind": "low-resolution",
+      "detail": "photo: 987 px wide, best ≥ 1080 px"
+    }
+  ],
+  "answers": [
+    {
+      "step": "1/9",
+      "question": "What format is this post?",
+      "answer": "Carousel"
+    },
+    {
+      "step": "2/9",
+      "question": "What kind of carousel is it?",
+      "answer": "Carousel article"
+    },
+    {
+      "step": "3/9",
+      "question": "Which color?",
+      "answer": "More…"
+    },
+    {
+      "step": "3/9",
+      "question": "Which color? (more)",
+      "answer": "Light Purple"
+    },
+    {
+      "step": "4/9",
+      "question": "How many slides?",
+      "answer": "5 (Recommended)"
+    },
+    {
+      "step": "4/9",
+      "question": "Auto-composed sequence: 01 Cover · Photo Card Tall · Light Purple / 02 Photo + Title · Light Color / 03 Two Photos + Text · Light Color / 04 Photo + Text · Light Color / 05 Outro · Light Purple",
+      "answer": "Use this"
+    },
+    {
+      "step": "5/9",
+      "question": "How do you want to fill in the text?",
+      "answer": "Draft it from a brief"
+    },
+    {
+      "step": "5/9",
+      "question": "Brief: What is the carousel about?",
+      "answer": "Just take the content of this post as a reference https://www.instagram.com/p/DYVkyMeHRVP/?img_index=6"
+    },
+    {
+      "step": "5/9",
+      "question": "Instagram link could not be opened; paste text or screenshots",
+      "answer": "5 screenshots of the reference carousel (Who We Are / What we noticed / What we do / Your style. Always. / We grow with you)"
+    },
+    {
+      "step": "5/9",
+      "question": "How does this draft look?",
+      "answer": "Use this draft"
+    },
+    {
+      "step": "7/9",
+      "question": "Photos for slides 01–04 (01 portrait 4:5 ≈1080 px; 02 landscape 1.4:1 ≈1030 px; 03 two portraits ≈5:7 ≈500 px, black and white; 04 landscape ≈3:2 ≈1030 px)",
+      "answer": "5 images attached (6.webp–10.webp), assigned in order"
+    },
+    {
+      "step": "7/9",
+      "question": "How do you want to handle the watermarked photos (cover and table setting)?",
+      "answer": "Use as is for now"
+    },
+    {
+      "step": "8/9",
+      "question": "Caption for the post?",
+      "answer": "Skip"
+    },
+    {
+      "step": "9/9",
+      "question": "Ready to build?",
+      "answer": "Build it"
+    },
+    {
+      "step": "Build",
+      "question": "Slide 02 title runs to 2 lines. How should I fix it?",
+      "answer": "Move words to italic (Recommended)"
+    }
+  ],
+  "figma": {
+    "sectionId": "2422:1168",
+    "summaryCardId": "2426:1217",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-1153-nick-zaitsev_01",
+        "nodeId": "2422:1169"
+      },
+      {
+        "index": 2,
+        "name": "BG-20261027-1153-nick-zaitsev_02",
+        "nodeId": "2422:1188"
+      },
+      {
+        "index": 3,
+        "name": "BG-20261027-1153-nick-zaitsev_03",
+        "nodeId": "2422:1197"
+      },
+      {
+        "index": 4,
+        "name": "BG-20261027-1153-nick-zaitsev_04",
+        "nodeId": "2422:1207"
+      },
+      {
+        "index": 5,
+        "name": "BG-20261027-1153-nick-zaitsev_05",
+        "nodeId": "2422:1215"
+      }
+    ],
+    "mediaSectionId": "2420:1345",
+    "media": [
+      {
+        "file": "6.jpg",
+        "nodeId": "2420:2",
+        "imageHash": "09b4daa47b828bf651158081c1de2fd951a5c5bf"
+      },
+      {
+        "file": "7.jpg",
+        "nodeId": "2420:1341",
+        "imageHash": "8bd36797fa2c72e48abc7359acc60ec6d22c6f2b"
+      },
+      {
+        "file": "8.jpg",
+        "nodeId": "2420:1342",
+        "imageHash": "d078fdd839ded6e7f95c1066cd7b7d46612a3bc4"
+      },
+      {
+        "file": "9.jpg",
+        "nodeId": "2420:1343",
+        "imageHash": "0f57bb608cc62bdb78676cd2cf9755c1b1cd12dc"
+      },
+      {
+        "file": "10.jpg",
+        "nodeId": "2420:1344",
+        "imageHash": "8825ecab65bfd9a0827f2e77a04462ae6d59f39c"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T12:07:00+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-27T12:03:00+00:00",
+        "errors": 0,
+        "warnings": 1,
+        "screenshot": "photos blank: WebP uploads not decoded by Figma; converted to JPEG, re-uploaded and swapped in",
+        "detail": "slide 02 title runs to 2 lines"
+      },
+      {
+        "at": "2026-10-27T12:07:00+00:00",
+        "errors": 0,
+        "warnings": 0,
+        "screenshot": "checked",
+        "detail": "slide 02 title split changed (You're behind / because you're good): 1 line each, photo back to template height"
+      }
+    ]
+  }
+}
