@@ -1,0 +1,424 @@
+{
+  "runId": "BG-20261027-2058-nick-zaitsev",
+  "mode": "quick",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 20:58",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T20:58:59+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "carousel",
+  "contentType": "Carousel article",
+  "color": "Pink",
+  "contentMode": "draft",
+  "brief": {
+    "text": "Carousel: 3 details couples forget when planning a garden ceremony — shade for guests, sound so everyone hears the vows, and a plan B for rain. CTA: save this for your planning. Warm colors.",
+    "topic": "3 details couples forget when planning a garden ceremony",
+    "keyMessage": "Shade for guests, sound so everyone hears the vows, a plan B for rain",
+    "audience": "Bride&Groom audience (assumed)",
+    "tone": "warm, friendly (assumed)",
+    "callToAction": "Save this for your planning",
+    "format": "carousel",
+    "color": "warm colors"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover · Swipe · Pink",
+      "group": "Cover / Swipe",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Swipe / Pink",
+        "key": "20cc347cf7b9a67cba51819a223afcb6407b34da"
+      },
+      "text": {
+        "tagline": {
+          "value": "Planning a garden ceremony?",
+          "source": "draft"
+        },
+        "title": {
+          "value": "3 details",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "couples forget",
+          "source": "draft"
+        },
+        "button-label": {
+          "value": "Swipe",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo[0]": {
+          "source": "file",
+          "path": "runs/.cache/test/carousel-photos/04-flowers-detail.jpg",
+          "file": "04-flowers-detail.jpg",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 334724,
+          "crop": 0.005,
+          "imageHash": "adee4ad974e14bbbceb42fe399ec7c54061aae7e",
+          "mediaNodeId": "2488:20"
+        },
+        "photo[1]": {
+          "source": "file",
+          "path": "runs/.cache/test/carousel-photos/02-table-square.jpg",
+          "file": "02-table-square.jpg",
+          "width": 987,
+          "height": 987,
+          "bytes": 333908,
+          "crop": 0.109,
+          "imageHash": "c7b2850bb0d0a11ee21bd98c6f876cd1b1ab976a",
+          "mediaNodeId": "2488:21"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Text · Title + Pagination · Light",
+      "group": "Carousel / Title + Pagination",
+      "color": "Light",
+      "colorFallback": "Pink → Light",
+      "component": {
+        "name": "Carousel / Title + Pagination / Light",
+        "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116"
+      },
+      "text": {
+        "tagline": {
+          "value": "Often forgotten",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Give your guests",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "some shade",
+          "source": "draft"
+        },
+        "body": {
+          "value": "An outdoor ceremony in full sun gets uncomfortable fast. Plan trees, a canopy or parasols so guests stay cool through the vows.",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "02",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    },
+    {
+      "index": 3,
+      "label": "03 Photo · Photo + Title · Light Color",
+      "group": "Carousel / Photo + Title",
+      "color": "Light Color",
+      "colorFallback": "Pink → Light Color",
+      "component": {
+        "name": "Carousel / Photo + Title / Light Color",
+        "key": "3f464a88e6b6e33b0371eb1e506fd85434d99599"
+      },
+      "text": {
+        "title": {
+          "value": "Make sure everyone",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "hears the vows",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Wind, birds and open space swallow voices. A small speaker and a mic for the officiant and the couple keep every word clear.",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "runs/.cache/test/carousel-photos/03-aisle-landscape.jpg",
+          "file": "03-aisle-landscape.jpg",
+          "width": 987,
+          "height": 700,
+          "bytes": 227185,
+          "crop": 0.006,
+          "imageHash": "4b895c5ba301f4cbe4d79a5409fdf579185f1980",
+          "mediaNodeId": "2488:22"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "label": "04 Text · Title + Pagination · Light",
+      "group": "Carousel / Title + Pagination",
+      "color": "Light",
+      "colorFallback": "Pink → Light",
+      "component": {
+        "name": "Carousel / Title + Pagination / Light",
+        "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116"
+      },
+      "text": {
+        "tagline": {
+          "value": "Easy to miss",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Always have a",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "plan B for rain",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Garden weather can turn in an hour. Hold a tent or an indoor space nearby and agree in advance when you will make the call.",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "04",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    },
+    {
+      "index": 5,
+      "label": "05 Outro · Pink",
+      "group": "Carousel / Outro",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Outro / Pink",
+        "key": "bb7b8d813196f2d479451a42ac443d8eaba52191"
+      },
+      "text": {
+        "title": {
+          "value": "Save this",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "post",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "05",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {}
+    }
+  ],
+  "caption": "Planning a garden ceremony? Here are 3 details couples often forget: shade for guests, sound so everyone hears the vows, and a plan B for rain. Save this for your planning.",
+  "hashtags": [
+    "#gardenwedding",
+    "#weddingplanning",
+    "#outdoorceremony",
+    "#weddingtips",
+    "#brideandgroom"
+  ],
+  "warnings": [
+    {
+      "slide": 2,
+      "kind": "color-fallback",
+      "detail": "Pink → Light (Title + Pagination has no Pink, Light Pink or Light Color variant)"
+    },
+    {
+      "slide": 3,
+      "kind": "color-fallback",
+      "detail": "Pink → Light Color (Photo + Title has no Pink or Light Pink variant)"
+    },
+    {
+      "slide": 4,
+      "kind": "color-fallback",
+      "detail": "Pink → Light (Title + Pagination has no Pink, Light Pink or Light Color variant)"
+    },
+    {
+      "slide": 3,
+      "kind": "low-resolution",
+      "detail": "photo: 03-aisle-landscape.jpg is 987 px wide, best 1028 px; operator chose Use it"
+    },
+    {
+      "slide": null,
+      "kind": "photo-unused",
+      "detail": "01-gazebo-portrait.jpg not used (no slot it fits without a heavy crop)"
+    },
+    {
+      "slide": null,
+      "kind": "test-run",
+      "detail": "TEST run from the skill test; do not publish"
+    }
+  ],
+  "answers": [
+    {
+      "step": "mode",
+      "question": "Which mode?",
+      "answer": "Quick (argument `quick`)"
+    },
+    {
+      "step": "brief",
+      "question": "Tell me what the post is about … Then add the photos …",
+      "answer": "Carousel: 3 details couples forget when planning a garden ceremony — shade for guests, sound so everyone hears the vows, and a plan B for rain. CTA: save this for your planning. Warm colors. [photos: folder runs/.cache/test/carousel-photos/ (4 JPGs)]"
+    },
+    {
+      "step": "decide",
+      "question": "Format",
+      "answer": "Format → Carousel (brief names it)"
+    },
+    {
+      "step": "decide",
+      "question": "Content type",
+      "answer": "Content type → Carousel article (tips: cover → content → outro)"
+    },
+    {
+      "step": "decide",
+      "question": "Color",
+      "answer": "Color → Pink (brief: warm → Pink/Yellow family; Pink has 3 layouts for a carousel article: 2 covers + outro; Light Yellow 2, Yellow 1)"
+    },
+    {
+      "step": "decide",
+      "question": "Color fallback",
+      "answer": "Content slides have no Pink or Light Pink layout → Light Color (Photo + Title), Light (Title + Pagination, no Light Color variant)"
+    },
+    {
+      "step": "decide",
+      "question": "Slides",
+      "answer": "Slides → 5 (cover + one slide per detail (3) + outro)"
+    },
+    {
+      "step": "decide",
+      "question": "Layouts",
+      "answer": "01 Cover · Swipe · Pink (two photo slots, filled at 0% and 11% crop) · 02 Title + Pagination · 03 Photo + Title (landscape slot, aisle photo 1% crop) · 04 Title + Pagination · 05 Outro · Pink (no layout twice in a row)"
+    },
+    {
+      "step": "decide",
+      "question": "Photos",
+      "answer": "01 photo[0] ← 04-flowers-detail.jpg (portrait, crop 1%) · 01 photo[1] ← 02-table-square.jpg (square, crop 11%) · 03 photo ← 03-aisle-landscape.jpg (landscape, crop 1%) · not used: 01-gazebo-portrait.jpg (the only remaining photo slots are landscape: 43–45% crop; text-only slides used instead)"
+    },
+    {
+      "step": "draft",
+      "question": "Slide 01 · button-label (≈5 chars)",
+      "answer": "Swipe (template text kept)"
+    },
+    {
+      "step": "draft",
+      "question": "Call to action",
+      "answer": "Outro: \"Save this | post\"; full CTA \"Save this for your planning.\" in the caption"
+    },
+    {
+      "step": "draft",
+      "question": "Caption",
+      "answer": "Planning a garden ceremony? Here are 3 details couples often forget: shade for guests, sound so everyone hears the vows, and a plan B for rain. Save this for your planning. #gardenwedding #weddingplanning #outdoorceremony #weddingtips #brideandgroom"
+    },
+    {
+      "step": "photo-check",
+      "question": "Slide 03 photo 03-aisle-landscape.jpg is 987 px wide; the slot is best at 1028 px (low resolution). Use it · Another image · Pick another layout",
+      "answer": "Use it (the only wider photo, 04-flowers-detail.jpg, would be cut by 43%)"
+    },
+    {
+      "step": "review",
+      "question": "Build it · Change something · Switch to detailed · Cancel",
+      "answer": "Change something: use the square photo on the cover"
+    },
+    {
+      "step": "review-change",
+      "question": "Cover photo",
+      "answer": "No change: the square photo (02-table-square.jpg) is already the cover's main framed photo (photo[1], crop 11%); 04-flowers-detail.jpg is only the background behind the card"
+    },
+    {
+      "step": "review",
+      "question": "Build it · Change something · Switch to detailed · Cancel",
+      "answer": "Build it"
+    }
+  ],
+  "figma": {
+    "sectionId": "2491:1615",
+    "summaryCardId": "2493:1669",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-2058-nick-zaitsev_01",
+        "nodeId": "2491:1668"
+      },
+      {
+        "index": 2,
+        "name": "BG-20261027-2058-nick-zaitsev_02",
+        "nodeId": "2491:1682"
+      },
+      {
+        "index": 3,
+        "name": "BG-20261027-2058-nick-zaitsev_03",
+        "nodeId": "2491:1696"
+      },
+      {
+        "index": 4,
+        "name": "BG-20261027-2058-nick-zaitsev_04",
+        "nodeId": "2491:1705"
+      },
+      {
+        "index": 5,
+        "name": "BG-20261027-2058-nick-zaitsev_05",
+        "nodeId": "2491:1719"
+      }
+    ],
+    "mediaSectionId": "2489:20",
+    "media": [
+      {
+        "nodeId": "2488:20",
+        "name": "media/BG-20261027-2058-nick-zaitsev/04-flowers-detail.jpg",
+        "imageHash": "adee4ad974e14bbbceb42fe399ec7c54061aae7e"
+      },
+      {
+        "nodeId": "2488:21",
+        "name": "media/BG-20261027-2058-nick-zaitsev/02-table-square.jpg",
+        "imageHash": "c7b2850bb0d0a11ee21bd98c6f876cd1b1ab976a"
+      },
+      {
+        "nodeId": "2488:22",
+        "name": "media/BG-20261027-2058-nick-zaitsev/03-aisle-landscape.jpg",
+        "imageHash": "4b895c5ba301f4cbe4d79a5409fdf579185f1980"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T21:17:55+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-27T21:17:55+00:00",
+        "errors": 0,
+        "warnings": 0,
+        "screenshot": "checked"
+      }
+    ]
+  }
+}

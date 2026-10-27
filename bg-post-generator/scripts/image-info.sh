@@ -7,7 +7,7 @@ f="$1"
 if [ -d "$f" ]; then
   find "$f" -maxdepth 1 -type f | sort | while IFS= read -r x; do
     case "$(printf '%s' "$x" | tr '[:upper:]' '[:lower:]')" in
-      *.png|*.jpg|*.jpeg|*.webp) "$0" "$x" ;;
+      *.png|*.jpg|*.jpeg|*.webp) bash "$0" "$x" ;;
       *) printf '{"path":"%s","skipped":"not a PNG/JPG/WebP file"}\n' "$x" ;;
     esac
   done

@@ -1,0 +1,215 @@
+{
+  "runId": "BG-20261027-2049-nick-zaitsev",
+  "mode": "quick",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 20:49",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T20:49:11+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Cover",
+  "color": "Purple",
+  "contentMode": "draft",
+  "brief": {
+    "text": "Feed post announcing that our editing calendar for spring 2027 is open. Key message: book your spring editing slot early, slots are limited. CTA: Send us your first project. Calm, elegant mood.",
+    "topic": "Spring 2027 editing calendar is open",
+    "keyMessage": "Book your spring editing slot early, slots are limited",
+    "audience": "Bride&Groom audience (wedding photographers/videographers)",
+    "tone": "calm, elegant",
+    "callToAction": "Send us your first project",
+    "format": "feed",
+    "color": "calm, elegant mood"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover · Photo Card Tall · Purple",
+      "group": "Cover / Photo Card Tall",
+      "color": "Purple",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Photo Card Tall / Purple",
+        "key": "5badfb1fad249256ac0f12049f6f85b05c419cb0"
+      },
+      "text": {
+        "tagline": {
+          "value": "Book early, slots are limited",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Spring 2027 editing is",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "now open",
+          "source": "draft"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        },
+        "page-number": {
+          "value": "01",
+          "source": "auto"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "runs/.cache/test/quick-feed.jpg",
+          "file": "quick-feed.jpg",
+          "width": 987,
+          "height": 1234,
+          "bytes": 408741,
+          "crop": 0.0045,
+          "imageHash": "41ed3fc4a6a57e3064b8b7056a6c091003eee3b3",
+          "mediaNodeId": "2483:20"
+        }
+      }
+    }
+  ],
+  "caption": "Our editing calendar for spring 2027 is open. Slots are limited, so book your spring editing slot early. Ready when you are: send us your first project.",
+  "hashtags": [
+    "#weddingvideo",
+    "#weddingfilm",
+    "#videoediting",
+    "#weddingvideographer",
+    "#brideandgroom"
+  ],
+  "warnings": [
+    {
+      "slide": 1,
+      "kind": "low-resolution",
+      "detail": "photo: quick-feed.jpg is 987 px wide, best 1080 px; operator chose Use it"
+    },
+    {
+      "slide": null,
+      "kind": "test-run",
+      "detail": "TEST run from the skill test; do not publish"
+    }
+  ],
+  "answers": [
+    {
+      "step": "mode",
+      "question": "Which mode?",
+      "answer": "Quick (argument `quick`)"
+    },
+    {
+      "step": "brief",
+      "question": "Tell me what the post is about … Then add the photos …",
+      "answer": "Feed post announcing that our editing calendar for spring 2027 is open. Key message: book your spring editing slot early, slots are limited. CTA: Send us your first project. Calm, elegant mood. [photo: runs/.cache/test/quick-feed.jpg]"
+    },
+    {
+      "step": "decide",
+      "question": "Format",
+      "answer": "Format → Feed post (brief names it)"
+    },
+    {
+      "step": "decide",
+      "question": "Content type",
+      "answer": "Content type → Cover (an announcement)"
+    },
+    {
+      "step": "decide",
+      "question": "Color",
+      "answer": "Color → Purple (brief: calm, elegant; calm → Blue/Purple family; Purple has 3 Cover layouts, Blue none; the only photo layout with 0% crop in that family)"
+    },
+    {
+      "step": "decide",
+      "question": "Slides",
+      "answer": "Slides → 1 (single feed post)"
+    },
+    {
+      "step": "decide",
+      "question": "Layout",
+      "answer": "Layout → Cover / Photo Card Tall / Purple (one portrait photo fills its 4:5 slot, crop 0%; Swipe layouts need 2 photos and show a Swipe button)"
+    },
+    {
+      "step": "decide",
+      "question": "Photo",
+      "answer": "01 photo ← quick-feed.jpg (portrait, crop 0%)"
+    },
+    {
+      "step": "draft",
+      "question": "Slide 01 · tagline (≈32 chars, 1 line)",
+      "answer": "Book early, slots are limited"
+    },
+    {
+      "step": "draft",
+      "question": "Slide 01 · title (≈42 chars, 3 lines; the last part is italic)",
+      "answer": "Our spring 2027 editing calendar is | now open"
+    },
+    {
+      "step": "draft",
+      "question": "Call to action",
+      "answer": "CTA in the caption (no button or body slot in this layout)"
+    },
+    {
+      "step": "draft",
+      "question": "Caption",
+      "answer": "Our editing calendar for spring 2027 is open. Slots are limited, so book your spring editing slot early. Ready when you are: send us your first project. #weddingvideo #weddingfilm #videoediting #weddingvideographer #brideandgroom"
+    },
+    {
+      "step": "photo-check",
+      "question": "Slide 01 photo quick-feed.jpg is 987 px wide; the slot is best at 1080 px (low resolution). Use it · Another image · Pick another layout",
+      "answer": "Use it"
+    },
+    {
+      "step": "review",
+      "question": "Build it · Change something · Switch to detailed · Cancel",
+      "answer": "Change something: make the cover title a bit shorter"
+    },
+    {
+      "step": "review-change",
+      "question": "Slide 01 title",
+      "answer": "Our spring 2027 editing calendar is | now open → Spring 2027 editing is | now open"
+    },
+    {
+      "step": "review",
+      "question": "Build it · Change something · Switch to detailed · Cancel",
+      "answer": "Build it"
+    }
+  ],
+  "figma": {
+    "sectionId": "2485:1600",
+    "summaryCardId": "2487:1615",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-2049-nick-zaitsev_01",
+        "nodeId": "2485:1643"
+      }
+    ],
+    "mediaSectionId": "2484:20",
+    "media": [
+      {
+        "nodeId": "2483:20",
+        "name": "media/BG-20261027-2049-nick-zaitsev/quick-feed.jpg",
+        "imageHash": "41ed3fc4a6a57e3064b8b7056a6c091003eee3b3"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T20:56:58+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-27T20:56:58+00:00",
+        "errors": 0,
+        "warnings": 0,
+        "screenshot": "checked"
+      }
+    ]
+  }
+}

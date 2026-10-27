@@ -8,7 +8,7 @@
 //   A label is one line of dark text (wrapped as needed); text after a "\n" is a grey second line.
 //   --cols    tiles per row (default: all in one row up to 5, then 4 per row)
 //   --width   tile width in px (default 200; previews are 270 px wide and are scaled down)
-//   --strip   one row, small tiles (120 px), "→" between them: for carousel / story-set sequences
+//   --strip   one row, small tiles (140 px), "→" between them: for carousel / story-set sequences
 // A missing or unreadable image becomes a grey "no preview" tile, so the sheet is always produced.
 // <out.png> must be inside runs/.cache/ (the script is pre-approved in .claude/settings.json, so it writes nowhere else).
 // Prints {"out","width","height","items","missing":[…]} as JSON. Exits 1 only if nothing could be written.
@@ -34,7 +34,7 @@ const rel = relative(cacheDir, resolve(out));
 if (!out.endsWith('.png') || !rel || rel.startsWith('..') || isAbsolute(rel)) { console.error(`contact-sheet: <out.png> must be a .png inside ${cacheDir}`); process.exit(1); }
 const items = [];
 for (let i = 0; i < rest.length; i += 2) items.push({ path: rest[i], label: rest[i + 1] });
-const tileW = +opt('--width', strip ? 120 : 200);
+const tileW = +opt('--width', strip ? 140 : 200);
 const cols = strip ? items.length : +opt('--cols', items.length <= 5 ? items.length : 4);
 const title = opt('--title', '');
 
@@ -247,7 +247,7 @@ const missing = items.filter((_, i) => !imgs[i]).map(it => it.path);
 const rows = Math.ceil(items.length / cols);
 // Each row is as tall as its tallest preview (a missing one counts as a 4:5 feed tile).
 const rowH = Array.from({ length: rows }, (_, r) => Math.round(tileW * Math.max(...imgs.slice(r * cols, (r + 1) * cols).map(im => (im ? im.h / im.w : 1.25)))));
-const pad = 16, gap = strip ? 28 : 20, lineH = GH + 2, labelLines = strip ? 2 : 3;
+const pad = 16, gap = strip ? 28 : 20, lineH = GH + 2, labelLines = 3;
 const perLine = Math.floor(tileW / GW);
 const titleH = title ? GH * 2 + 12 : 0;
 const labelH = 8 + labelLines * lineH;

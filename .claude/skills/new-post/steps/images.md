@@ -20,5 +20,6 @@ A dragged file path, a typed path, a folder, a direct image URL, a name on the M
 
 ## Assigning several photos (folder, Quick mode, /bulk-posts)
 - Detailed mode asks: Assign in order · Choose per slot.
-- Automatic: give each slot the photo with the lowest crop among those not yet used, then the larger one when crops tie; never reuse a photo while unused ones remain; prefer the sharpest (widest) photo for the cover and full-bleed slots. Then run the checks above.
+- Automatic: fill slots in slide order, and within a slide the largest slot first. Give each slot the photo with the lowest crop among those not yet used, then the larger one when crops tie; never reuse a photo while unused ones remain; prefer the sharpest (widest) photo for the cover and full-bleed slots. Then run the checks above. Photos left over: `steps/compose.md` → *Layouts for photos*.
+- Name slots in operator words, never by id: "cover: main photo" (the larger visible slot), "cover: background photo" (`photo` at the slide's root behind a card), "avatar". The ids `photo[0]`/`photo[1]` are for the build spec only.
 - Show the assignment as `01 photo ← IMG_2041.jpg (portrait, crop 4%)` lines in the review.

@@ -9,7 +9,8 @@ url="${1:-}"; f="${2:-}"
 die() { printf '{"success":false,"error":"%s"}\n' "$1"; exit 1; }
 [ $# -eq 2 ] || die "usage: upload-asset.sh <submitUrl> <file>"
 case "$url" in https://mcp.figma.com/mcp/upload/*) ;; *) die "not a Figma upload URL" ;; esac
-case "$url" in *[[:space:]\"\'\`\$\;\|\&\<\>]*) die "unexpected characters in URL" ;; esac
+# '&' is allowed: Figma's URLs carry ?scaleMode=…&currentPageId=…; the URL is passed to curl as one quoted argument.
+case "$url" in *[[:space:]\"\'\`\$\;\|\<\>]*) die "unexpected characters in URL" ;; esac
 [ -f "$f" ] || die "file not found: $f"
 mime=$(file --mime-type -b "$f" 2>/dev/null || echo unknown)
 case "$mime" in image/png|image/jpeg|image/webp) ;; *) die "not a PNG/JPEG/WebP image ($mime)" ;; esac

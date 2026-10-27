@@ -6,10 +6,10 @@ Shared rules for every text a post gets: typed by the operator (Detailed 6/9), d
 Every slot with `kind: "text"` that is not `auto` and not `role: "fixed"`.
 - Budget = `capacity` chars over `lines` lines. For quotes and long text also say how much fills the design (`defaultLength`): much shorter text leaves a gap.
 - `|` splits a title from its `-accent` part. Without `|` and with an accent slot, pick the last words that fit the accent line and show the split. For a mixed-font single node, pass the accent separately (`accent` in the build spec).
-- `keep` → keep the template text (record `source: "kept-default"`); offer it as a choice where it makes sense (story headlines, `button-label`).
-- `hide` → hide an optional field (listed in `hide`).
+- `keep` (an operator answer, not a manifest flag) → keep the template text (record `source: "kept-default"`); offer it as a choice where it makes sense (story headlines, `button-label`). In Quick mode, list every kept template text on the review screen ("button: *Swipe* (template text)"), so **Build it** is the operator's explicit OK.
+- `hide` (an operator answer) → hide a field that is not essential (a tagline, a source label): its path goes into the build spec's `hide`.
 - List slots (`list` set): bullets come from the template; strip typed `1.` / `•`.
-- Auto slots: `page-number` = two-digit slide index; `tag-label` keeps its template text (`kept: true` in verify).
+- Auto slots: `page-number` = two-digit slide index (a single post shows "01"; `steps/compose.md` prefers layouts without one); `tag-label` keeps its template text (`kept: true` in verify).
 - Reviews: quote, author name, handle (if the layout shows one), source (Google/Facebook: pick a layout with that platform, or fill `source-label`), star rating (1..`stars`).
 
 ## Over budget
