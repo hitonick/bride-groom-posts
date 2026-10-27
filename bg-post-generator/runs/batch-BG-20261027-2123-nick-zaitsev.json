@@ -1,0 +1,93 @@
+{
+  "batchId": "BG-20261027-2123-nick-zaitsev",
+  "createdBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 21:23",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T21:23:44+00:00"
+  },
+  "brief": "runs/.cache/test/bulk/brief.md",
+  "posts": [
+    {
+      "n": 1,
+      "runId": "BG-20261027-2123-nick-zaitsev-01",
+      "date": "Mon 2 Nov",
+      "label": "Post 1",
+      "format": "carousel",
+      "template": "Cover / Swipe → Carousel / Title + Pagination → Carousel / Intro List → Carousel / Outro",
+      "color": "Pink",
+      "status": "verified",
+      "sectionId": "2497:1669",
+      "link": "https://www.figma.com/design/kjSjiNXV1FhVk8UBF9NY8t/?node-id=2497-1669",
+      "warnings": [
+        "Slide 02: No content layouts in Pink: slides 02–04 use Light (Pink → Light)",
+        "Slide 03: Pink → Light",
+        "Slide 04: Pink → Light"
+      ],
+      "caption": "Planning a garden ceremony? Three details couples often forget: shade for guests, clear sound for the vows and a plan B for rain. Get them right and the day feels calmer. Save this for your planning.",
+      "hashtags": [
+        "#gardenwedding",
+        "#weddingplanning",
+        "#weddingtips",
+        "#outdoorceremony",
+        "#brideandgroom"
+      ]
+    },
+    {
+      "n": 2,
+      "runId": "BG-20261027-2123-nick-zaitsev-02",
+      "date": "Wed 4 Nov",
+      "label": "Post 2",
+      "format": "feed",
+      "template": "Cover / Photo Top",
+      "color": "Dark",
+      "status": "failed",
+      "sectionId": "2500:1729",
+      "link": "https://www.figma.com/design/kjSjiNXV1FhVk8UBF9NY8t/?node-id=2500-1729",
+      "warnings": [
+        "Slide 01: bad-tiny-broken.jpg is 180×120 px; the slot needs about 1028 px wide (operator: Use it)",
+        "Slide 01: This layout shows the photo in black and white"
+      ],
+      "caption": "Our editing calendar for spring 2027 is open. Book your spring editing slot early to get the dates you need. Send us your first project and we'll take it from there.",
+      "hashtags": [
+        "#weddingvideo",
+        "#weddingeditor",
+        "#videoediting",
+        "#weddingfilm",
+        "#spring2027"
+      ],
+      "error": "The photo bad-tiny-broken.jpg (180×120 px) did not decode in Figma: the upload succeeded, but the screenshot shows only a thin pixelated strip at the top and the rest of the photo area is flat grey. The file is damaged (cut off), so it cannot be used. The slide and card were kept as built."
+    },
+    {
+      "n": 3,
+      "runId": "BG-20261027-2123-nick-zaitsev-03",
+      "date": "Fri 6 Nov",
+      "label": "Post 3",
+      "format": "story",
+      "template": "Story / Poll Card",
+      "color": "Blue",
+      "status": "verified",
+      "sectionId": "2503:1736",
+      "link": "https://www.figma.com/design/kjSjiNXV1FhVk8UBF9NY8t/?node-id=2503-1736",
+      "warnings": [
+        "Slide 01: 03-aisle-landscape.jpg is landscape; the portrait slot crops 53% of it (operator: Use it)",
+        "Slide 01: Headline keeps the template text 'Poll Time!'; the question goes in Instagram's poll sticker"
+      ],
+      "caption": "First look or aisle reveal? Tell us in the poll on our story. Vote in the poll!",
+      "hashtags": [
+        "#firstlook",
+        "#weddingday",
+        "#weddingvideo",
+        "#brideandgroom"
+      ]
+    }
+  ],
+  "summary": {
+    "built": 3,
+    "verified": 2,
+    "failed": 1
+  }
+}

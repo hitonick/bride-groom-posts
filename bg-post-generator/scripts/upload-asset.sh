@@ -17,5 +17,7 @@ case "$mime" in image/png|image/jpeg|image/webp) ;; *) die "not a PNG/JPEG/WebP 
 max=$(sed -nE 's/.*"maxBytes"[[:space:]]*:[[:space:]]*([0-9]+).*/\1/p' "$(dirname "$0")/../config.json" | head -1)
 bytes=$(wc -c < "$f" | tr -d ' ')
 [ "$bytes" -le "${max:-10485760}" ] || die "file is $bytes bytes, limit ${max:-10485760}"
+# Figma accepts cut-off files but shows them grey, so refuse them here.
+bash "$(dirname "$0")/image-info.sh" "$f" | grep -q '"complete":true' || die "the file is damaged or cut off; save or export it again"
 curl -sS --fail-with-body --max-time 120 -X POST -F "file=@${f};type=${mime}" "$url"
 echo

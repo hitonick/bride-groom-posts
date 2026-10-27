@@ -263,7 +263,7 @@ items.forEach((it, i) => {
   const im = imgs[i];
   if (im) { const dh = Math.round(tileW * im.h / im.w); blit(cv, im, cx, cy, tileW, Math.min(dh, tileH)); }
   else { fill(cv, cx, cy, tileW, tileH, TILE_BG); drawText(cv, 'no preview', cx + Math.max(4, (tileW - 10 * GW) >> 1), cy + (tileH >> 1) - 8, MUTED); }
-  const [main, sub = ''] = it.label.split('\n');
+  const [main, sub = ''] = it.label.split(/\n|\\n/); // a real newline, or a literal \n typed in a shell string
   const mainLines = wrap(main, perLine, sub ? labelLines - 1 : labelLines), subLines = sub ? wrap(sub, perLine, labelLines - mainLines.length) : [];
   [...mainLines.map(l => [l, INK]), ...subLines.map(l => [l, MUTED])].forEach(([l, rgb], k) => drawText(cv, l, cx, cy + tileH + 8 + k * lineH, rgb));
   if (strip && i < items.length - 1) drawText(cv, '→', cx + tileW + ((gap - GW) >> 1), cy + (tileH >> 1) - 8, MUTED);

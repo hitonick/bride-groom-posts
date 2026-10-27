@@ -24,6 +24,10 @@ Every slot with `kind: "text"` that is not `auto` and not `role: "fixed"`.
 - **Never invent** review quotes, names, handles, ratings, statistics, prices, dates or client details. Reviews are always the operator's real text: if a review post has none, ask for it (Detailed mode skips drafting for reviews). Missing facts become a question, not a guess.
 - Record each text with `source: "draft"` (or `typed`, `kept-default`, `auto`).
 
+## Story headlines
+Poll and question story layouts have very short headline slots (4–5 characters, e.g. "Poll Time!"): the question itself goes in Instagram's poll sticker, not on the slide. Keep the template headline (`kept-default`, listed on the review) unless a short word of the operator's fits, and put the question in the review so the operator can paste it into the sticker.
+
 ## Caption
+Stories have no caption: skip it for stories and story sets (the call to action goes on the slide or into the sticker text).
 - At most `config.instagram.hashtagsMax` hashtags; caption ≤ `config.instagram.captionMaxChars`.
 - Detailed mode asks: Write my own · Draft it for me · Skip; Quick mode drafts it. Show the draft and let the operator use, edit or skip it.

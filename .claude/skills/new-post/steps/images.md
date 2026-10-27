@@ -10,10 +10,10 @@ A dragged file path, a typed path, a folder, a direct image URL, a name on the M
 - File / folder: `bash scripts/image-info.sh <path>`. Folders list PNG/JPG/WebP with sizes (others "skipped").
 - URL: `bash scripts/fetch-image.sh '<url>' <runId>/<name>` downloads it into `runs/.cache/` (it rejects non-images and files over the limit) and prints the same JSON as `image-info.sh`; then treat it as a file. If the download is blocked, say which host and ask for the file instead (README → *Cloud sessions*).
 - Media name: `use_figma` with `figma/stage-media.js` in `mode: 'lookup'` → reuse its `imageHash`.
-- Reject: type not in `config.media.types`, larger than `config.media.maxBytes`, unreadable. Clipboard pastes have no file: ask the operator to save it as a file and drag that in.
+- Reject: type not in `config.media.types`, larger than `config.media.maxBytes`, unreadable, or `"complete": false` (the file is cut off or damaged: Figma would accept it but show a grey box; `upload-asset.sh` refuses it too). Clipboard pastes have no file: ask the operator to save it as a file and drag that in.
 
 ## Checks (always, in every mode)
-- `crop = 1 - min(imgAspect, slotAspect) / max(imgAspect, slotAspect)`. Warn when crop > 0.25.
+- `crop = 1 - min(imgAspect, slotAspect) / max(imgAspect, slotAspect)`. Warn when crop > 0.25 (warning kind `image-crop`).
 - Warn when width < best width (`low-resolution`).
 - The operator decides on every heavy-crop or low-resolution photo: Use it · Another image · (Quick/bulk: Pick another layout). Record the decision.
 - `skip` keeps the template photo: warning `image-placeholder` (not for `background`; keeping a story background is fine and not a warning).
