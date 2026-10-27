@@ -55,6 +55,7 @@ To allow a host: the cloud environment menu in the session title bar → **Edit*
 | `/new-post` | Builds and checks a new post on the Generated page. Asks which mode you want: |
 | `/new-post detailed` | 9 short questions; you choose format, color, layouts and text, with pictures of the templates to pick from |
 | `/new-post quick` | Describe the post and add photos; Claude picks the rest and shows you one summary to approve |
+| `/bulk-posts` | Several posts at once (e.g. a week) from one brief file: one plan to approve, then each post is built, checked and linked. Start from `briefs/TEMPLATE.md` |
 | `/edit-run` | Change an existing run (by run ID or Figma link); adds a Revisions entry |
 | `/sync-templates` | Refresh the template list after designers change the Templates page (also runs automatically) |
 
@@ -76,5 +77,6 @@ No tokens, personal IDs or paths are stored in this folder. Each person signs in
 | `../.claude/skills/` (repository root) | `/new-post`, `/edit-run`, `/sync-templates` |
 | `figma/` | Scripts Claude runs inside Figma (scan, stage photos, build, verify, read a run) |
 | `scripts/` | Small local helpers (time zone, image size, image download/upload, contact sheets, previews, manifest assembly) |
+| `briefs/` | Briefs for `/bulk-posts`; copy `TEMPLATE.md` to start |
 | `runs/` | One JSON log per run (who, when, every answer, Figma node IDs); `runs/.cache/` holds temporary files and is not committed |
 | `docs/` | Operator guide (PDF + its HTML source) |

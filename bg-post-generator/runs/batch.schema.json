@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch.schema.json",
+  "title": "Bride&Groom batch index (runs/batch-<batchId>.json)",
+  "description": "Written by /bulk-posts: one entry per post of the brief, pointing to its run log runs/<runId>.json.",
+  "type": "object",
+  "required": ["batchId", "createdBy", "created", "posts", "summary"],
+  "properties": {
+    "batchId": { "type": "string", "pattern": "^BG-\\d{8}-\\d{4}-[a-z0-9-]+$" },
+    "createdBy": { "type": "object", "required": ["handle"], "properties": { "handle": { "type": "string" }, "email": { "type": "string" } } },
+    "created": { "type": "object", "properties": { "local": { "type": "string" }, "tz": { "type": "string" }, "iso": { "type": "string" } } },
+    "brief": { "type": "string", "description": "Path of the brief file (relative to bg-post-generator/), or \"pasted\"" },
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["n", "runId", "status"],
+        "properties": {
+          "n": { "type": "integer" },
+          "runId": { "type": "string" },
+          "date": { "type": "string" }, "label": { "type": "string" },
+          "format": { "type": "string" }, "template": { "type": "string" }, "color": { "type": "string" },
+          "status": { "enum": ["verified", "built-with-errors", "failed", "cancelled"] },
+          "error": { "type": "string" },
+          "sectionId": { "type": ["string", "null"] },
+          "link": { "type": ["string", "null"] },
+          "warnings": { "type": "array", "items": { "type": "string" } },
+          "caption": { "type": "string" },
+          "hashtags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "summary": { "type": "object", "properties": { "built": { "type": "integer" }, "verified": { "type": "integer" }, "failed": { "type": "integer" } } }
+  }
+}
