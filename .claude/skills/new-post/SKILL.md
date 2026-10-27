@@ -50,8 +50,17 @@ Ask the operator one question at a time, build the post from `templates/manifest
 5. `use_figma` with `figma/scan-hash.js` (ARGS from `config.pages.templates` and `config.scan`). Then check:
    - pages `Templates`, `Media`, `Generated` exist (names from `config.pages`); otherwise name the missing page and stop;
    - `hash` and `scannerVersion` equal the manifest's. If not, say "Templates changed, refreshing the list…" and run the `/sync-templates` procedure, then reload the manifest.
+   - `lookHash` equals the manifest's. If only this differs, the designs changed but not their fields: say "Template designs changed, refreshing the previews…" and run the `/sync-templates` procedure (it re-exports only the changed previews).
 6. Permission or seat errors at any point: stop and say exactly which access is missing ("your Figma account <email> needs **can edit** on the file").
 7. `bash scripts/local-time.sh` → `stamp`, `iso`, `local`, `tz`. Run ID = `BG-<stamp>-<handle>` (e.g. `BG-20261023-1430-anna`).
+
+## Previews
+Show the operator what they are choosing, as one image per question, never one image per option.
+- **Contact sheet** (before 3/9 and 4/9): `node scripts/contact-sheet.mjs runs/.cache/<runId>/<step>.png --title "<the question>" -- <preview> "<label>" …`, one pair per answer option, in the same order and with the same number and wording as the options (`1 · Hashtag · Pink`). `<preview>` = `templates/previews/<variant key>.png` (the variant's `preview` in the manifest). For 3/9 show each color's most typical layout for the chosen format and type; for a carousel's cover question show the covers, and so on.
+- **Strip** (carousel / story-set sequence at 4/9, and the review at 9/9): the same script with `--strip`, one tile per slide (`01 Cover`, `02 Text`, …).
+- **Delivery**: send the PNG with `SendUserFile` (`display: "render"`) when that tool exists (desktop and web show it inline); otherwise print its absolute path as a Markdown link `[sheet](/abs/path.png)` (clickable in the terminal). Then ask the question.
+- `AskUserQuestion` options also get a short text `preview`: the layout's fields and budgets, e.g. `title ≈24 chars · 2 lines\nphoto portrait 4:5\ntagline ≈9 chars`.
+- Missing previews show as grey "no preview" tiles. If the script fails or no previews exist, skip the image and ask the question as plain text: previews never block the questionnaire.
 
 ## Questions
 
@@ -62,14 +71,14 @@ Feed post (single) · Carousel · Story · Story set. Feed and carousel use `for
 Offer only types that exist for the chosen format, from the manifest's template `type`s and layouts, described in operator words (Review, Cover, Carousel article, Reviews carousel, Poll / Question / Opinion story…). A carousel article is Cover → Carousel content slides → Outro/Thank You.
 
 ### 3/9 Color
-List colors from the variants of the eligible templates, each with "N layouts". Most layouts first.
+List colors from the variants of the eligible templates, each with "N layouts". Most layouts first. Send a contact sheet first (see *Previews*).
 **Fallback** when a layout lacks the color: same hue lighter/darker (`Pink` ↔ `Light Pink`), then a neutral (`Light Color`, then `config.colorFallback.neutrals`). Never switch to another hue without asking. Tell the operator which slides fall back; record `colorFallback: "Pink → Light Color"` and a `color-fallback` warning.
 
 ### 4/9 Structure
-- Single post / story: pick the layout (group) among those available in the color.
+- Single post / story: pick the layout (group) among those available in the color. Send a contact sheet of the candidate layouts in that color first.
 - Carousel / story set: number of slides (offer 5 recommended, 3, 7; limits `config.instagram.carouselMinSlides`..`carouselMaxSlides`), then **Auto-compose** or **Manual**.
-  - Auto-compose: varied sequence cover → content → outro, no layout twice in a row, prefer layouts in the chosen color. Show it as `01 Cover · Text · Pink` lines and ask: Use this · Change a slide · Manual.
-  - Manual: ask the layout for each slide.
+  - Auto-compose: varied sequence cover → content → outro, no layout twice in a row, prefer layouts in the chosen color. Send it as a strip and as `01 Cover · Text · Pink` lines, then ask: Use this · Change a slide · Manual.
+  - Manual: ask the layout for each slide, with a contact sheet of that slide's candidates.
 - Never auto-pick a layout with `sharedWith` text slots (see manifest irregularities). If the operator picks one, warn that two fields will show the same text.
 - Mention grayscale photos (variant `grayscale`) before the image step: "this layout shows photos in black and white".
 
@@ -104,7 +113,7 @@ Accept: a dragged file path, a typed path, a folder, a direct image URL, a name 
 Write my own · Draft it for me · Skip. At most `config.instagram.hashtagsMax` hashtags, caption ≤ `captionMaxChars`. Show a draft and ask: Use it · Edit · Skip.
 
 ### 9/9 Review
-A compact table: format, type, color (+fallbacks), each slide (layout, color, every field value, image), caption, hashtags, warnings. Ask: Build it · Change something (name the step) · Cancel.
+Send the strip of the chosen templates (one tile per slide, in its final color), then a compact table: format, type, color (+fallbacks), each slide (layout, color, every field value, image), caption, hashtags, warnings. Ask: Build it · Change something (name the step) · Cancel.
 
 ## Build
 1. **Upload photos**: `upload_assets` (`count` = number of files, `currentPageId` = the Media page id from preflight) → one `submitUrl` per file; then `bash scripts/upload-asset.sh '<submitUrl>' <file>` for each (it only posts PNG/JPEG/WebP files to `https://mcp.figma.com/mcp/upload/…`) → `imageHash`, `placedOnNodeId`. Then `use_figma` with `figma/stage-media.js`, `mode: 'stage'`, `runId`, `items: [{ nodeId: placedOnNodeId, file, width, height }]` → `imageHash` per file, `sectionId`.

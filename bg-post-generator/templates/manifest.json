@@ -1,8 +1,8 @@
 {
   "$schema": "./manifest.schema.json",
   "version": 1,
-  "generatedAt": "2026-10-27T21:35:42+02:00",
-  "generatedBy": "Ilya Luzan",
+  "generatedAt": "2026-10-27T20:13:25+00:00",
+  "generatedBy": "Nick Zaitsev",
   "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
   "templatesPage": "Templates",
   "scanArgs": {
@@ -30,7 +30,8 @@
     "templatesPerCall": 10
   },
   "hash": "d2af0a88c5ede3c3",
-  "scannerVersion": 4,
+  "lookHash": "7444fb8786bee508",
+  "scannerVersion": 5,
   "componentCount": 109,
   "templateCount": 40,
   "fontWidthRatios": {
@@ -175,37 +176,49 @@
           "color": "Light Blue",
           "name": "Review / UI Dark / Light Blue",
           "key": "24a737407589680a7ecd9415c82fb31da31773d4",
-          "nodeId": "2016:174"
+          "nodeId": "2016:174",
+          "look": "06acddb73e36eb7e",
+          "preview": "previews/24a737407589680a7ecd9415c82fb31da31773d4.png"
         },
         {
           "color": "Light Purple",
           "name": "Review / UI Dark / Light Purple",
           "key": "0a1012100777b2b3c5b9f33af0991d7b9657003f",
-          "nodeId": "2016:175"
+          "nodeId": "2016:175",
+          "look": "cffac4605b27f86b",
+          "preview": "previews/0a1012100777b2b3c5b9f33af0991d7b9657003f.png"
         },
         {
           "color": "Light Pink",
           "name": "Review / UI Dark / Light Pink",
           "key": "1fe6fae1ffcde37516494561fa7a6a26bb46fb15",
-          "nodeId": "2016:176"
+          "nodeId": "2016:176",
+          "look": "45ea03517f7a95d8",
+          "preview": "previews/1fe6fae1ffcde37516494561fa7a6a26bb46fb15.png"
         },
         {
           "color": "Purple",
           "name": "Review / UI Dark / Purple",
           "key": "1c2b110971e0fc624e5c71c2c31ae0e0e3a9b3f1",
-          "nodeId": "2016:177"
+          "nodeId": "2016:177",
+          "look": "59949fe395cf3b3e",
+          "preview": "previews/1c2b110971e0fc624e5c71c2c31ae0e0e3a9b3f1.png"
         },
         {
           "color": "Pink",
           "name": "Review / UI Dark / Pink",
           "key": "e6ed055b6652b1404c2fdb4a33f5f6ab78b2de10",
-          "nodeId": "2016:178"
+          "nodeId": "2016:178",
+          "look": "be9d510284273903",
+          "preview": "previews/e6ed055b6652b1404c2fdb4a33f5f6ab78b2de10.png"
         },
         {
           "color": "Blue",
           "name": "Review / UI Dark / Blue",
           "key": "2fe8e89f9418c2741388db92335bc479b5dd71e9",
-          "nodeId": "2016:179"
+          "nodeId": "2016:179",
+          "look": "f5139f56fe19e3ed",
+          "preview": "previews/2fe8e89f9418c2741388db92335bc479b5dd71e9.png"
         }
       ]
     },
@@ -312,37 +325,49 @@
           "color": "Yellow",
           "name": "Review / UI Bubble / Yellow",
           "key": "1c46adb30c4102c5bceb6dca0c36170e44e88e3e",
-          "nodeId": "2016:180"
+          "nodeId": "2016:180",
+          "look": "efc836b4ad19a715",
+          "preview": "previews/1c46adb30c4102c5bceb6dca0c36170e44e88e3e.png"
         },
         {
           "color": "Pink",
           "name": "Review / UI Bubble / Pink",
           "key": "5c941f98549029d3bab3789d11750b0688403065",
-          "nodeId": "2016:181"
+          "nodeId": "2016:181",
+          "look": "d0064d4d783ab92c",
+          "preview": "previews/5c941f98549029d3bab3789d11750b0688403065.png"
         },
         {
           "color": "Purple",
           "name": "Review / UI Bubble / Purple",
           "key": "d5dcaed1f13ab4ac7f91fc683e397c186dccce5e",
-          "nodeId": "2016:182"
+          "nodeId": "2016:182",
+          "look": "efc60378c1244167",
+          "preview": "previews/d5dcaed1f13ab4ac7f91fc683e397c186dccce5e.png"
         },
         {
           "color": "Light Pink",
           "name": "Review / UI Bubble / Light Pink",
           "key": "2c9ef6ba97566b5873f70a9dce2cdd51a123bbd4",
-          "nodeId": "2016:183"
+          "nodeId": "2016:183",
+          "look": "d78942360c96dab7",
+          "preview": "previews/2c9ef6ba97566b5873f70a9dce2cdd51a123bbd4.png"
         },
         {
           "color": "Light Purple",
           "name": "Review / UI Bubble / Light Purple",
           "key": "a47c2cbc9704fb603b6745b5bd84cfaee8e15913",
-          "nodeId": "2016:184"
+          "nodeId": "2016:184",
+          "look": "328918b7907bdb16",
+          "preview": "previews/a47c2cbc9704fb603b6745b5bd84cfaee8e15913.png"
         },
         {
           "color": "Light Blue",
           "name": "Review / UI Bubble / Light Blue",
           "key": "d10a3a27cab1b901e2caf8ccfeacad2caa25876d",
-          "nodeId": "2016:185"
+          "nodeId": "2016:185",
+          "look": "1c2540e14810ed50",
+          "preview": "previews/d10a3a27cab1b901e2caf8ccfeacad2caa25876d.png"
         }
       ]
     },
@@ -466,7 +491,9 @@
           "color": "Default",
           "name": "Review / Platform / Facebook Photo",
           "key": "832ea19a473a4fb594eda88a5424fd1b9c2c2395",
-          "nodeId": "2016:186"
+          "nodeId": "2016:186",
+          "look": "d1cd392f66239c0e",
+          "preview": "previews/832ea19a473a4fb594eda88a5424fd1b9c2c2395.png"
         }
       ]
     },
@@ -590,7 +617,9 @@
           "color": "Default",
           "name": "Review / Platform / Google Photo",
           "key": "027abbb49e6ffdb65d18db1608d126af73aab6eb",
-          "nodeId": "2016:187"
+          "nodeId": "2016:187",
+          "look": "6e0b4733d1575588",
+          "preview": "previews/027abbb49e6ffdb65d18db1608d126af73aab6eb.png"
         }
       ]
     },
@@ -780,7 +809,9 @@
           "color": "Default",
           "name": "Review / Platform / Double",
           "key": "f2af1a0c77d211799f1f0d0becfee00ba007f484",
-          "nodeId": "2016:188"
+          "nodeId": "2016:188",
+          "look": "7608eb58dac3269d",
+          "preview": "previews/f2af1a0c77d211799f1f0d0becfee00ba007f484.png"
         }
       ]
     },
@@ -897,7 +928,9 @@
           "color": "Default",
           "name": "Review / Framed Photo",
           "key": "c56ab3bb747d7ddc39b8995c32b9f4cd27f0f652",
-          "nodeId": "2016:189"
+          "nodeId": "2016:189",
+          "look": "6b78a2b1be7fe160",
+          "preview": "previews/c56ab3bb747d7ddc39b8995c32b9f4cd27f0f652.png"
         }
       ]
     },
@@ -1014,7 +1047,9 @@
           "color": "Default",
           "name": "Review / Split / Text Bottom",
           "key": "00659358cdb39cf1c6abc14d58712b3f35c81f88",
-          "nodeId": "2016:190"
+          "nodeId": "2016:190",
+          "look": "8d8169bd68c7a8ba",
+          "preview": "previews/00659358cdb39cf1c6abc14d58712b3f35c81f88.png"
         }
       ]
     },
@@ -1131,7 +1166,9 @@
           "color": "Default",
           "name": "Review / Split / Text Top",
           "key": "c01b993b7262d90bafc43249c3fac3ab9b5a99f0",
-          "nodeId": "2016:191"
+          "nodeId": "2016:191",
+          "look": "e7f9d636cc6458b7",
+          "preview": "previews/c01b993b7262d90bafc43249c3fac3ab9b5a99f0.png"
         }
       ]
     },
@@ -1238,49 +1275,65 @@
           "color": "Light Blue",
           "name": "Review / Hashtag / Light Blue",
           "key": "f415305cff68ea9a6c58537018cc032edfdde191",
-          "nodeId": "2016:192"
+          "nodeId": "2016:192",
+          "look": "e0fc1df8a3e2664d",
+          "preview": "previews/f415305cff68ea9a6c58537018cc032edfdde191.png"
         },
         {
           "color": "Light Pink",
           "name": "Review / Hashtag / Light Pink",
           "key": "5106b07355b29f0f8eef47637e7353eeb437a765",
-          "nodeId": "2016:193"
+          "nodeId": "2016:193",
+          "look": "a00e64018df49a38",
+          "preview": "previews/5106b07355b29f0f8eef47637e7353eeb437a765.png"
         },
         {
           "color": "Light Purple",
           "name": "Review / Hashtag / Light Purple",
           "key": "b387107d01408ae36d653b117d72849d79ab3e32",
-          "nodeId": "2016:194"
+          "nodeId": "2016:194",
+          "look": "0ddab653ed787c38",
+          "preview": "previews/b387107d01408ae36d653b117d72849d79ab3e32.png"
         },
         {
           "color": "Yellow",
           "name": "Review / Hashtag / Yellow",
           "key": "4274ee1128b5ae111daa26c062dd672f960f6c38",
-          "nodeId": "2016:195"
+          "nodeId": "2016:195",
+          "look": "78dbf758eb88a67b",
+          "preview": "previews/4274ee1128b5ae111daa26c062dd672f960f6c38.png"
         },
         {
           "color": "Blue",
           "name": "Review / Hashtag / Blue",
           "key": "ddaa816667797bd1942e291779fc10eb30f32900",
-          "nodeId": "2016:196"
+          "nodeId": "2016:196",
+          "look": "769b33929420f1dd",
+          "preview": "previews/ddaa816667797bd1942e291779fc10eb30f32900.png"
         },
         {
           "color": "Pink",
           "name": "Review / Hashtag / Pink",
           "key": "6e18ff64fe7bd03812288cf45bc3face6453deb3",
-          "nodeId": "2016:197"
+          "nodeId": "2016:197",
+          "look": "294a8884f7395db7",
+          "preview": "previews/6e18ff64fe7bd03812288cf45bc3face6453deb3.png"
         },
         {
           "color": "Dark",
           "name": "Review / Hashtag / Dark",
           "key": "82a18d22a7957c0bb1065e5a3f0854cac5c1f392",
-          "nodeId": "2016:198"
+          "nodeId": "2016:198",
+          "look": "4017096ea355fe81",
+          "preview": "previews/82a18d22a7957c0bb1065e5a3f0854cac5c1f392.png"
         },
         {
           "color": "Purple",
           "name": "Review / Hashtag / Purple",
           "key": "a98a613bae0c64ba7a589e7846432e6d62f1d3ce",
-          "nodeId": "2016:199"
+          "nodeId": "2016:199",
+          "look": "0a29a1a10a6f35de",
+          "preview": "previews/a98a613bae0c64ba7a589e7846432e6d62f1d3ce.png"
         }
       ]
     },
@@ -1384,55 +1437,73 @@
           "color": "Light Yellow",
           "name": "Review / Pattern / Light Yellow",
           "key": "9e5e9a129b4ec4b0c1630aa4f8be9e3ca1f9c556",
-          "nodeId": "2016:200"
+          "nodeId": "2016:200",
+          "look": "35d5690b6ea803f8",
+          "preview": "previews/9e5e9a129b4ec4b0c1630aa4f8be9e3ca1f9c556.png"
         },
         {
           "color": "Light Blue",
           "name": "Review / Pattern / Light Blue",
           "key": "e777c4434f794e0f13137f4985c7b502e2e19319",
-          "nodeId": "2016:201"
+          "nodeId": "2016:201",
+          "look": "e5c7d32aec2db3ad",
+          "preview": "previews/e777c4434f794e0f13137f4985c7b502e2e19319.png"
         },
         {
           "color": "Light Pink",
           "name": "Review / Pattern / Light Pink",
           "key": "3a38ae0f53906faabfd0ea56744e4c6b4da70688",
-          "nodeId": "2016:202"
+          "nodeId": "2016:202",
+          "look": "2f6eabda3fdc2d11",
+          "preview": "previews/3a38ae0f53906faabfd0ea56744e4c6b4da70688.png"
         },
         {
           "color": "Light Purple",
           "name": "Review / Pattern / Light Purple",
           "key": "ce4ad4adc5da4bec063f77d882d51f7b620c1f4a",
-          "nodeId": "2016:203"
+          "nodeId": "2016:203",
+          "look": "67b2b9edcce698d8",
+          "preview": "previews/ce4ad4adc5da4bec063f77d882d51f7b620c1f4a.png"
         },
         {
           "color": "Yellow",
           "name": "Review / Pattern / Yellow",
           "key": "b804e811e1b4c18e05e2a33e47b90dba99de74de",
-          "nodeId": "2016:204"
+          "nodeId": "2016:204",
+          "look": "c3e93eba8f55137d",
+          "preview": "previews/b804e811e1b4c18e05e2a33e47b90dba99de74de.png"
         },
         {
           "color": "Blue",
           "name": "Review / Pattern / Blue",
           "key": "2b428b449e93c25087a4593fa2731df656bba675",
-          "nodeId": "2016:205"
+          "nodeId": "2016:205",
+          "look": "2418fbe9e055f1e2",
+          "preview": "previews/2b428b449e93c25087a4593fa2731df656bba675.png"
         },
         {
           "color": "Pink",
           "name": "Review / Pattern / Pink",
           "key": "e19eb3e004fd8be225bdb41e38d65abb0beb0fdf",
-          "nodeId": "2016:206"
+          "nodeId": "2016:206",
+          "look": "5a875bec5b15acef",
+          "preview": "previews/e19eb3e004fd8be225bdb41e38d65abb0beb0fdf.png"
         },
         {
           "color": "Dark",
           "name": "Review / Pattern / Dark",
           "key": "f864bfd47d1d044f1f87d283738c7da2ef87bd17",
-          "nodeId": "2016:207"
+          "nodeId": "2016:207",
+          "look": "73ed1384482bcedf",
+          "preview": "previews/f864bfd47d1d044f1f87d283738c7da2ef87bd17.png"
         },
         {
           "color": "Purple",
           "name": "Review / Pattern / Purple",
           "key": "b4806c3d492231f5f69695eee4cb45a33aefa372",
-          "nodeId": "2016:208"
+          "nodeId": "2016:208",
+          "look": "62b5c710ae306d4d",
+          "preview": "previews/b4806c3d492231f5f69695eee4cb45a33aefa372.png"
         }
       ]
     },
@@ -1549,7 +1620,9 @@
           "color": "Default",
           "name": "Review / Photo Overlay",
           "key": "e8789b79211e58c317fe719e2d7d26c6495ed983",
-          "nodeId": "2016:209"
+          "nodeId": "2016:209",
+          "look": "8d5370c7c5bb65ce",
+          "preview": "previews/e8789b79211e58c317fe719e2d7d26c6495ed983.png"
         }
       ]
     },
@@ -1629,7 +1702,9 @@
           "color": "Light",
           "name": "Cover / Photo Short / Light",
           "key": "dc396f139fbaa298764ebc3d2150824171d1f78b",
-          "nodeId": "2037:174"
+          "nodeId": "2037:174",
+          "look": "83f8408dcc9975b0",
+          "preview": "previews/dc396f139fbaa298764ebc3d2150824171d1f78b.png"
         },
         {
           "color": "Dark",
@@ -1638,7 +1713,9 @@
           "nodeId": "2037:180",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "d41ed834132096cd",
+          "preview": "previews/c6833c2d2d2175c2f6426f00fbf8f3609aa90abf.png"
         }
       ]
     },
@@ -1718,7 +1795,9 @@
           "color": "Light",
           "name": "Cover / Photo Card / Light",
           "key": "ae038f6b3304112efb1a68435a6aed4d95efdf4e",
-          "nodeId": "2037:175"
+          "nodeId": "2037:175",
+          "look": "5b5c62d190539dc8",
+          "preview": "previews/ae038f6b3304112efb1a68435a6aed4d95efdf4e.png"
         }
       ]
     },
@@ -1875,13 +1954,17 @@
           "color": "Light Purple",
           "name": "Cover / Photo Card Tall / Light Purple",
           "key": "0a3f07c0db38aede8bd5466f4e2e982def99ead8",
-          "nodeId": "2037:176"
+          "nodeId": "2037:176",
+          "look": "d2167a927498f39f",
+          "preview": "previews/0a3f07c0db38aede8bd5466f4e2e982def99ead8.png"
         },
         {
           "color": "Purple",
           "name": "Cover / Photo Card Tall / Purple",
           "key": "5badfb1fad249256ac0f12049f6f85b05c419cb0",
-          "nodeId": "2037:177"
+          "nodeId": "2037:177",
+          "look": "1d0992e4da4c635d",
+          "preview": "previews/5badfb1fad249256ac0f12049f6f85b05c419cb0.png"
         }
       ]
     },
@@ -1999,7 +2082,9 @@
           "color": "Purple",
           "name": "Cover / Swipe Centered / Purple",
           "key": "53b06f3eeca2eade151e13d694b9861efe347f80",
-          "nodeId": "2037:178"
+          "nodeId": "2037:178",
+          "look": "d9b793b7d9942f38",
+          "preview": "previews/53b06f3eeca2eade151e13d694b9861efe347f80.png"
         }
       ]
     },
@@ -2140,7 +2225,9 @@
           "color": "Pink",
           "name": "Cover / Swipe / Pink",
           "key": "20cc347cf7b9a67cba51819a223afcb6407b34da",
-          "nodeId": "2037:179"
+          "nodeId": "2037:179",
+          "look": "a6eda8faaf412de5",
+          "preview": "previews/20cc347cf7b9a67cba51819a223afcb6407b34da.png"
         }
       ]
     },
@@ -2305,7 +2392,9 @@
           "color": "Light Blue",
           "name": "Cover / Text + Body / Light Blue",
           "key": "9ee623b30a8c4a72f696004a71f78c730db3da7d",
-          "nodeId": "2037:181"
+          "nodeId": "2037:181",
+          "look": "b5d80d2a451eaf37",
+          "preview": "previews/9ee623b30a8c4a72f696004a71f78c730db3da7d.png"
         }
       ]
     },
@@ -2446,19 +2535,25 @@
           "color": "Pink",
           "name": "Cover / Text / Pink",
           "key": "019ae86451351c1e5998918422a805aa2b59fa55",
-          "nodeId": "2037:182"
+          "nodeId": "2037:182",
+          "look": "5508343b9de5ee9c",
+          "preview": "previews/019ae86451351c1e5998918422a805aa2b59fa55.png"
         },
         {
           "color": "Light Yellow",
           "name": "Cover / Text / Light Yellow",
           "key": "8d2c0e5cc5fd99b57ce37921b5a4ec6ffb8895a0",
-          "nodeId": "2037:184"
+          "nodeId": "2037:184",
+          "look": "8f5506a81e486499",
+          "preview": "previews/8d2c0e5cc5fd99b57ce37921b5a4ec6ffb8895a0.png"
         },
         {
           "color": "Dark",
           "name": "Cover / Text / Dark",
           "key": "db7cab3ff537477a9bb9ff40386e7e6ad357b6dd",
-          "nodeId": "2037:185"
+          "nodeId": "2037:185",
+          "look": "9968100b145c4506",
+          "preview": "previews/db7cab3ff537477a9bb9ff40386e7e6ad357b6dd.png"
         }
       ]
     },
@@ -2586,7 +2681,9 @@
           "color": "Purple",
           "name": "Cover / Quote / Purple",
           "key": "6b22bf2be30ee0f44d1191efb3310e752b48914b",
-          "nodeId": "2037:183"
+          "nodeId": "2037:183",
+          "look": "d66e6068c782d847",
+          "preview": "previews/6b22bf2be30ee0f44d1191efb3310e752b48914b.png"
         }
       ]
     },
@@ -2693,7 +2790,9 @@
           "nodeId": "2037:186",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "7f6bcd52cfa30b6f",
+          "preview": "previews/055f463118cf2516c3a3390722903ee1a7574ca3.png"
         }
       ]
     },
@@ -2800,7 +2899,9 @@
           "nodeId": "2037:187",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "e4d23595f957beea",
+          "preview": "previews/b0e4f205faa14bd63d4e5075cd63c09caaecb65f.png"
         }
       ]
     },
@@ -2965,13 +3066,17 @@
           "color": "Light",
           "name": "Carousel / Title + Pagination / Light",
           "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116",
-          "nodeId": "2324:22744"
+          "nodeId": "2324:22744",
+          "look": "cce8381e58c44b11",
+          "preview": "previews/74f7a1c6834ff04a0652a5d63970c5151f36e116.png"
         },
         {
           "color": "Dark",
           "name": "Carousel / Title + Pagination / Dark",
           "key": "ceec03149f0b3bddb8d28dee1333b127ec914163",
-          "nodeId": "2324:22692"
+          "nodeId": "2324:22692",
+          "look": "34d3818273fa56f9",
+          "preview": "previews/ceec03149f0b3bddb8d28dee1333b127ec914163.png"
         }
       ]
     },
@@ -3128,7 +3233,9 @@
           "nodeId": "2324:22640",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "0c53e82003becdff",
+          "preview": "previews/7975c119c135f8618ad3eaac1bc06ff74d1f8668.png"
         },
         {
           "color": "Dark",
@@ -3137,7 +3244,9 @@
           "nodeId": "2324:22601",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "9fca05b2afd1e3ff",
+          "preview": "previews/214d46f7c4d050a47b90a937ac7b6bd248d63803.png"
         }
       ]
     },
@@ -3254,61 +3363,81 @@
           "color": "Light",
           "name": "Carousel / Outro / Light",
           "key": "746bb2be18e784a9662490fe25d91b067d6448a3",
-          "nodeId": "2324:22665"
+          "nodeId": "2324:22665",
+          "look": "e5c3ce2dadeb7d98",
+          "preview": "previews/746bb2be18e784a9662490fe25d91b067d6448a3.png"
         },
         {
           "color": "Light Yellow",
           "name": "Carousel / Outro / Light Yellow",
           "key": "d6dbcb85f1f451c222c18e81e93cb87c52ea8f94",
-          "nodeId": "2092:174"
+          "nodeId": "2092:174",
+          "look": "8a95583e91398fff",
+          "preview": "previews/d6dbcb85f1f451c222c18e81e93cb87c52ea8f94.png"
         },
         {
           "color": "Light Pink",
           "name": "Carousel / Outro / Light Pink",
           "key": "6f453c242fead872da3a737b7f70064ec34e372c",
-          "nodeId": "2092:175"
+          "nodeId": "2092:175",
+          "look": "4d37c39b1f0682ce",
+          "preview": "previews/6f453c242fead872da3a737b7f70064ec34e372c.png"
         },
         {
           "color": "Light Purple",
           "name": "Carousel / Outro / Light Purple",
           "key": "633bde46ac7e2819615deb8842157f14c01a47d1",
-          "nodeId": "2092:176"
+          "nodeId": "2092:176",
+          "look": "032dcfe9e0d8a3f8",
+          "preview": "previews/633bde46ac7e2819615deb8842157f14c01a47d1.png"
         },
         {
           "color": "Light Blue",
           "name": "Carousel / Outro / Light Blue",
           "key": "42d44dff7e457f750d1245a746f9d6ac015978f2",
-          "nodeId": "2092:177"
+          "nodeId": "2092:177",
+          "look": "643e25e8a203a519",
+          "preview": "previews/42d44dff7e457f750d1245a746f9d6ac015978f2.png"
         },
         {
           "color": "Yellow",
           "name": "Carousel / Outro / Yellow",
           "key": "0a0f8b15c72afc84fd1c2688e42d4ff90e9d8336",
-          "nodeId": "2092:178"
+          "nodeId": "2092:178",
+          "look": "d1babbff96520c1c",
+          "preview": "previews/0a0f8b15c72afc84fd1c2688e42d4ff90e9d8336.png"
         },
         {
           "color": "Pink",
           "name": "Carousel / Outro / Pink",
           "key": "bb7b8d813196f2d479451a42ac443d8eaba52191",
-          "nodeId": "2092:179"
+          "nodeId": "2092:179",
+          "look": "c5aa68d4f355a6a3",
+          "preview": "previews/bb7b8d813196f2d479451a42ac443d8eaba52191.png"
         },
         {
           "color": "Blue",
           "name": "Carousel / Outro / Blue",
           "key": "240e264b9fae9611ca87c4b4d65383758695d21b",
-          "nodeId": "2092:180"
+          "nodeId": "2092:180",
+          "look": "4460db9033bfdae3",
+          "preview": "previews/240e264b9fae9611ca87c4b4d65383758695d21b.png"
         },
         {
           "color": "Purple",
           "name": "Carousel / Outro / Purple",
           "key": "470441b84c2c4543d9dbe68ff41ccaaf644ea4f6",
-          "nodeId": "2092:181"
+          "nodeId": "2092:181",
+          "look": "c0b070ca278a3dff",
+          "preview": "previews/470441b84c2c4543d9dbe68ff41ccaaf644ea4f6.png"
         },
         {
           "color": "Dark",
           "name": "Carousel / Outro / Dark",
           "key": "fc8a2f1b17a4cf9c32c9964f2dcb0578b6f79a36",
-          "nodeId": "2092:182"
+          "nodeId": "2092:182",
+          "look": "5c3fb088219ed20d",
+          "preview": "previews/fc8a2f1b17a4cf9c32c9964f2dcb0578b6f79a36.png"
         }
       ]
     },
@@ -3391,13 +3520,17 @@
           "nodeId": "2092:183",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "3469105d2fea79da",
+          "preview": "previews/cea4ed4e03c970f634be3ccab587721bc3d330d4.png"
         },
         {
           "color": "Light Color",
           "name": "Carousel / Photo + Body / Light Color",
           "key": "92c7eecb42b5d63f6486ac3b171e1fa692a2afe9",
-          "nodeId": "2092:184"
+          "nodeId": "2092:184",
+          "look": "5a37a9ad166a7938",
+          "preview": "previews/92c7eecb42b5d63f6486ac3b171e1fa692a2afe9.png"
         },
         {
           "color": "Dark",
@@ -3406,7 +3539,9 @@
           "nodeId": "2092:185",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "eb1fd38b6ef87ac4",
+          "preview": "previews/9107a4aade143db7b407f9e09542e6ce3fd95752.png"
         }
       ]
     },
@@ -3513,13 +3648,17 @@
           "nodeId": "2092:186",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "61fb372f22a66312",
+          "preview": "previews/77faf24323272407db1df9bbc9593731a2fae6b1.png"
         },
         {
           "color": "Light Color",
           "name": "Carousel / Photo + Title / Light Color",
           "key": "3f464a88e6b6e33b0371eb1e506fd85434d99599",
-          "nodeId": "2092:187"
+          "nodeId": "2092:187",
+          "look": "312bb7c7d4545ec4",
+          "preview": "previews/3f464a88e6b6e33b0371eb1e506fd85434d99599.png"
         },
         {
           "color": "Dark",
@@ -3528,7 +3667,9 @@
           "nodeId": "2092:188",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "79f51cf532d2880e",
+          "preview": "previews/9405670399dcda808f1f07ab400cc2cde3276af2.png"
         }
       ]
     },
@@ -3649,7 +3790,9 @@
           "grayscale": [
             "photo[0]",
             "photo[1]"
-          ]
+          ],
+          "look": "e3553e43262d5b7e",
+          "preview": "previews/0ac51dadc39d205e31b7aa300fc41f51419be8e2.png"
         },
         {
           "color": "Light Color",
@@ -3659,7 +3802,9 @@
           "grayscale": [
             "photo[0]",
             "photo[1]"
-          ]
+          ],
+          "look": "01fe28e50c04f842",
+          "preview": "previews/920501f726151bea7c655401b29cc31111024c09.png"
         },
         {
           "color": "Dark",
@@ -3669,7 +3814,9 @@
           "grayscale": [
             "photo[0]",
             "photo[1]"
-          ]
+          ],
+          "look": "3ccdb55b8e96f094",
+          "preview": "previews/f9bbed9494308f9be4e926c69985f85cb166aa4d.png"
         }
       ]
     },
@@ -3776,13 +3923,17 @@
           "nodeId": "2092:192",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "4285b4a24cc76427",
+          "preview": "previews/c928fcf29739b68424ebd2858db6305e607acb06.png"
         },
         {
           "color": "Light Color",
           "name": "Carousel / Photo + Text / Light Color",
           "key": "1e613bc9ada6770029b62632ddbd6cd10a47ec00",
-          "nodeId": "2092:193"
+          "nodeId": "2092:193",
+          "look": "26fa568a89dd5ea1",
+          "preview": "previews/1e613bc9ada6770029b62632ddbd6cd10a47ec00.png"
         },
         {
           "color": "Dark",
@@ -3791,7 +3942,9 @@
           "nodeId": "2092:194",
           "grayscale": [
             "photo"
-          ]
+          ],
+          "look": "3c0cbb6c1dcf042b",
+          "preview": "previews/33b7e743579077172eecaec4639158a409c653ef.png"
         }
       ]
     },
@@ -4017,7 +4170,9 @@
           "color": "Light",
           "name": "Carousel / Thank You / Light",
           "key": "898c74c11e24dfc5f1e9575022d3823cd08bf295",
-          "nodeId": "2092:195"
+          "nodeId": "2092:195",
+          "look": "d28f030bf69ed184",
+          "preview": "previews/898c74c11e24dfc5f1e9575022d3823cd08bf295.png"
         }
       ]
     },
@@ -4197,7 +4352,9 @@
           "color": "Dark",
           "name": "Carousel / Photo Collage / Dark",
           "key": "b6b021e236d4f30ba33e1e30ce1e9c55dfa979c7",
-          "nodeId": "2092:196"
+          "nodeId": "2092:196",
+          "look": "d04218e4731be367",
+          "preview": "previews/b6b021e236d4f30ba33e1e30ce1e9c55dfa979c7.png"
         }
       ]
     },
@@ -4388,7 +4545,9 @@
           "color": "Light",
           "name": "Carousel / Intro List / Light",
           "key": "7407d5a26976b8b689625fbec607b30a83caa336",
-          "nodeId": "2092:197"
+          "nodeId": "2092:197",
+          "look": "c5e29c8577dfab38",
+          "preview": "previews/7407d5a26976b8b689625fbec607b30a83caa336.png"
         }
       ]
     },
@@ -4485,7 +4644,9 @@
           "color": "Dark",
           "name": "Story / Photo Talk / Dark",
           "key": "c88f13f3024cce73c56787a99c641eebf3363e94",
-          "nodeId": "2112:174"
+          "nodeId": "2112:174",
+          "look": "3317b0ca8fb6e42d",
+          "preview": "previews/c88f13f3024cce73c56787a99c641eebf3363e94.png"
         }
       ]
     },
@@ -4590,25 +4751,33 @@
           "color": "Blue",
           "name": "Story / Share Opinion / Blue",
           "key": "9bcfd14f0a1759d5bf49bb36f9d3bbaac90066c2",
-          "nodeId": "2112:175"
+          "nodeId": "2112:175",
+          "look": "e0d7294514069212",
+          "preview": "previews/9bcfd14f0a1759d5bf49bb36f9d3bbaac90066c2.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Share Opinion / Yellow",
           "key": "8628aed7d2083f16cd229ad826bd3ba550bdb137",
-          "nodeId": "2112:176"
+          "nodeId": "2112:176",
+          "look": "9e54025d6d1390ba",
+          "preview": "previews/8628aed7d2083f16cd229ad826bd3ba550bdb137.png"
         },
         {
           "color": "Pink",
           "name": "Story / Share Opinion / Pink",
           "key": "f426a91790fbbadfa0e924704994507a4e3a49e0",
-          "nodeId": "2112:177"
+          "nodeId": "2112:177",
+          "look": "a53476574e902c4e",
+          "preview": "previews/f426a91790fbbadfa0e924704994507a4e3a49e0.png"
         },
         {
           "color": "Purple",
           "name": "Story / Share Opinion / Purple",
           "key": "efb8cdbb1e7b062911a4f055653327f46d410c70",
-          "nodeId": "2112:178"
+          "nodeId": "2112:178",
+          "look": "d0a9af09515f4c00",
+          "preview": "previews/efb8cdbb1e7b062911a4f055653327f46d410c70.png"
         }
       ]
     },
@@ -4668,25 +4837,33 @@
           "color": "Purple",
           "name": "Story / What Do You Think / Purple",
           "key": "f4db4b4dc160a0792216c9d6a31bee65b602f6d6",
-          "nodeId": "2112:179"
+          "nodeId": "2112:179",
+          "look": "c353fe53e4a904e8",
+          "preview": "previews/f4db4b4dc160a0792216c9d6a31bee65b602f6d6.png"
         },
         {
           "color": "Pink",
           "name": "Story / What Do You Think / Pink",
           "key": "aa8c24ce1912f337364cbf755886b4196c0c83e1",
-          "nodeId": "2112:180"
+          "nodeId": "2112:180",
+          "look": "7840e72f3cc2ec2c",
+          "preview": "previews/aa8c24ce1912f337364cbf755886b4196c0c83e1.png"
         },
         {
           "color": "Yellow",
           "name": "Story / What Do You Think / Yellow",
           "key": "750e43742225506e4ea025dc2458948b680a6183",
-          "nodeId": "2112:181"
+          "nodeId": "2112:181",
+          "look": "a6283c175f32847e",
+          "preview": "previews/750e43742225506e4ea025dc2458948b680a6183.png"
         },
         {
           "color": "Blue",
           "name": "Story / What Do You Think / Blue",
           "key": "f9b94887d2b3920ab2efd8ac868787db09d260c0",
-          "nodeId": "2112:182"
+          "nodeId": "2112:182",
+          "look": "f51dd346a47d88f7",
+          "preview": "previews/f9b94887d2b3920ab2efd8ac868787db09d260c0.png"
         }
       ]
     },
@@ -4791,25 +4968,33 @@
           "color": "Blue",
           "name": "Story / Question Card / Blue",
           "key": "609bec0694cd4295b971ba28be51099f99bb2462",
-          "nodeId": "2112:183"
+          "nodeId": "2112:183",
+          "look": "0ba37464493dd359",
+          "preview": "previews/609bec0694cd4295b971ba28be51099f99bb2462.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Question Card / Yellow",
           "key": "ee243612fcc263f0df6c499aba451d873432e15c",
-          "nodeId": "2112:184"
+          "nodeId": "2112:184",
+          "look": "f771b26a64deabfd",
+          "preview": "previews/ee243612fcc263f0df6c499aba451d873432e15c.png"
         },
         {
           "color": "Pink",
           "name": "Story / Question Card / Pink",
           "key": "0d44fd3ac3f315429a6fd3088e56e98b31254758",
-          "nodeId": "2112:185"
+          "nodeId": "2112:185",
+          "look": "8e72d613a51834e0",
+          "preview": "previews/0d44fd3ac3f315429a6fd3088e56e98b31254758.png"
         },
         {
           "color": "Purple",
           "name": "Story / Question Card / Purple",
           "key": "d87b0cd2fda4169d3f50de089b0fc87e0658c050",
-          "nodeId": "2112:186"
+          "nodeId": "2112:186",
+          "look": "f68c319f4241dad4",
+          "preview": "previews/d87b0cd2fda4169d3f50de089b0fc87e0658c050.png"
         }
       ]
     },
@@ -4929,25 +5114,33 @@
           "color": "Purple",
           "name": "Story / Poll Time / Purple",
           "key": "a2a0637ca4415d0362dd1880c8e58b14dec0181a",
-          "nodeId": "2112:187"
+          "nodeId": "2112:187",
+          "look": "d1466b213da7cfa6",
+          "preview": "previews/a2a0637ca4415d0362dd1880c8e58b14dec0181a.png"
         },
         {
           "color": "Pink",
           "name": "Story / Poll Time / Pink",
           "key": "058a4f479a91f0398905bef233e5ed8de3c78029",
-          "nodeId": "2112:188"
+          "nodeId": "2112:188",
+          "look": "568695b79ff82210",
+          "preview": "previews/058a4f479a91f0398905bef233e5ed8de3c78029.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Poll Time / Yellow",
           "key": "d6f812843ccbfe799d395261eeb4fd0a2ddee552",
-          "nodeId": "2112:189"
+          "nodeId": "2112:189",
+          "look": "dfb0c88b5dca8c16",
+          "preview": "previews/d6f812843ccbfe799d395261eeb4fd0a2ddee552.png"
         },
         {
           "color": "Blue",
           "name": "Story / Poll Time / Blue",
           "key": "14a1fd7a7861ea10b06dd68563bfa05364149f67",
-          "nodeId": "2112:190"
+          "nodeId": "2112:190",
+          "look": "c7b61dbb711664d2",
+          "preview": "previews/14a1fd7a7861ea10b06dd68563bfa05364149f67.png"
         }
       ]
     },
@@ -5014,25 +5207,33 @@
           "color": "Blue",
           "name": "Story / Poll & Vote / Blue",
           "key": "f79736449cdf0ccad8cc9d2e28c0c9ce845fb9ef",
-          "nodeId": "2112:191"
+          "nodeId": "2112:191",
+          "look": "251ca8eb32649044",
+          "preview": "previews/f79736449cdf0ccad8cc9d2e28c0c9ce845fb9ef.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Poll & Vote / Yellow",
           "key": "734d47722fddae3acb6c4c81b63a244a1af4b19a",
-          "nodeId": "2112:192"
+          "nodeId": "2112:192",
+          "look": "9b3e0e9d8194ae86",
+          "preview": "previews/734d47722fddae3acb6c4c81b63a244a1af4b19a.png"
         },
         {
           "color": "Pink",
           "name": "Story / Poll & Vote / Pink",
           "key": "c17513f4cba14f0fabc3d71e6277fc75054ce1a6",
-          "nodeId": "2112:193"
+          "nodeId": "2112:193",
+          "look": "75cb9215b2293528",
+          "preview": "previews/c17513f4cba14f0fabc3d71e6277fc75054ce1a6.png"
         },
         {
           "color": "Purple",
           "name": "Story / Poll & Vote / Purple",
           "key": "1b846e1fbec6b9940c67ec6c51b041ae56ac2258",
-          "nodeId": "2112:194"
+          "nodeId": "2112:194",
+          "look": "2d5aa93fc2d72116",
+          "preview": "previews/1b846e1fbec6b9940c67ec6c51b041ae56ac2258.png"
         }
       ]
     },
@@ -5112,25 +5313,33 @@
           "color": "Purple",
           "name": "Story / Poll Card / Purple",
           "key": "8f5d677d96173c891b8cb86deeb901f9b5d0bf5f",
-          "nodeId": "2112:195"
+          "nodeId": "2112:195",
+          "look": "2547fec852b203dd",
+          "preview": "previews/8f5d677d96173c891b8cb86deeb901f9b5d0bf5f.png"
         },
         {
           "color": "Pink",
           "name": "Story / Poll Card / Pink",
           "key": "640855e8ef980b3bd21fcb2db39b23406079caab",
-          "nodeId": "2112:196"
+          "nodeId": "2112:196",
+          "look": "6948111e1aaaca03",
+          "preview": "previews/640855e8ef980b3bd21fcb2db39b23406079caab.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Poll Card / Yellow",
           "key": "88466669b23868a2ea02f09b9701aaacef32f2a8",
-          "nodeId": "2112:197"
+          "nodeId": "2112:197",
+          "look": "e1cddf0c6cd8ec2d",
+          "preview": "previews/88466669b23868a2ea02f09b9701aaacef32f2a8.png"
         },
         {
           "color": "Blue",
           "name": "Story / Poll Card / Blue",
           "key": "a800048ff04f7fd973117bd654d2359ec2f7ed01",
-          "nodeId": "2112:198"
+          "nodeId": "2112:198",
+          "look": "c8f61579b7c5b17c",
+          "preview": "previews/a800048ff04f7fd973117bd654d2359ec2f7ed01.png"
         }
       ]
     },
@@ -5148,25 +5357,33 @@
           "color": "Blue",
           "name": "Story / Poll Pattern / Blue",
           "key": "af21a0c1593bd6f53c5956426b24c629a3d33396",
-          "nodeId": "2112:199"
+          "nodeId": "2112:199",
+          "look": "09ab3bf7f184a9f4",
+          "preview": "previews/af21a0c1593bd6f53c5956426b24c629a3d33396.png"
         },
         {
           "color": "Yellow",
           "name": "Story / Poll Pattern / Yellow",
           "key": "24eb848eb0634dc29cd733d003efc0ffd4340c8b",
-          "nodeId": "2112:200"
+          "nodeId": "2112:200",
+          "look": "6ab425e2da01a269",
+          "preview": "previews/24eb848eb0634dc29cd733d003efc0ffd4340c8b.png"
         },
         {
           "color": "Pink",
           "name": "Story / Poll Pattern / Pink",
           "key": "709a16e82ab54fc0792ec1bd3668237b112963e4",
-          "nodeId": "2112:201"
+          "nodeId": "2112:201",
+          "look": "675c94e656332217",
+          "preview": "previews/709a16e82ab54fc0792ec1bd3668237b112963e4.png"
         },
         {
           "color": "Purple",
           "name": "Story / Poll Pattern / Purple",
           "key": "806802e77bac9a5c99a7b2cc1392138317bd437c",
-          "nodeId": "2112:202"
+          "nodeId": "2112:202",
+          "look": "92e2144601ba344b",
+          "preview": "previews/806802e77bac9a5c99a7b2cc1392138317bd437c.png"
         }
       ]
     },
@@ -5263,7 +5480,9 @@
           "color": "Dark",
           "name": "Story / Photo Poll / Dark",
           "key": "b46e837bf1cbd28d4ef7ab78396e03875d53e1fc",
-          "nodeId": "2112:203"
+          "nodeId": "2112:203",
+          "look": "a9788cc69c4b2fd3",
+          "preview": "previews/b46e837bf1cbd28d4ef7ab78396e03875d53e1fc.png"
         }
       ]
     }

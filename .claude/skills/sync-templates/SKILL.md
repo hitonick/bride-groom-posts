@@ -44,7 +44,8 @@ Follow every rule in `CLAUDE.md` (Figma MCP rules especially).
 1. Inline `figma/scan-templates.js` into `use_figma`, replacing the `const ARGS =` line with:
    `{ templatesPage: config.pages.templates, ignoreMarker: config.scan.ignoreMarker, decorContainers: config.scan.decorContainers, colorTokens: config.scan.colorTokens, mode: 'digest' }`.
 2. Save the result to `templates/.scan/digest.json` and run `node scripts/manifest-digest.mjs templates/.scan/digest.json`.
-3. Exit 0 (`identical: …`) → the manifest is current. Report "Templates are up to date (N layouts)" and stop, unless the operator asked for a full rebuild.
+3. Exit 0 (`identical: …`) → the manifest is current: skip to **4. Previews** (only missing previews get exported), then report "Templates are up to date (N layouts)". Do a full scan anyway if the operator asked for a full rebuild.
+   The digest also covers each variant's `look` (a visual fingerprint), so a design change that keeps the slots (new colors, moved decor) shows up as a changed template here.
 
 ## 3. Full scan
 `use_figma` returns are capped at 48 KB, so fetch in parts:
@@ -56,11 +57,21 @@ Follow every rule in `CLAUDE.md` (Figma MCP rules especially).
 
 Never hand-edit `templates/manifest.json`.
 
-## 4. Report
+## 4. Previews
+One ~270 px PNG per template variant in `templates/previews/<component key>.png`, shown to operators while they choose (see /new-post → *Previews*). `templates/previews/index.json` records the `look` each file was exported from.
+1. `node scripts/previews.mjs status` → `todo[]` (`key`, `nodeId`, `maxDimension`, `reason`: missing / template changed). Empty → skip to step 4.
+2. For each todo item (about 10 calls in parallel): `get_screenshot` with `nodeId` and `maxDimension` (it makes the image 270 px wide). Read-only on the Templates page.
+   - Download the returned URL: `bash scripts/fetch-image.sh '<image_url>' previews/<key>.png`.
+   - If the download fails (cloud sessions often block `www.figma.com`), call `get_screenshot` again with `enableBase64Response: true`. When the client saves the inline image to a local file and names it in the result, run `node scripts/previews.mjs import-file <key> <that file>`.
+   - If neither works, stop exporting, tell the operator previews were skipped and why, and carry on: the questionnaire works without them.
+3. `node scripts/previews.mjs import runs/.cache/previews` (imports every downloaded `<key>.png`), then `node scripts/previews.mjs prune` (deletes previews of variants that no longer exist).
+4. `node scripts/previews.mjs status` again: report `ok`/`total` and the folder size (`bytes`). Previews are committed with the manifest.
+
+## 5. Report
 - Counts: layouts and components per type (from `summary`), and what changed vs the previous manifest (new / changed / removed templates from the digest diff).
 - **Irregularities** (`irregularities[]`): list each issue, the components it affects and its `proposal`. Call out layers bound to the same text property (`sharedWith`): /new-post never auto-picks those layouts.
 - Renames are only proposals. The Templates page is changed only if the operator explicitly confirms a specific rename in this session; then make exactly that rename and rescan.
 
 ## Notes
-- If the hash from `figma/scan-hash.js` doesn't equal the fresh manifest hash right after a sync, `scan-hash.js` is out of step with `scan-templates.js`: tell the operator (a maintainer must align `classify/walk/assignIds`), and don't loop on re-syncing.
+- If the `hash` or `lookHash` from `figma/scan-hash.js` doesn't equal the fresh manifest's right after a sync, `scan-hash.js` is out of step with `scan-templates.js`: tell the operator (a maintainer must align `classify/walk/assignIds`), and don't loop on re-syncing.
 - Frames whose name contains `config.scan.ignoreMarker` are never read or changed.

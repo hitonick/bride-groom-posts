@@ -23,6 +23,8 @@ if (!parts.length) fail('no part-*.json files');
 for (const p of parts) if (p.hash !== meta.hash) fail(`part at offset ${p.offset} has hash ${p.hash}, meta has ${meta.hash} — the file changed mid-scan, re-run the sync`);
 
 const templates = parts.flatMap(p => p.templates);
+// Every variant has a preview thumbnail at a fixed path; scripts/previews.mjs exports and tracks them.
+for (const t of templates) for (const v of t.variants) v.preview = `previews/${v.key}.png`;
 if (templates.length !== meta.templateCount) fail(`got ${templates.length} templates, meta says ${meta.templateCount} — a part is missing`);
 const variants = templates.reduce((n, t) => n + t.variants.length, 0);
 if (variants !== meta.componentCount) fail(`templates hold ${variants} components, meta says ${meta.componentCount}`);
@@ -44,6 +46,7 @@ const manifest = {
   templatesPage: config.pages.templates,
   scanArgs: config.scan,
   hash: meta.hash,
+  lookHash: meta.lookHash,
   scannerVersion: meta.scannerVersion ?? 1,
   componentCount: meta.componentCount,
   templateCount: meta.templateCount,
