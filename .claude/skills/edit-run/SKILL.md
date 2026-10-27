@@ -32,7 +32,7 @@ allowed-tools:
 
 All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply.
 
-Edits one run in place. `CLAUDE.md` rules apply; the conversation rules (one question at a time, `back` / `cancel`, choices from the manifest) are the same as in `/new-post`. The shared steps in `.claude/skills/new-post/steps/` (repository root) define what is reused here: `preflight.md`, `compose.md` (colors, fallbacks, layouts), `copy.md` (text rules), `images.md`, `previews.md` and `build.md` (build spec, verify inputs, run-log shape).
+Edits one run in place. `CLAUDE.md` rules apply; the conversation rules (one question at a time, `back` / `cancel`, choices from the manifest) are the same as in `/new-post`. The shared steps in `<repository root>/.claude/skills/new-post/steps/` (not inside `bg-post-generator/`) define what is reused here: `preflight.md`, `compose.md` (colors, fallbacks, layouts), `copy.md` (text rules), `images.md`, `previews.md` and `build.md` (build spec, verify inputs, run-log shape).
 
 Works the same for every run, whatever made it: Detailed or Quick mode (`mode`), or one post of a `/bulk-posts` batch (`batchId`). The brief is kept for reference and never re-applied; only the changes the operator asks for are made.
 

@@ -30,11 +30,11 @@ allowed-tools:
 ---
 # /new-post
 
-All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply. Speak plainly: operators are not designers or developers.
+Project paths (`config.json`, `scripts/…`, `figma/…`, `templates/…`, `runs/…`) are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply. Skill files are at the **repository root**: `steps/…` and `quick.md` below mean `<repository root>/.claude/skills/new-post/steps/…` (next to this file), not a folder inside `bg-post-generator/`. Speak plainly: operators are not designers or developers.
 
-The shared steps live next to this file and are used by both modes, `/bulk-posts` and `/edit-run`:
+The shared steps are used by both modes, `/bulk-posts` and `/edit-run`:
 
-| Step | File (in `.claude/skills/new-post/`) |
+| Step | File (`<repository root>/.claude/skills/new-post/`) |
 |---|---|
 | Preflight | `steps/preflight.md` |
 | Choose format, type, color, slides | `steps/compose.md` |

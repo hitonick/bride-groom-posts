@@ -5,6 +5,7 @@
 // Usage:
 //   node scripts/contact-sheet.mjs <out.png> [--title "3/9 Which color?"] [--cols 4] [--width 200] [--strip]
 //                                  -- <image.png> "<label>" [<image.png> "<label>" …]
+//   A label is one line of dark text (wrapped as needed); text after a "\n" is a grey second line.
 //   --cols    tiles per row (default: all in one row up to 5, then 4 per row)
 //   --width   tile width in px (default 200; previews are 270 px wide and are scaled down)
 //   --strip   one row, small tiles (120 px), "→" between them: for carousel / story-set sequences
@@ -183,9 +184,12 @@ const GLYPHS = Buffer.from(
   'AAAAAAAAAAAAL/AAAC/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAIgAv2n4AAr/cAAK/3AAr2' +
   'n4AKUAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJECRETMGf///2EiI8sQAABxAAAAAAAAAAAAAAAAAAAAAA' +
   'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAr0/W969P1vcAAAAAAAAAAAAAAAAAAAAA', 'base64');
+// Typographic characters outside the glyph set get a close ASCII stand-in.
+const STAND_IN = { '≈': '~', '–': '-', '—': '-', '‘': "'", '’': "'", '“': '"', '”': '"', '↔': '-', '←': '<', '•': '·', '\u00a0': ' ' };
 function drawText(cv, text, x0, y0, rgb, scale = 1) {
   let x = x0;
-  for (const ch of text) {
+  for (const raw of text) {
+    const ch = STAND_IN[raw] || raw;
     let gi = GLYPH_CHARS.indexOf(ch); if (gi < 0) gi = GLYPH_CHARS.indexOf('?');
     for (let gy = 0; gy < GH; gy++) for (let gx = 0; gx < GW; gx++) {
       const k = gi * GW * GH + gy * GW + gx, a = ((GLYPHS[k >> 1] >> (k & 1 ? 0 : 4)) & 15) / 15;
@@ -248,7 +252,8 @@ const perLine = Math.floor(tileW / GW);
 const titleH = title ? GH * 2 + 12 : 0;
 const labelH = 8 + labelLines * lineH;
 const rowY = rowH.map((_, r) => rowH.slice(0, r).reduce((a, h) => a + h + labelH + gap, 0));
-const W = pad * 2 + cols * tileW + (cols - 1) * gap;
+// Wide enough for the title (a one-tile strip would otherwise cut it).
+const W = Math.max(pad * 2 + cols * tileW + (cols - 1) * gap, title ? pad * 2 + Math.min(title.length, 60) * GW * 2 : 0);
 const H = pad * 2 + titleH + rowH.reduce((a, h) => a + h + labelH, 0) + (rows - 1) * gap;
 const cv = canvas(W, H);
 if (title) drawText(cv, wrap(title, Math.floor((W - 2 * pad) / (GW * 2)), 1)[0], pad, pad, INK, 2);
@@ -258,7 +263,9 @@ items.forEach((it, i) => {
   const im = imgs[i];
   if (im) { const dh = Math.round(tileW * im.h / im.w); blit(cv, im, cx, cy, tileW, Math.min(dh, tileH)); }
   else { fill(cv, cx, cy, tileW, tileH, TILE_BG); drawText(cv, 'no preview', cx + Math.max(4, (tileW - 10 * GW) >> 1), cy + (tileH >> 1) - 8, MUTED); }
-  wrap(it.label, perLine, labelLines).forEach((l, k) => drawText(cv, l, cx, cy + tileH + 8 + k * lineH, k ? MUTED : INK));
+  const [main, sub = ''] = it.label.split('\n');
+  const mainLines = wrap(main, perLine, sub ? labelLines - 1 : labelLines), subLines = sub ? wrap(sub, perLine, labelLines - mainLines.length) : [];
+  [...mainLines.map(l => [l, INK]), ...subLines.map(l => [l, MUTED])].forEach(([l, rgb], k) => drawText(cv, l, cx, cy + tileH + 8 + k * lineH, rgb));
   if (strip && i < items.length - 1) drawText(cv, '→', cx + tileW + ((gap - GW) >> 1), cy + (tileH >> 1) - 8, MUTED);
 });
 try {

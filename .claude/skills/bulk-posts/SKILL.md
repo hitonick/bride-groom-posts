@@ -31,7 +31,7 @@ allowed-tools:
 
 # /bulk-posts
 
-All paths in this skill are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply. Speak plainly.
+Project paths (`scripts/…`, `figma/…`, `runs/…`, `briefs/…`) are relative to the project folder `bg-post-generator/`: read files and run commands from there, and its `CLAUDE.md` rules apply. Skill files (`steps/…`, `quick.md`) are in `<repository root>/.claude/skills/new-post/`. Speak plainly.
 
 Each post is a Quick-mode post (`.claude/skills/new-post/quick.md`) built with the shared steps in `.claude/skills/new-post/steps/`. This skill only adds the batch around them: one brief in, one plan to approve, N runs out, one summary.
 It is a separate skill (not a mode of `/new-post`) because its input, plan table and batch bookkeeping have nothing in common with the one-post questionnaire; keeping them apart keeps both skills short.

@@ -1,5 +1,6 @@
 // build-run.js — create or update one run's Section on the Generated page. Run via use_figma.
-// Before sending, replace the ARGS line with the build spec (see .claude/skills/new-post/SKILL.md → "Build spec").
+// Before sending, replace the whole `const ARGS = { … };` declaration (lines 5–16) with the build spec
+// (see .claude/skills/new-post/steps/build.md → "2. Build spec", at the repository root).
 // Re-runnable: slides are replaced by name, and the summary card is re-rendered when `card` is given.
 // Slides are component instances with overrides only; nothing is detached and template styling is never changed.
 const ARGS = {
@@ -204,7 +205,7 @@ section.resizeWithoutConstraints(x - L.slideGap + pad, bottom + pad);
 // ---- placement (same call as creation, so two operators can't collide) ---
 if (isNew) {
   // Measure against every top-level node, so loose layers on the page are never overlapped.
-  const others = page.children.filter(n => n !== section);
+  const others = page.children.filter(n => n.id !== section.id);
   section.x = others.length ? Math.min(...others.map(n => n.x)) : 0;
   if (!others.length) section.y = 0;
   else if (L.runOrder === 'prepend') section.y = Math.min(...others.map(n => n.y)) - L.sectionGap - section.height;

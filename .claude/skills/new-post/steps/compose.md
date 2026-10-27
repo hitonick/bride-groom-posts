@@ -7,11 +7,13 @@ Feed post (single) · Carousel · Story · Story set. Feed and carousel use `for
 
 ## Content type
 Only types that exist for the format, from the manifest's template `type`s and layouts, in operator words: Review, Cover, Carousel article, Reviews carousel, Poll / Question / Opinion story…
+- Feed post (single): Review or Cover layouts. `Carousel` layouts are content slides of a carousel and are not offered for a single post.
 - Carousel article = Cover → Carousel content slides → Outro/Thank You.
 - Reviews carousel = Review slides only.
 
 ## Color
-- Candidates: colors of the eligible templates' variants, each with "N layouts", most layouts first.
+- Candidates: colors of the eligible templates' variants, each with "N layouts", most layouts first; ties in the order of `config.scan.colorTokens`.
+- `Default` is not a palette color: it is the color of layouts whose name has none (see the manifest's irregularities). List it last, as "The layout's own colors (N layouts)".
 - **Fallback** when a layout lacks the color: the same hue lighter/darker (`Pink` ↔ `Light Pink`), then a neutral (`Light Color`, then `config.colorFallback.neutrals`). Never switch to another hue without asking. Tell the operator which slides fall back; record `colorFallback: "Pink → Light Color"` and a `color-fallback` warning.
 
 ## Slides

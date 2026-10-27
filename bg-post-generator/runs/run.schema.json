@@ -9,7 +9,7 @@
     "runId": { "type": "string", "pattern": "^BG-\\d{8}-\\d{4}-[a-z0-9-]+$", "description": "BG-<stamp>-<handle>, with -01…-NN appended for posts of a batch" },
     "mode": { "enum": ["detailed", "quick"], "description": "How the post was specified: the 9-step questionnaire, or a brief (Quick mode and /bulk-posts)" },
     "batchId": { "type": "string", "description": "Set for posts created by /bulk-posts; the batch index is runs/batch-<batchId>.json" },
-    "status": { "enum": ["verified", "built-with-errors", "failed", "cancelled"] },
+    "status": { "enum": ["verified", "built-with-errors", "failed", "cancelled", "unverified"], "description": "unverified = built, verify not finished yet (only ever seen in the card of an interrupted run)" },
     "requestedBy": { "type": "object", "required": ["handle"], "properties": { "handle": { "type": "string" }, "email": { "type": "string" } } },
     "created": { "type": "object", "properties": { "local": { "type": "string" }, "tz": { "type": "string" }, "iso": { "type": "string" } } },
     "fileKey": { "type": "string" },

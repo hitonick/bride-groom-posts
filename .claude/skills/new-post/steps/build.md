@@ -16,7 +16,7 @@ Inline `figma/build-run.js` into `use_figma`, ARGS:
   exportSettings: { format: config.export.format, width: config.export[feed|story].value },
   tokens: <keep the defaults in the script>, font: 'DM Sans',
   sectionId: null,                                        // new run
-  sectionName: '<runId> · <Format> · <short title>',      // e.g. "BG-20261023-1430-anna · Carousel · Wedding film tips"
+  sectionName: '<runId> · <Format> · <short title>',      // e.g. "BG-20261023-1430-anna · Carousel · Wedding film tips"; test runs: 'TEST <runId> · …'
   card: { title: runId, subtitle: '<Format> · <content type> · <color> · <Detailed|Quick>',
           blocks: [ { heading: 'Requested', lines: ['<handle> (<email>)', '<local> <tz>'] },
                     { heading: 'Batch', lines: ['<batchId> · post N of M'] },           // /bulk-posts only
@@ -26,7 +26,7 @@ Inline `figma/build-run.js` into `use_figma`, ARGS:
                     { heading: 'Images', lines: ['01 photo → IMG_2041.png 1080×1350', …] },
                     { heading: 'Caption', lines: [caption, hashtags.join(' ')] },
                     { heading: 'Warnings', tone: 'warn', lines: [...] } ],   // omit empty blocks
-          runData: JSON.stringify(<run log>) },
+          runData: JSON.stringify(<run log so far, status "unverified">) },
   slides: [ { index: 1, name: '<runId>_01', label: '01 Cover',
               component: { key, nodeId, name },             // from the chosen manifest variant
               texts: [ { path, value, accent } ],           // accent only for a mixed-font node
@@ -40,15 +40,17 @@ Keep each call ≤ 50k chars (split a long carousel: build the first slides with
 Inline `figma/verify-run.js` with `sectionId`, `export` as above, `slides: [{ name, nodeId, component, texts: [{ path, lines, maxW: box.availW, value, kept }] (every text slot of the template), images: [{ path, skipped }] }]`. For a mixed-font accent node, `value` = text + `"\n"` + accent.
 
 ## 4. Screenshot
-`get_screenshot` of the section. Mandatory even when verify passes: look for text running past cards, cut words, leftover placeholder photos, blank (grey) photos, odd gaps. A photo that shows as flat grey did not decode in Figma (seen with some WebP files): convert it to PNG (`sips -s format png` on macOS, `convert` elsewhere) and upload it again.
+`get_screenshot` of the section, plus one per slide when the section view is small (white slide edges vanish against the section background). Mandatory even when verify passes: look for text running past cards, cut words, leftover placeholder photos, blank (grey) photos, odd gaps. A photo that shows as flat grey did not decode in Figma (seen with some WebP files): convert it to PNG (`sips -s format png` on macOS, `convert` elsewhere) and upload it again.
 
 ## 5. Fix loop
 Errors → name slide + field and offer: shorten/extend text · switch layout · different image. Text Claude drafted may be shortened directly (say so); the operator's own text only with their OK. Rebuild only the affected slides (same `sectionId`, `card: null` unless answers changed) and re-verify. Warnings (`underfill`, `lines`) → tell the operator and let them decide.
 Figma rate limit or a transient error: wait (30 s, then 60 s, then 120 s) and retry the same call; after the third failure stop and report.
 
 ## 6. Run log
-Write `runs/<runId>.json` (schema: `runs/run.schema.json`): `runId, mode ("detailed" | "quick"), batchId?, status ("verified" | "built-with-errors" | "failed" | "cancelled"), requestedBy, created, fileKey, manifestHash, format (feed | carousel | story | story-set), contentType, color, contentMode, brief?, slides[] (index, label, group, color, colorFallback, component {name,key}, text {slotId: {value, accent?, source: typed|draft|kept-default|auto}}, hidden, rating, images {slotId: {source, path, file, width, height, bytes, crop}}), caption, hashtags, warnings[], answers[], figma {sectionId, summaryCardId, slides[], mediaSectionId, media[]}, revisions: [], verification {at, errors, warnings, history}`.
-The same JSON goes into the card's hidden `run-data` text. Re-render the card if the log changes after verification.
+Write `runs/<runId>.json` (schema: `runs/run.schema.json`) once verify and the screenshot are done: `runId, mode ("detailed" | "quick"), batchId?, status ("verified" | "built-with-errors" | "failed" | "cancelled"), requestedBy, created, fileKey, manifestHash, format (feed | carousel | story | story-set), contentType, color, contentMode, brief?, slides[] (index, label, group, color, colorFallback, component {name,key}, text {slotId: {value, accent?, source: typed|draft|kept-default|auto}}, hidden, rating, images {slotId: {source, path, file, width, height, bytes, crop}}), caption, hashtags, warnings[], answers[], figma {sectionId, summaryCardId, slides[], mediaSectionId, media[]}, revisions: [], verification {at, errors, warnings, history}`.
+- Kept template text: `{ value: <the template's text>, source: "kept-default" }`; in verify inputs it is `kept: true` with no `value`. Auto `tag-label` the same; `page-number` is `{ value: "02", source: "auto" }` and is verified by value.
+- A skipped image: `{ source: "skipped" }` (plus the `image-placeholder` warning).
+- **Card**: the first build stores the log so far with `status: "unverified"`. After verify and the screenshot, render the card once more with the final log (`build-run.js` with the same `sectionId`, `slides: []`, `card`). Re-rendering replaces the card, so its new id comes back as `cardId`: write it to the local log's `figma.summaryCardId`, and leave `summaryCardId` null inside the card's own run-data (`read-run.js` finds the card by name).
 
 ## 7. Final message
 "Done. N slides, verified." + warnings in one line each + the link `https://www.figma.com/design/<fileKey>/?node-id=<sectionId with ":" → "-">` + caption and hashtags ready to copy + "Export: select the slides (not the card) → Export."
