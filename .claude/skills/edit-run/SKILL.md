@@ -1,6 +1,31 @@
 ---
 name: edit-run
 description: Change an existing Bride&Groom run on the Figma Generated page (text, photos, color, slides, caption), re-verify it and add a Revisions entry. Use when the operator types /edit-run or wants to change a post that was already generated.
+allowed-tools:
+  - mcp__figma__whoami
+  - mcp__figma__create_session
+  - mcp__figma__get_figma_skill
+  - mcp__figma__use_figma
+  - mcp__figma__upload_assets
+  - mcp__figma__get_screenshot
+  - mcp__claude_ai_Figma__whoami
+  - mcp__claude_ai_Figma__create_session
+  - mcp__claude_ai_Figma__get_figma_skill
+  - mcp__claude_ai_Figma__use_figma
+  - mcp__claude_ai_Figma__upload_assets
+  - mcp__claude_ai_Figma__get_screenshot
+  - mcp__Figma__whoami
+  - mcp__Figma__create_session
+  - mcp__Figma__get_figma_skill
+  - mcp__Figma__use_figma
+  - mcp__Figma__upload_assets
+  - mcp__Figma__get_screenshot
+  - Bash(bash scripts/local-time.sh)
+  - Bash(bash scripts/image-info.sh *)
+  - Bash(file --mime-type *)
+  - Bash(bash scripts/upload-asset.sh *)
+  - Bash(bash scripts/fetch-image.sh *)
+  - Bash(node scripts/contact-sheet.mjs *)
 ---
 
 # /edit-run

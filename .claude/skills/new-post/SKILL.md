@@ -1,6 +1,31 @@
 ---
 name: new-post
 description: Guided questionnaire that builds a Bride&Groom Instagram post (feed post, carousel, story or story set) in Figma from the approved templates, verifies it and logs the run. Use when the operator types /new-post or asks to create a post.
+allowed-tools:
+  - mcp__figma__whoami
+  - mcp__figma__create_session
+  - mcp__figma__get_figma_skill
+  - mcp__figma__use_figma
+  - mcp__figma__upload_assets
+  - mcp__figma__get_screenshot
+  - mcp__claude_ai_Figma__whoami
+  - mcp__claude_ai_Figma__create_session
+  - mcp__claude_ai_Figma__get_figma_skill
+  - mcp__claude_ai_Figma__use_figma
+  - mcp__claude_ai_Figma__upload_assets
+  - mcp__claude_ai_Figma__get_screenshot
+  - mcp__Figma__whoami
+  - mcp__Figma__create_session
+  - mcp__Figma__get_figma_skill
+  - mcp__Figma__use_figma
+  - mcp__Figma__upload_assets
+  - mcp__Figma__get_screenshot
+  - Bash(bash scripts/local-time.sh)
+  - Bash(bash scripts/image-info.sh *)
+  - Bash(file --mime-type *)
+  - Bash(bash scripts/upload-asset.sh *)
+  - Bash(bash scripts/fetch-image.sh *)
+  - Bash(node scripts/contact-sheet.mjs *)
 ---
 
 # /new-post
@@ -19,7 +44,7 @@ Ask the operator one question at a time, build the post from `templates/manifest
 
 ## 0. Preflight (before question 1)
 1. Read `config.json` and `templates/manifest.json`.
-2. Figma MCP tools available? If not: "Figma is not connected. Type `/mcp` → figma → Authenticate (or, in the desktop app, connect Figma under Settings → Connectors), then run /new-post again." Stop.
+2. Figma MCP tools available (`whoami`, `use_figma`…, from the project's `figma` server or a Figma connector)? If not: "Figma is not connected. Type `/mcp` → figma → Authenticate (or, in the desktop app, connect Figma under Settings → Connectors), then run /new-post again." In a cloud session (claude.ai/code) say instead: "Connect the Figma connector at claude.ai/customize/connectors, then start a new session" (see README → *Cloud sessions*). Stop.
 3. `whoami` → `handle` and `email` (requestedBy). Run ID handle = the Figma handle lowercased, non-alphanumerics → `-`.
 4. `create_session` with `config.fileKey`; reuse its `sessionId` on every Figma call. `get_figma_skill` (`figma-use`) once; pass `skillNames: "resource:figma-use"` on every `use_figma`.
 5. `use_figma` with `figma/scan-hash.js` (ARGS from `config.pages.templates` and `config.scan`). Then check:
@@ -68,7 +93,7 @@ For each slide, each text slot (manifest `kind: "text"`, not `auto`, not `role: 
 For each image slot (`photo`, `avatar`, optional `background`): describe it: orientation from `aspect` (portrait/landscape/square + ratio), best width ≈ slot width × 1080 / template width, grayscale note.
 Accept: a dragged file path, a typed path, a folder, a direct image URL, a name on the Media page, or `skip`.
 - File / folder: `bash scripts/image-info.sh <path>`. Folders list PNG/JPG/WebP with sizes (others "skipped"); ask Assign in order · Choose per slot.
-- URL: download into the scratchpad, then treat as a file.
+- URL: `bash scripts/fetch-image.sh '<url>' <runId>/<name>` downloads it into `runs/.cache/` (rejects non-images and files over the limit) and prints the same JSON as `image-info.sh`; then treat it as a file.
 - Media name: `use_figma` with `figma/stage-media.js` in `mode: 'lookup'` → reuse its `imageHash`.
 - Reject: type not in `config.media.types`, larger than `config.media.maxBytes`, unreadable. Clipboard pastes have no file: ask the operator to save it as a file and drag that in.
 - Warn when width < best width, or when crop > 0.25 (`crop = 1 - min(imgAspect, slotAspect) / max(imgAspect, slotAspect)`), and offer another image.
@@ -82,7 +107,7 @@ Write my own · Draft it for me · Skip. At most `config.instagram.hashtagsMax` 
 A compact table: format, type, color (+fallbacks), each slide (layout, color, every field value, image), caption, hashtags, warnings. Ask: Build it · Change something (name the step) · Cancel.
 
 ## Build
-1. **Upload photos**: `upload_assets` for each local file onto the Media page. Then `use_figma` with `figma/stage-media.js`, `mode: 'stage'`, `runId`, `items: [{ nodeId: placedOnNodeId, file, width, height }]` → `imageHash` per file, `sectionId`.
+1. **Upload photos**: `upload_assets` (`count` = number of files, `currentPageId` = the Media page id from preflight) → one `submitUrl` per file; then `bash scripts/upload-asset.sh '<submitUrl>' <file>` for each (it only posts PNG/JPEG/WebP files to `https://mcp.figma.com/mcp/upload/…`) → `imageHash`, `placedOnNodeId`. Then `use_figma` with `figma/stage-media.js`, `mode: 'stage'`, `runId`, `items: [{ nodeId: placedOnNodeId, file, width, height }]` → `imageHash` per file, `sectionId`.
 2. **Build spec**: inline `figma/build-run.js` into `use_figma`, ARGS:
    ```js
    {

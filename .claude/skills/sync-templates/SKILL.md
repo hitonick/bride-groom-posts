@@ -1,6 +1,29 @@
 ---
 name: sync-templates
 description: Rebuild templates/manifest.json from the Figma Templates page. Use after designers change templates, when /new-post reports template drift, or when the operator types /sync-templates.
+allowed-tools:
+  - mcp__figma__whoami
+  - mcp__figma__create_session
+  - mcp__figma__get_figma_skill
+  - mcp__figma__use_figma
+  - mcp__figma__upload_assets
+  - mcp__figma__get_screenshot
+  - mcp__claude_ai_Figma__whoami
+  - mcp__claude_ai_Figma__create_session
+  - mcp__claude_ai_Figma__get_figma_skill
+  - mcp__claude_ai_Figma__use_figma
+  - mcp__claude_ai_Figma__upload_assets
+  - mcp__claude_ai_Figma__get_screenshot
+  - mcp__Figma__whoami
+  - mcp__Figma__create_session
+  - mcp__Figma__get_figma_skill
+  - mcp__Figma__use_figma
+  - mcp__Figma__upload_assets
+  - mcp__Figma__get_screenshot
+  - Bash(node scripts/manifest-digest.mjs *)
+  - Bash(node scripts/assemble-manifest.mjs *)
+  - Bash(node scripts/previews.mjs *)
+  - Bash(bash scripts/fetch-image.sh *)
 ---
 
 # /sync-templates
@@ -12,7 +35,7 @@ Follow every rule in `CLAUDE.md` (Figma MCP rules especially).
 
 ## 1. Preflight
 1. Read `config.json`. All page names, scan settings and the fileKey come from there.
-2. Check the Figma MCP tools are available. If not: tell the operator to type `/mcp` → **figma** → **Authenticate** (or connect the Figma connector in Settings → Connectors in the desktop app), then stop.
+2. Check the Figma MCP tools are available. If not: tell the operator to type `/mcp` → **figma** → **Authenticate** (or connect the Figma connector in Settings → Connectors in the desktop app; in a cloud session, at claude.ai/customize/connectors and then start a new session), then stop.
 3. `whoami` → remember the handle (used as `--by`).
 4. `create_session` with `config.fileKey`; pass the `sessionId` to every later Figma call.
 5. `get_figma_skill` for `skill://figma/figma-use/SKILL.md` before the first `use_figma`; pass `skillNames: "resource:figma-use"` on every `use_figma`.
