@@ -1,0 +1,169 @@
+{
+  "runId": "BG-20261027-2027-nick-zaitsev",
+  "mode": "detailed",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 20:27",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T20:27:56+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Review",
+  "color": "Pink",
+  "contentMode": "typed",
+  "brief": null,
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Review · UI Bubble · Pink",
+      "group": "Review / UI Bubble",
+      "color": "Pink",
+      "colorFallback": null,
+      "component": {
+        "name": "Review / UI Bubble / Pink",
+        "key": "5c941f98549029d3bab3789d11750b0688403065"
+      },
+      "text": {
+        "author-name": {
+          "value": "Test Operator",
+          "source": "typed"
+        },
+        "author-handle": {
+          "value": "@test_only",
+          "source": "typed"
+        },
+        "quote-text": {
+          "value": "TEST ONLY: placeholder text to check the layout, not a real client review.",
+          "source": "typed"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "avatar": {
+          "source": "skipped",
+          "path": null,
+          "file": null,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "crop": null
+        }
+      }
+    }
+  ],
+  "caption": "",
+  "hashtags": [],
+  "warnings": [
+    {
+      "slide": 1,
+      "kind": "image-placeholder",
+      "detail": "avatar: template avatar kept (operator typed skip)"
+    },
+    {
+      "slide": 1,
+      "kind": "test-run",
+      "detail": "TEST run: placeholder review text, not a real client review; do not publish"
+    },
+    {
+      "slide": 1,
+      "kind": "underfill",
+      "detail": "quote: 26 px more empty space at the bottom than the template (74 of ~103 chars, 2 lines instead of 3); operator chose Keep as is"
+    }
+  ],
+  "answers": [
+    {
+      "step": "mode",
+      "question": "Which mode? (type back or cancel at any step)",
+      "answer": "Detailed"
+    },
+    {
+      "step": "1/9",
+      "question": "1/9 Which format?",
+      "answer": "Feed post (single)"
+    },
+    {
+      "step": "2/9",
+      "question": "2/9 What kind of post?",
+      "answer": "Review"
+    },
+    {
+      "step": "3/9",
+      "question": "3/9 Which color? (Default 7 layouts, Light Blue 4, Light Purple 4; More…: Light Pink 4, Purple 4, Pink 4, Blue 3, Yellow 3, Dark 2, Light Yellow 1)",
+      "answer": "Pink"
+    },
+    {
+      "step": "4/9",
+      "question": "4/9 Which Pink review layout?",
+      "answer": "UI Bubble"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · author-name (≈17 chars, 1 line)",
+      "answer": "Test Operator"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · author-handle (≈18 chars, 1 line)",
+      "answer": "@test_only"
+    },
+    {
+      "step": "6/9",
+      "question": "Slide 01 · quote-text (≈105 chars, 3 lines; the design is filled at about 103 chars, much shorter text leaves a gap)",
+      "answer": "TEST ONLY: placeholder text to check the layout, not a real client review."
+    },
+    {
+      "step": "7/9",
+      "question": "Slide 01 · avatar: square 1:1 round photo, best ≥ 196 px wide (file, folder, image link, Media name, or skip)",
+      "answer": "skip"
+    },
+    {
+      "step": "8/9",
+      "question": "8/9 Caption?",
+      "answer": "Skip"
+    },
+    {
+      "step": "9/9",
+      "question": "9/9 Build it?",
+      "answer": "Build it"
+    },
+    {
+      "step": "fix",
+      "question": "Slide 01 quote is shorter than the layout expects (26 px more empty space under it than the template). Keep it, or extend the text?",
+      "answer": "Keep as is"
+    }
+  ],
+  "figma": {
+    "sectionId": "2479:1290",
+    "summaryCardId": "2481:1600",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-2027-nick-zaitsev_01",
+        "nodeId": "2479:1323"
+      }
+    ],
+    "mediaSectionId": null,
+    "media": []
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T20:40:23+00:00",
+    "errors": 0,
+    "warnings": 2,
+    "history": [
+      {
+        "at": "2026-10-27T20:40:23+00:00",
+        "errors": 0,
+        "warnings": 2,
+        "screenshot": "checked"
+      }
+    ]
+  }
+}

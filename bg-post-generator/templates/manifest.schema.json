@@ -14,6 +14,7 @@
     "templatesPage": { "type": "string" },
     "scanArgs": { "type": "object", "description": "ARGS the scan ran with (decor containers, color tokens, ignore marker)" },
     "hash": { "type": "string", "pattern": "^[0-9a-f]{16}$", "description": "Digest of component names + slot ids/paths; /new-post compares it with a live 'hash' scan" },
+    "lookHash": { "type": "string", "pattern": "^[0-9a-f]{16}$", "description": "Digest of every variant's `look`; when the live value differs, template visuals changed and previews are stale (scanner ≥ 5)" },
     "scannerVersion": { "type": "integer", "description": "SCANNER_VERSION of figma/scan-templates.js that produced this manifest; an older value forces a re-sync" },
     "componentCount": { "type": "integer" },
     "templateCount": { "type": "integer" },
@@ -73,7 +74,9 @@
               "name": { "type": "string" },
               "key": { "type": "string", "description": "Component key for importComponentByKeyAsync / local lookup" },
               "nodeId": { "type": "string", "description": "Informational only — resolve by key or name at runtime" },
-              "grayscale": { "type": "array", "items": { "type": "string" }, "description": "Image slot ids this color variant shows in black & white (template filter, kept on build)" }
+              "grayscale": { "type": "array", "items": { "type": "string" }, "description": "Image slot ids this color variant shows in black & white (template filter, kept on build)" },
+              "look": { "type": "string", "pattern": "^[0-9a-f]{16}$", "description": "Visual fingerprint of the component (geometry, fills, strokes, text, effects); a preview exported from another look is stale" },
+              "preview": { "type": "string", "description": "Thumbnail path relative to templates/ ('previews/<key>.png', ~270 px wide); templates/previews/index.json records the look it was exported from. Added by assemble-manifest.mjs, not by the live scan" }
             }
           }
         }

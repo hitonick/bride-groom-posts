@@ -1,9 +1,9 @@
-// scan-hash.js — read-only, light preflight check for /new-post: { hash, scannerVersion, componentCount, pages }.
-// Computes exactly the same hash as scan-templates.js (mode 'hash') without measuring text, so it is ~3× smaller.
-// Keep classify/walk/assignIds/background rules in step with scan-templates.js: if the two ever disagree,
+// scan-hash.js — read-only, light preflight check for /new-post: { hash, lookHash, scannerVersion, componentCount, pages }.
+// Computes exactly the same hash and lookHash as scan-templates.js (mode 'hash') without measuring text, so it is ~3× smaller.
+// Keep classify/walk/assignIds/background rules and look() in step with scan-templates.js: if the two ever disagree,
 // /new-post sees a hash mismatch right after a fresh sync — the skill treats that as "scan-hash.js is out of date".
 const ARGS = { templatesPage: 'Templates', ignoreMarker: '(CLAUDE - IGNORE)', decorContainers: ['mockup', 'photoshop', 'decor', 'bg', 'card-bg'] };
-const SCANNER_VERSION = 4;
+const SCANNER_VERSION = 5;
 const IMAGE_ROLES = ['photo', 'avatar'];
 const page = figma.root.children.find(p => p.name === ARGS.templatesPage);
 if (!page) throw new Error(`Page "${ARGS.templatesPage}" not found`);
@@ -52,6 +52,22 @@ function assignIds(slots) {
   slots.forEach((s, k) => { if (ids.has(s.id)) s.id = `${s.name}#${k}`; ids.add(s.id); });
 }
 function fnv(str, seed) { let h = seed >>> 0; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(16).padStart(8, '0'); }
+const digest = s => fnv(s, 2166136261) + fnv(s, 0x9747b28c);
+// Same as scan-templates.js. Visual fingerprint of one component (geometry, fills, strokes, text, effects of every visible layer, decor
+// included): it changes whenever the rendered template changes, so /sync-templates knows which preview to re-export.
+const fp = v => (v === figma.mixed ? 'mixed' : Array.isArray(v) ? v.filter(p => p.visible !== false).map(p => [p.type, p.color ? ['r', 'g', 'b'].map(k => Math.round(p.color[k] * 255)).join('.') : '', p.opacity == null ? 1 : Math.round(p.opacity * 100) / 100, p.imageHash || '', p.scaleMode || '', p.gradientStops ? p.gradientStops.length : ''].join(':')).join('|') : '');
+function look(c) {
+  const parts = [];
+  const visit = (n, depth) => {
+    if (!n.visible) return;
+    const b = [n.type, n.name, Math.round(n.x), Math.round(n.y), Math.round(n.width), Math.round(n.height), 'opacity' in n ? Math.round(n.opacity * 100) : '', 'fills' in n ? fp(n.fills) : '', 'strokes' in n ? fp(n.strokes) + ('strokeWeight' in n && n.strokeWeight !== figma.mixed ? n.strokeWeight : '') : '', 'cornerRadius' in n && n.cornerRadius !== figma.mixed ? n.cornerRadius : '', 'effects' in n ? n.effects.filter(e => e.visible).length : ''];
+    if (n.type === 'TEXT') b.push(n.characters.slice(0, 64), n.fontName === figma.mixed ? 'mixed' : `${n.fontName.family}/${n.fontName.style}`, n.fontSize === figma.mixed ? 'mixed' : n.fontSize);
+    parts.push(depth + '>' + b.join(','));
+    if ('children' in n) for (const k of n.children) visit(k, depth + 1);
+  };
+  visit(c, 0);
+  return digest(parts.join('\n'));
+}
 const sigLines = comps.map(c => {
   const ctx = { slotImages: [] };
   const slots = [];
@@ -61,4 +77,5 @@ const sigLines = comps.map(c => {
   return `${c.name}::${slots.map(s => `${s.id}@${s.path}`).join(',')}`;
 });
 const s = sigLines.sort().join('\n');
-return { hash: fnv(s, 2166136261) + fnv(s, 0x9747b28c), scannerVersion: SCANNER_VERSION, componentCount: comps.length, pages: figma.root.children.map(p => ({ id: p.id, name: p.name })) };
+const lookHash = digest(comps.map(c => `${c.key}:${look(c)}`).sort().join('\n'));
+return { hash: digest(s), lookHash, scannerVersion: SCANNER_VERSION, componentCount: comps.length, pages: figma.root.children.map(p => ({ id: p.id, name: p.name })) };

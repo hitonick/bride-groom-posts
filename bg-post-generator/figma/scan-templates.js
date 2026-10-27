@@ -1,7 +1,7 @@
 // scan-templates.js — read-only scan of the Templates page. Run via use_figma.
 // Before sending, replace the ARGS line with values from config.json (`pages.templates`, `scan.*`) and the mode:
 //   mode: 'hash'      → { hash, scannerVersion, componentCount, pages } for the /new-post preflight (drift check + page check)
-//   mode: 'meta'      → hash, palettes, colorsByType, irregularities, templateCount
+//   mode: 'meta'      → hash, lookHash, palettes, colorsByType, irregularities, templateCount
 //   mode: 'templates' → one page of template entries (offset/limit; 10 per call stays under the 48 KB return cap)
 //   mode: 'digest'    → fingerprints per template entry, to find what changed without fetching everything
 // Slots are addressed by layer-name path ("content > photos > photo[1]"); "[k]" disambiguates same-name siblings.
@@ -9,7 +9,7 @@
 const ARGS = { templatesPage: 'Templates', ignoreMarker: '(CLAUDE - IGNORE)', decorContainers: ['mockup', 'photoshop', 'decor', 'bg', 'card-bg'], colorTokens: ['Purple', 'Light Purple', 'Pink', 'Light Pink', 'Blue', 'Light Blue', 'Yellow', 'Light Yellow', 'Dark', 'Light', 'Light Color'], mode: 'meta', offset: 0, limit: 16 };
 
 // Bump when the scan output gains or changes fields: /new-post re-syncs manifests built by an older scanner.
-const SCANNER_VERSION = 4;
+const SCANNER_VERSION = 5;
 const TEXT_ROLES = ['tagline', 'title', 'body', 'quote-text', 'author-name', 'author-handle', 'author-role', 'source-label', 'tag-label', 'page-number', 'paragraph', 'bullet', 'button-label'];
 const IMAGE_ROLES = ['photo', 'avatar'];
 const AUTO_ROLES = ['page-number', 'tag-label'];
@@ -176,6 +176,21 @@ function assignIds(slots) {
 // ---- hashing (FNV-1a, two seeds → 16 hex chars) -------------------------
 function fnv(str, seed) { let h = seed >>> 0; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(16).padStart(8, '0'); }
 const digest = s => fnv(s, 2166136261) + fnv(s, 0x9747b28c);
+// Visual fingerprint of one component (geometry, fills, strokes, text, effects of every visible layer, decor
+// included): it changes whenever the rendered template changes, so /sync-templates knows which preview to re-export.
+const fp = v => (v === figma.mixed ? 'mixed' : Array.isArray(v) ? v.filter(p => p.visible !== false).map(p => [p.type, p.color ? ['r', 'g', 'b'].map(k => Math.round(p.color[k] * 255)).join('.') : '', p.opacity == null ? 1 : Math.round(p.opacity * 100) / 100, p.imageHash || '', p.scaleMode || '', p.gradientStops ? p.gradientStops.length : ''].join(':')).join('|') : '');
+function look(c) {
+  const parts = [];
+  const visit = (n, depth) => {
+    if (!n.visible) return;
+    const b = [n.type, n.name, Math.round(n.x), Math.round(n.y), Math.round(n.width), Math.round(n.height), 'opacity' in n ? Math.round(n.opacity * 100) : '', 'fills' in n ? fp(n.fills) : '', 'strokes' in n ? fp(n.strokes) + ('strokeWeight' in n && n.strokeWeight !== figma.mixed ? n.strokeWeight : '') : '', 'cornerRadius' in n && n.cornerRadius !== figma.mixed ? n.cornerRadius : '', 'effects' in n ? n.effects.filter(e => e.visible).length : ''];
+    if (n.type === 'TEXT') b.push(n.characters.slice(0, 64), n.fontName === figma.mixed ? 'mixed' : `${n.fontName.family}/${n.fontName.style}`, n.fontSize === figma.mixed ? 'mixed' : n.fontSize);
+    parts.push(depth + '>' + b.join(','));
+    if ('children' in n) for (const k of n.children) visit(k, depth + 1);
+  };
+  visit(c, 0);
+  return digest(parts.join('\n'));
+}
 
 // ---- main ---------------------------------------------------------------
 const items = [];
@@ -226,8 +241,10 @@ for (const c of comps) {
 for (const n in nameCount) if (nameCount[n] > 1) flag(`Duplicate component name (${nameCount[n]}×)`, n, 'Make names unique');
 
 const hash = digest(sigLines.sort().join('\n'));
+// One fingerprint for the look of every template: the /new-post preflight compares it to spot stale previews.
+const lookHash = digest(comps.map(c => `${c.key}:${look(c)}`).sort().join('\n'));
 // Preflight uses this mode: the page list lets it check Media/Generated exist (and get their ids) in the same call.
-if (ARGS.mode === 'hash') return { hash, scannerVersion: SCANNER_VERSION, componentCount: comps.length, pages: figma.root.children.map(p => ({ id: p.id, name: p.name })) };
+if (ARGS.mode === 'hash') return { hash, lookHash, scannerVersion: SCANNER_VERSION, componentCount: comps.length, pages: figma.root.children.map(p => ({ id: p.id, name: p.name })) };
 
 // One template entry per Type / Layout + slot structure; colors become variants.
 const groups = new Map();
@@ -237,7 +254,7 @@ for (const it of items) {
   if (!groups.has(key)) groups.set(key, { group: g, type: it.type, layout: it.layout, format: it.format, section: sectionOf(it.c), width: r1(it.c.width), height: r1(it.c.height), decor: it.decor.length ? it.decor : undefined, nestedInstances: it.nested.length ? it.nested : undefined, slots: it.slots, variants: [] });
   // Image filters differ between colors of one layout (e.g. Light/Dark grayscale, Light Color in color), so they live on the variant.
   const grayscale = it.slots.filter(s => s.imageFilter === 'grayscale').map(s => s.id);
-  groups.get(key).variants.push({ color: it.color, name: it.c.name, key: it.c.key, nodeId: it.c.id, section: sectionOf(it.c), grayscale: grayscale.length ? grayscale : undefined });
+  groups.get(key).variants.push({ color: it.color, name: it.c.name, key: it.c.key, nodeId: it.c.id, section: sectionOf(it.c), grayscale: grayscale.length ? grayscale : undefined, look: look(it.c) });
 }
 for (const g of groups.values()) for (const s of g.slots) delete s.imageFilter;
 const templates = [...groups.values()];
@@ -259,6 +276,6 @@ for (const it of items) { const m = colorsByType[it.type] = colorsByType[it.type
 // mode 'digest': one fingerprint per template entry + one for the rest, over sorted keys. /sync-templates compares
 // them with the saved manifest and only fetches the entries that changed (scripts/manifest-digest.mjs computes the local side).
 const canon = v => Array.isArray(v) ? `[${v.map(canon).join(',')}]` : v && typeof v === 'object' ? `{${Object.keys(v).filter(k => v[k] !== undefined).sort().map(k => `${JSON.stringify(k)}:${canon(v[k])}`).join(',')}}` : JSON.stringify(softBreaks(String(v)) === String(v) ? v : softBreaks(v));
-if (ARGS.mode === 'digest') return { hash, scannerVersion: SCANNER_VERSION, templateCount: templates.length, meta: digest(canon({ fontWidthRatios: ratios, palettes, colorsByType, irregularities: [...irregular.values()] })), templates: templates.map(t => [t.group, t.variants[0].color, digest(canon(t))]) };
+if (ARGS.mode === 'digest') return { hash, lookHash, scannerVersion: SCANNER_VERSION, templateCount: templates.length, meta: digest(canon({ fontWidthRatios: ratios, palettes, colorsByType, irregularities: [...irregular.values()] })), templates: templates.map(t => [t.group, t.variants[0].color, digest(canon(t))]) };
 if (ARGS.mode === 'templates') return safe({ hash, templateCount: templates.length, offset: ARGS.offset, templates: templates.slice(ARGS.offset, ARGS.offset + ARGS.limit) });
-return safe({ hash, scannerVersion: SCANNER_VERSION, componentCount: comps.length, templateCount: templates.length, fontWidthRatios: ratios, palettes, colorsByType, irregularities: [...irregular.values()] });
+return safe({ hash, lookHash, scannerVersion: SCANNER_VERSION, componentCount: comps.length, templateCount: templates.length, fontWidthRatios: ratios, palettes, colorsByType, irregularities: [...irregular.values()] });

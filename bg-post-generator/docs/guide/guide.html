@@ -4,7 +4,7 @@
 <div class="cover">
 <p class="cover-title">Bride&amp;Groom<br/>Post Generator</p>
 <p class="cover-sub">Operator Guide: creating Instagram posts with Claude Code and Figma</p>
-<p class="cover-meta">Version 1.0 · October 2026<br/>For: anyone on the team who creates Instagram content<br/>No design or coding skills required</p>
+<p class="cover-meta">Version 2.0 · October 2026<br/>For: anyone on the team who creates Instagram content<br/>No design or coding skills required</p>
 </div>
 
 <h1 class="page">1. How it works</h1>
@@ -69,7 +69,9 @@ claude</pre>
 <ul>
 <li><b>Terminal and desktop app:</b> type <code>/mcp</code>, select <b>figma</b>, then <b>Authenticate</b>. A browser window opens. Sign in to Figma and click <b>Allow access</b>.</li>
 <li><b>Desktop app, alternative:</b> connect the <b>Figma</b> connector in the Claude settings (<b>Settings → Connectors</b>). If your account already has it connected, there is nothing to do: Claude uses whichever Figma connection is available.</li>
+<li><b>Cloud sessions</b> (claude.ai/code, opened on the GitHub repository): use the connector. Add <b>Figma</b> at <code>claude.ai/customize/connectors</code>, sign in with your Figma account, then start a <b>new</b> session. The <code>/mcp</code> sign-in does not work there.</li>
 </ul>
+<div class="note"><b>Permission prompts.</b> The project pre-approves the Figma tools and its own helper scripts, so Claude should not ask before every Figma step. If your Figma tools appear under an unusual name, Claude asks once per tool: choose <b>Always allow</b>. In cloud sessions you can also choose <b>Auto</b> in the mode menu next to the prompt box, if your organization allows it.</div>
 
 <h2>Step 5. Check access to the file, then start</h2>
 <p>Open the Figma file link in your browser. If you see "View only" or cannot edit, ask the file owner to share it with you as <b>can edit</b>. Then, in Claude Code, type:</p>
@@ -77,7 +79,16 @@ claude</pre>
 <p>Before the first question, Claude checks everything automatically: the Figma connection, your identity, the file, the required pages and the template list. If something is missing, it tells you exactly what to fix.</p>
 
 <h1>3. Creating a post with /new-post</h1>
-<p>Claude asks one question per step and shows a counter such as <code>3/9</code>. For multiple-choice questions, pick an option with the arrow keys and Enter (or click it). A list shows at most four options. When there are more, the last one is <b>More…</b>, and the question names the rest. You can also choose <b>Other</b> and type any option by name (for example a color). For free-text questions, just type and press Enter. Steps that don't apply are skipped, so the counter may jump (for example 4/9 → 6/9 for a review, which is always typed and skips the content-mode question).</p>
+<p>Type <code>/new-post</code>. Claude asks how you want to work:</p>
+<ul>
+<li><b>Detailed</b>: 9 short questions, and you choose everything yourself (this section).</li>
+<li><b>Quick</b>: describe the post and add photos; Claude chooses the layout, color and text, and you approve one summary (section 4).</li>
+</ul>
+<p>You can skip that question with <code>/new-post detailed</code> or <code>/new-post quick</code>.</p>
+<p><b>See before you choose.</b> When you pick a color or a layout, Claude first shows one picture with the options side by side, numbered and labelled like the answers. For a carousel it shows the slide sequence as a strip, and it shows the strip again before building.</p>
+<img src="images/contact-sheet-color.png" alt="Contact sheet shown before the color question" style="width:100%;max-width:640px"/>
+<img src="images/strip-carousel.png" alt="Strip of a 5-slide carousel" style="width:100%;max-width:640px"/>
+<p>In <b>Detailed</b> mode, Claude asks one question per step and shows a counter such as <code>3/9</code>. For multiple-choice questions, pick an option with the arrow keys and Enter (or click it). A list shows at most four options. When there are more, the last one is <b>More…</b>, and the question names the rest. You can also choose <b>Other</b> and type any option by name (for example a color). For free-text questions, just type and press Enter. Steps that don't apply are skipped, so the counter may jump (for example 4/9 → 6/9 for a review, which is always typed and skips the content-mode question).</p>
 
 <div class="tip"><b>At any step</b> you can type <code>back</code> to return to the previous question, or <code>cancel</code> to stop without building anything.</div>
 
@@ -89,7 +100,7 @@ claude</pre>
 <tr><td>4. Structure</td><td><b>Single post or story:</b> the layout. <b>Carousel / story set:</b> number of slides, then the layout of each slide</td><td>Carousels have 2–20 slides (Instagram's limit). Choose <b>auto-compose</b> (Claude picks a varied sequence: cover → content → outro) or <b>manual</b>.</td></tr>
 <tr><td>5. Content mode</td><td>"I'll type the text" or "Draft it from a brief"</td><td>For a draft, you give the topic, key message, audience, tone and call to action. You can edit the draft before anything is built. Reviews are always typed: Claude never invents quotes, names or ratings.</td></tr>
 <tr><td>6. Text</td><td>Each text field, one by one, with a character budget. After a draft, only the fields the draft did not fill (for example "keep the template's <i>Swipe</i> button?")</td><td>See "Typing text" below. Page numbers and brand tags are filled in automatically.</td></tr>
-<tr><td>7. Images</td><td>One image for each photo or avatar slot, plus an optional background on some stories</td><td>See section 4.</td></tr>
+<tr><td>7. Images</td><td>One image for each photo or avatar slot, plus an optional background on some stories</td><td>See section 6.</td></tr>
 <tr><td>8. Caption</td><td>Instagram caption and hashtags (optional)</td><td>Write your own, or ask Claude to draft them. Instagram allows at most 5 hashtags per post.</td></tr>
 <tr><td>9. Review</td><td>A compact table of everything that will be built</td><td>Confirm to build, or name the step you want to change.</td></tr>
 </table>
@@ -137,7 +148,35 @@ Claude: 9/9 · [table of everything]  › Build it · Change something · Cancel
 Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
         https://www.figma.com/design/…?node-id=…</pre>
 
-<h1>4. Adding images</h1>
+<h1>4. Quick mode: /new-post quick</h1>
+<p>Write what the post is about in one message, add the photos, and Claude does the rest:</p>
+<pre>you:    /new-post quick
+Claude: Tell me what the post is about: topic, key message, call to action,
+        and if you like the format and a color or mood. Then add the photos.
+you:    Carousel about 3 details couples forget for a garden ceremony:
+        shade, sound and a rain plan. CTA: save this for your planning.
+        Warm colors. ~/Desktop/garden-shoot/
+Claude: [strip of the 5 slides] + a table: layout, color, every text,
+        which photo goes where, caption, warnings
+        › Build it · Change something · Switch to detailed · Cancel</pre>
+<ul>
+<li>Claude uses the same rules as Detailed mode: only approved templates, the closest color when a layout lacks yours, text within each field's limit, and the photos that need the least cropping.</li>
+<li><b>Change something</b>: say it in plain words ("slide 3 title shorter", "use the other photo on the cover", "make it blue").</li>
+<li><b>Switch to detailed</b> keeps what was decided and walks you through the 9 questions.</li>
+<li>Claude never invents reviews, names, ratings, numbers or prices. For a review post, paste the real review. Text you put in "quotes" is used exactly as written, and Claude asks before shortening it.</li>
+<li>Photos that would be cropped heavily or are too small are still flagged, and you decide.</li>
+</ul>
+
+<h1>5. A week of posts: /bulk-posts</h1>
+<p>To prepare several posts at once, copy <code>briefs/TEMPLATE.md</code> (for example to <code>briefs/2026-11-02-week.md</code>), write one <b>## Post</b> block per post, and put each post's photos in a folder next to it. Then type <code>/bulk-posts</code> and give the file (or paste the brief).</p>
+<ul>
+<li>Claude shows <b>one plan</b> for the whole batch: number, date, format, template and color, headline, photos and warnings, with a picture of each post. It varies layouts and colors across the week.</li>
+<li>Change any post in plain words, then choose <b>Build all</b>.</li>
+<li>Each post becomes its own run on the Generated page (run IDs end in <code>-01</code>, <code>-02</code>, …) and is checked like any other post. If one post fails, Claude marks it as failed, finishes the others, and tells you what went wrong.</li>
+<li>The final message has a link, the warnings and a ready-to-copy caption for every post. A summary of the batch is saved in <code>runs/batch-&lt;batch ID&gt;.json</code>.</li>
+</ul>
+
+<h1>6. Adding images</h1>
 <p>When Claude reaches an image slot, you can provide the image in any of these ways:</p>
 <table>
 <thead><tr><th>Method</th><th>How</th></tr></thead>
@@ -162,7 +201,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <li>Uploaded images are stored on the Figma <b>Media</b> page as <code>media/&lt;run ID&gt;/&lt;file name&gt;</code>, so they can be reused later.</li>
 </ul>
 
-<h1>5. Reviewing and exporting</h1>
+<h1>7. Reviewing and exporting</h1>
 <h2>Check the result</h2>
 <p>Claude checks every slide before it reports success:</p>
 <ul>
@@ -188,7 +227,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 </table>
 <p>Copy the caption and hashtags from the summary card, or from Claude's final message.</p>
 
-<h1>6. Changing an existing post: /edit-run</h1>
+<h1>8. Changing an existing post: /edit-run</h1>
 <p>To change a post that has already been generated, type:</p>
 <pre>/edit-run</pre>
 <p>Give the run ID (for example <code>BG-20261023-1430-anna</code>) or paste the Figma link to the run's section. Then tell Claude what to change:</p>
@@ -202,7 +241,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <p>Claude shows you before → after and asks you to confirm. It then edits the run in place (the section stays where it is), checks it again, and adds a <b>Revisions</b> entry to the summary card: who changed what, and when. Slides that are rebuilt lose any manual edits made to them in Figma; Claude reminds you before applying.</p>
 <div class="tip">Prefer <code>/edit-run</code> over editing by hand in Figma. Manual edits work, but they are not recorded on the summary card, and detaching instances breaks the link to the templates.</div>
 
-<h1>7. Templates and designers</h1>
+<h1>9. Templates and designers</h1>
 <p>Templates live on the Figma <b>Templates</b> page. Claude reads their names and layers every time, so a designer can add or update templates without touching the project folder.</p>
 <ul>
 <li>At the start of every <code>/new-post</code>, Claude checks whether templates have changed and refreshes its template list automatically.</li>
@@ -220,7 +259,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <li><code>/sync-templates</code> reports naming problems and proposes renames. It changes the Templates page only after you confirm.</li>
 </ul>
 
-<h1 class="page">8. Using another Claude account or a team</h1>
+<h1 class="page">10. Using another Claude account or a team</h1>
 <p>Nothing in the project folder is tied to a person or an account. There are no personal tokens, IDs or paths in it. The same folder works for anyone.</p>
 
 <h2>Switching to another Claude account (for example a corporate one)</h2>
@@ -243,7 +282,7 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <h2>Using a copy of the Figma file</h2>
 <p>If the team works in a duplicate of the templates file, open <code>config.json</code>, replace <code>fileKey</code> with the key of the new file, then run <code>/sync-templates</code>. The key is the part of the file link after <code>/design/</code>. No other change is needed.</p>
 
-<h1>9. Troubleshooting</h1>
+<h1>11. Troubleshooting</h1>
 <table>
 <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
 <tr><td>Claude says Figma is not connected, or the Figma tools are missing</td><td>Type <code>/mcp</code> → figma → Authenticate (terminal and desktop app), or connect the Figma connector in Settings → Connectors (desktop app). Then run <code>/new-post</code> again.</td></tr>
@@ -254,14 +293,21 @@ Claude: Done. 3 slides, verified. 1 warning: slide 02 uses Light Color.
 <tr><td>"Heavy crop" warning</td><td>The image orientation does not match the slot. Choose a better-matching photo, or accept the crop.</td></tr>
 <tr><td>A color you want is not offered for a layout</td><td>That layout does not exist in that color. Accept the suggested closest color, or pick another layout.</td></tr>
 <tr><td>Two text fields of a layout always show the same text</td><td>A template defect: both layers are bound to the same text property in Figma. <code>/sync-templates</code> reports it, Claude doesn't auto-pick such a layout, and it stops with a clear message if one is chosen. Pick another layout, or ask a designer to give the accent layer its own text property, then run <code>/sync-templates</code>.</td></tr>
+<tr><td>Claude asks for permission before Figma steps</td><td>Choose <b>Always allow</b> once per tool. In cloud sessions, check that the session has only this one repository (the shared permission settings are read only then), or pick <b>Auto</b> mode if your organization allows it.</td></tr>
+<tr><td>No pictures of the templates are shown</td><td>The previews are missing or out of date. Run <code>/sync-templates</code>. The questions still work without pictures.</td></tr>
+<tr><td>A photo shows as a grey box in Figma</td><td>Figma could not read the file (this happens with some WebP images). Claude spots it in its screenshot check and asks for a PNG or JPG version.</td></tr>
+<tr><td>A photo link does not download (cloud session)</td><td>The cloud environment only reaches allowed websites. Upload the file instead, or ask the environment owner to allow that site (README → Cloud sessions).</td></tr>
 <tr><td>Figma rate-limit message</td><td>Wait a few minutes and repeat the last step. Your answers are kept.</td></tr>
 <tr><td>Templates were just changed by a designer</td><td>Nothing to do: Claude refreshes automatically. You can also run <code>/sync-templates</code>.</td></tr>
 </table>
 
-<h1>10. Quick reference</h1>
+<h1>12. Quick reference</h1>
 <table>
 <thead><tr><th>Command / word</th><th>What it does</th></tr></thead>
-<tr><td><code>/new-post</code></td><td>Start the guided questionnaire and build a new post.</td></tr>
+<tr><td><code>/new-post</code></td><td>Build a new post; asks for the mode.</td></tr>
+<tr><td><code>/new-post detailed</code></td><td>The 9-question guided mode.</td></tr>
+<tr><td><code>/new-post quick</code></td><td>Describe the post and add photos; approve one summary.</td></tr>
+<tr><td><code>/bulk-posts</code></td><td>Several posts from one brief file (<code>briefs/TEMPLATE.md</code>).</td></tr>
 <tr><td><code>/edit-run</code></td><td>Change an existing run (by run ID or Figma link).</td></tr>
 <tr><td><code>/sync-templates</code></td><td>Refresh the template list from Figma.</td></tr>
 <tr><td><code>back</code></td><td>Return to the previous question.</td></tr>

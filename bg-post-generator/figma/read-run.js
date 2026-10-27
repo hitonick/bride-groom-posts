@@ -15,10 +15,12 @@ let section = null;
 if (ARGS.nodeId) {
   for (let n = await figma.getNodeByIdAsync(ARGS.nodeId); n && n.type !== 'PAGE'; n = n.parent) if (n.type === 'SECTION' && n.parent.type === 'PAGE') { section = n; break; }
 }
-if (!section && ARGS.runId) section = page.children.find(n => n.type === 'SECTION' && n.name.startsWith(`${ARGS.runId} ·`)) || null;
+// Test runs are named "TEST <runId> · …" so they are easy to find and delete; the prefix is not part of the run ID.
+const bare = name => name.replace(/^TEST /, '');
+if (!section && ARGS.runId) section = page.children.find(n => n.type === 'SECTION' && bare(n.name).startsWith(`${ARGS.runId} ·`)) || null;
 if (!section) return { found: false, candidates: page.children.filter(n => n.type === 'SECTION').map(n => n.name).slice(-10) };
 
-const runId = section.name.split(' · ')[0];
+const runId = bare(section.name).split(' · ')[0];
 const card = section.children.find(n => n.name === 'summary-card') || null;
 const data = card ? card.findOne(n => n.type === 'TEXT' && n.name === 'run-data') : null;
 let runData = null;

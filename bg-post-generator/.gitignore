@@ -1,3 +1,5 @@
 # Scan parts written by /sync-templates; assembled into templates/manifest.json
 templates/.scan/
 .DS_Store
+# Working files of a session: downloaded photos, contact sheets, screenshots
+runs/.cache/

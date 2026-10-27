@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run.schema.json",
+  "title": "Bride&Groom run log (runs/<runId>.json)",
+  "description": "Written by /new-post and /bulk-posts, updated by /edit-run. The same JSON is stored in the summary card's hidden run-data text. Logs written before mode/batchId existed have no `mode`: treat them as detailed.",
+  "type": "object",
+  "required": ["runId", "status", "requestedBy", "created", "fileKey", "format", "slides", "answers", "figma"],
+  "properties": {
+    "runId": { "type": "string", "pattern": "^BG-\\d{8}-\\d{4}-[a-z0-9-]+$", "description": "BG-<stamp>-<handle>, with -01…-NN appended for posts of a batch" },
+    "mode": { "enum": ["detailed", "quick"], "description": "How the post was specified: the 9-step questionnaire, or a brief (Quick mode and /bulk-posts)" },
+    "batchId": { "type": "string", "description": "Set for posts created by /bulk-posts; the batch index is runs/batch-<batchId>.json" },
+    "status": { "enum": ["verified", "built-with-errors", "failed", "cancelled", "unverified"], "description": "unverified = built, verify not finished yet (only ever seen in the card of an interrupted run)" },
+    "requestedBy": { "type": "object", "required": ["handle"], "properties": { "handle": { "type": "string" }, "email": { "type": "string" } } },
+    "created": { "type": "object", "properties": { "local": { "type": "string" }, "tz": { "type": "string" }, "iso": { "type": "string" } } },
+    "fileKey": { "type": "string" },
+    "manifestHash": { "type": "string" },
+    "format": { "enum": ["feed", "carousel", "story", "story-set"], "description": "The post format the operator chose (feed = single feed post)" },
+    "contentType": { "type": "string" },
+    "color": { "type": "string" },
+    "contentMode": { "enum": ["typed", "draft", "mixed"], "description": "Where the slide text came from overall" },
+    "brief": {
+      "type": ["object", "null"],
+      "description": "Quick mode / bulk: `text` is the operator's brief verbatim; the other fields are what Claude read from it. Detailed 'Draft it from a brief': the five answers.",
+      "properties": {
+        "text": { "type": "string" },
+        "topic": { "type": "string" }, "keyMessage": { "type": "string" }, "audience": { "type": "string" },
+        "tone": { "type": "string" }, "callToAction": { "type": "string" },
+        "format": { "type": "string" }, "color": { "type": "string" }, "date": { "type": "string" }, "label": { "type": "string" }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "component"],
+        "properties": {
+          "index": { "type": "integer" },
+          "label": { "type": "string" },
+          "group": { "type": "string" },
+          "color": { "type": "string" },
+          "colorFallback": { "type": ["string", "null"], "description": "e.g. \"Pink → Light Color\"" },
+          "component": { "type": "object", "required": ["key"], "properties": { "name": { "type": "string" }, "key": { "type": "string" } } },
+          "text": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["value", "source"],
+              "properties": { "value": { "type": "string" }, "accent": { "type": "string" }, "source": { "enum": ["typed", "draft", "kept-default", "auto", "edited"], "description": "edited = changed later with /edit-run" } }
+            }
+          },
+          "hidden": { "type": "array", "items": { "type": "string" } },
+          "rating": { "type": ["integer", "object", "null"], "description": "Stars shown (1..stars) on a review slide" },
+          "images": { "type": "object", "additionalProperties": { "type": "object" } }
+        }
+      }
+    },
+    "caption": { "type": "string" },
+    "hashtags": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "object", "required": ["kind"], "properties": { "slide": { "type": ["integer", "null"] }, "kind": { "type": "string" }, "detail": { "type": "string" } } } },
+    "answers": { "type": "array", "items": { "type": "object", "required": ["question", "answer"], "properties": { "step": { "type": "string" }, "question": { "type": "string" }, "answer": { "type": "string" } } } },
+    "figma": {
+      "type": "object",
+      "properties": {
+        "sectionId": { "type": ["string", "null"] }, "summaryCardId": { "type": ["string", "null"] },
+        "slides": { "type": "array", "items": { "type": "object" } },
+        "mediaSectionId": { "type": ["string", "null"] }, "media": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "error": { "type": "string", "description": "status failed: what went wrong, in plain words" },
+    "revisions": { "type": "array", "items": { "type": "object", "properties": { "at": { "type": "string" }, "by": { "type": "object" }, "via": { "type": "string" }, "change": { "type": "string" } } } },
+    "verification": { "type": "object", "properties": { "at": { "type": ["string", "null"] }, "errors": { "type": ["integer", "array", "null"] }, "warnings": { "type": ["integer", "array", "null"] }, "history": { "type": "array" } } }
+  }
+}
