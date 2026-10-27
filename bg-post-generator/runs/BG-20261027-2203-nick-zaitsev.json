@@ -1,0 +1,159 @@
+{
+ "runId": "BG-20261027-2203-nick-zaitsev",
+ "mode": "detailed",
+ "status": "verified",
+ "requestedBy": {
+  "handle": "Nick Zaitsev",
+  "email": "design@theroom.boutique"
+ },
+ "created": {
+  "local": "2026-10-27 22:03",
+  "tz": "Etc/UTC",
+  "iso": "2026-10-27T22:03:54+00:00"
+ },
+ "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+ "manifestHash": "d2af0a88c5ede3c3",
+ "format": "feed",
+ "contentType": "Review",
+ "color": "Blue",
+ "contentMode": "typed",
+ "brief": null,
+ "slides": [
+  {
+   "index": 1,
+   "label": "01 Review · Hashtag · Blue",
+   "group": "Review / Hashtag",
+   "color": "Blue",
+   "colorFallback": null,
+   "component": {
+    "name": "Review / Hashtag / Blue",
+    "key": "ddaa816667797bd1942e291779fc10eb30f32900"
+   },
+   "text": {
+    "quote-text": {
+     "value": "Parrots Very Smart Birds. Love them!",
+     "source": "typed"
+    },
+    "author-name": {
+     "value": "Parrot Jameson",
+     "source": "typed"
+    },
+    "author-handle": {
+     "value": "@parrot",
+     "source": "typed"
+    }
+   },
+   "hidden": [],
+   "rating": null,
+   "images": {
+    "avatar": {
+     "source": "skipped",
+     "path": null,
+     "file": null,
+     "width": null,
+     "height": null,
+     "bytes": null,
+     "crop": null
+    }
+   }
+  }
+ ],
+ "caption": "",
+ "hashtags": [],
+ "warnings": [
+  {
+   "slide": 1,
+   "kind": "image-placeholder",
+   "detail": "avatar: template avatar kept (operator typed skip)"
+  }
+ ],
+ "answers": [
+  {
+   "step": "mode",
+   "question": "How would you like to build this post? (type back or cancel at any step)",
+   "answer": "Detailed"
+  },
+  {
+   "step": "1/9",
+   "question": "1/9 · What format is this post?",
+   "answer": "Feed post (single)"
+  },
+  {
+   "step": "2/9",
+   "question": "2/9 · What kind of post is it?",
+   "answer": "Review"
+  },
+  {
+   "step": "3/9",
+   "question": "3/9 · Which color? (Purple 4, Light Purple 4, Pink 4; More…: Light Pink 4, Light Blue 4, Blue 3, Yellow 3, Dark 2, Light Yellow 1, The layout's own colors 7)",
+   "answer": "More…"
+  },
+  {
+   "step": "3/9",
+   "question": "3/9 · Which of the other colors? (Light Pink, Light Blue, Blue, Yellow; Other: Dark, Light Yellow, 10)",
+   "answer": "Blue"
+  },
+  {
+   "step": "4/9",
+   "question": "4/9 · Which layout? (UI Dark, Hashtag, Pattern)",
+   "answer": "Hashtag"
+  },
+  {
+   "step": "6/9",
+   "question": "6/9 · Text, slide 01 · quote (about 102 characters across 3 lines)",
+   "answer": "Parrots Very Smart Birds. Love them!"
+  },
+  {
+   "step": "6/9",
+   "question": "6/9 · Text, slide 01 · author name (about 17 characters, 1 line)",
+   "answer": "Parrot Jameson"
+  },
+  {
+   "step": "6/9",
+   "question": "6/9 · Text, slide 01 · author handle (about 18 characters, 1 line)",
+   "answer": "@parrot"
+  },
+  {
+   "step": "7/9",
+   "question": "7/9 · Photo, slide 01 · avatar (round, square crop; at least about 160 × 160 px)",
+   "answer": "skip"
+  },
+  {
+   "step": "8/9",
+   "question": "8/9 · Caption for this post?",
+   "answer": "Skip"
+  },
+  {
+   "step": "9/9",
+   "question": "9/9 · Ready to build this post in Figma?",
+   "answer": "Build it"
+  }
+ ],
+ "figma": {
+  "sectionId": "2508:1290",
+  "summaryCardId": "2510:1310",
+  "slides": [
+   {
+    "index": 1,
+    "name": "BG-20261027-2203-nick-zaitsev_01",
+    "nodeId": "2508:1321"
+   }
+  ],
+  "mediaSectionId": null,
+  "media": []
+ },
+ "revisions": [],
+ "verification": {
+  "at": "2026-10-27T22:11:23+00:00",
+  "errors": 0,
+  "warnings": 1,
+  "history": [
+   {
+    "at": "2026-10-27T22:11:23+00:00",
+    "errors": 0,
+    "warnings": 1,
+    "screenshot": "checked"
+   }
+  ]
+ }
+}
