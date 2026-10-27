@@ -145,7 +145,9 @@ for (const s of ARGS.slides) {
     const vert = f.layoutMode === 'VERTICAL';
     const free = freeSpace(f);
     const mFree = mf && 'layoutMode' in mf && mf.layoutMode === f.layoutMode ? freeSpace(mf) : 0;
-    if (f.primaryAxisSizingMode === 'FIXED' && free < -1) add('error', 'overflow', path, `content is ${r(-free)}px ${vert ? 'taller' : 'wider'} than the frame`);
+    // Some templates already overrun their own frame (content eats into padding); only an overrun beyond that is an error.
+    const limit = Math.min(0, mFree);
+    if (f.primaryAxisSizingMode === 'FIXED' && free < limit - 1) add('error', 'overflow', path, `content is ${r(limit - free)}px ${vert ? 'taller' : 'wider'} than the frame${limit < 0 ? ` (beyond the template's own ${r(-limit)}px overrun)` : ''}`);
     else if (vert && f.primaryAxisSizingMode === 'FIXED' && ['MIN', 'MAX'].includes(f.primaryAxisAlignItems) && free - mFree >= ARGS.underfillMin) {
       add('warn', 'underfill', path, `${r(free - mFree)}px more empty space ${f.primaryAxisAlignItems === 'MIN' ? 'at the bottom' : 'at the top'} than the template — the text is shorter than the layout expects`);
     }
