@@ -1,0 +1,176 @@
+{
+  "runId": "BG-20261027-2123-nick-zaitsev-03",
+  "mode": "quick",
+  "batchId": "BG-20261027-2123-nick-zaitsev",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 21:23",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T21:23:44+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "story",
+  "contentType": "Poll story",
+  "color": "Blue",
+  "contentMode": "draft",
+  "brief": {
+    "text": "## Post 3\ndate: Fri 6 Nov\nformat: story\ntopic: Poll: first look or aisle reveal?\ncta: Vote in the poll\ncolor: Purple\nphotos: post3/03-aisle-landscape.jpg",
+    "topic": "Poll: first look or aisle reveal?",
+    "audience": "Bride&Groom audience (assumed)",
+    "tone": "warm, friendly (assumed)",
+    "callToAction": "Vote in the poll",
+    "format": "story",
+    "color": "Purple (changed in review: not Purple → Blue)",
+    "date": "Fri 6 Nov",
+    "label": "Post 3"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Poll",
+      "group": "Story / Poll Card",
+      "color": "Blue",
+      "colorFallback": null,
+      "component": {
+        "name": "Story / Poll Card / Blue",
+        "key": "a800048ff04f7fd973117bd654d2359ec2f7ed01"
+      },
+      "text": {
+        "title": {
+          "value": "Poll",
+          "source": "kept-default"
+        },
+        "title-accent": {
+          "value": "Time!",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "runs/.cache/test/bulk/post3/03-aisle-landscape.jpg",
+          "file": "03-aisle-landscape.jpg",
+          "width": 987,
+          "height": 700,
+          "bytes": 227185,
+          "crop": 0.525,
+          "imageHash": "4b895c5ba301f4cbe4d79a5409fdf579185f1980",
+          "mediaNodeId": "2495:23"
+        }
+      }
+    }
+  ],
+  "caption": "First look or aisle reveal? Tell us in the poll on our story. Vote in the poll!",
+  "hashtags": [
+    "#firstlook",
+    "#weddingday",
+    "#weddingvideo",
+    "#brideandgroom"
+  ],
+  "warnings": [
+    {
+      "slide": 1,
+      "kind": "heavy-crop",
+      "detail": "03-aisle-landscape.jpg is landscape; the portrait slot crops 53% of it (operator: Use it)"
+    },
+    {
+      "slide": 1,
+      "kind": "kept-default",
+      "detail": "Headline keeps the template text 'Poll Time!'; the question goes in Instagram's poll sticker"
+    }
+  ],
+  "answers": [
+    {
+      "step": "decide",
+      "question": "Format",
+      "answer": "Story (brief: format story)"
+    },
+    {
+      "step": "decide",
+      "question": "Content type",
+      "answer": "Poll story (brief: poll)"
+    },
+    {
+      "step": "decide",
+      "question": "Color",
+      "answer": "Purple (brief: color Purple)"
+    },
+    {
+      "step": "decide",
+      "question": "Layout",
+      "answer": "Story / Poll Card (the poll layout with a photo slot)"
+    },
+    {
+      "step": "decide",
+      "question": "Photos",
+      "answer": "photo ← 03-aisle-landscape.jpg (landscape, crop 53%; also fills the card's background)"
+    },
+    {
+      "step": "photo-check",
+      "question": "03-aisle-landscape.jpg crops 53% in the portrait slot (heavy crop): Use it · Another image · Pick another layout",
+      "answer": "Use it (no other photo in post3/)"
+    },
+    {
+      "step": "draft",
+      "question": "Text",
+      "answer": "Headline 'Poll Time!' kept as template text (title 4 + accent 5 chars cannot hold the question); question and CTA in Instagram's poll sticker and the caption"
+    },
+    {
+      "step": "review",
+      "question": "Plan: Build all · Change a post · Cancel",
+      "answer": "Change a post"
+    },
+    {
+      "step": "review-change",
+      "question": "Which post and what?",
+      "answer": "post 3: use a different color, not purple → Color Purple → Blue (Blue, Yellow, Pink tie at 7 story layouts; Pink is already used by post 1, Blue comes first of the unused ones)"
+    },
+    {
+      "step": "review",
+      "question": "Plan: Build all · Change a post · Cancel",
+      "answer": "Build all"
+    }
+  ],
+  "figma": {
+    "sectionId": "2503:1736",
+    "summaryCardId": "2505:1747",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-2123-nick-zaitsev-03_01",
+        "nodeId": "2503:1778"
+      }
+    ],
+    "mediaSectionId": "2496:22",
+    "media": [
+      {
+        "file": "03-aisle-landscape.jpg",
+        "nodeId": "2495:23",
+        "imageHash": "4b895c5ba301f4cbe4d79a5409fdf579185f1980"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T21:55:00+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-27T21:55:00+00:00",
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "checked": 1,
+        "screenshot": "runs/.cache/BG-20261027-2123-nick-zaitsev-03/screenshot-section.png: clean (photo replaced in card and background)"
+      }
+    ]
+  }
+}

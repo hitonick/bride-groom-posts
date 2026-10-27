@@ -6,10 +6,10 @@ Shared rules for every text a post gets: typed by the operator (Detailed 6/9), d
 Every slot with `kind: "text"` that is not `auto` and not `role: "fixed"`.
 - Budget = `capacity` chars over `lines` lines. For quotes and long text also say how much fills the design (`defaultLength`): much shorter text leaves a gap.
 - `|` splits a title from its `-accent` part. Without `|` and with an accent slot, pick the last words that fit the accent line and show the split. For a mixed-font single node, pass the accent separately (`accent` in the build spec).
-- `keep` → keep the template text (record `source: "kept-default"`); offer it as a choice where it makes sense (story headlines, `button-label`).
-- `hide` → hide an optional field (listed in `hide`).
+- `keep` (an operator answer, not a manifest flag) → keep the template text (record `source: "kept-default"`); offer it as a choice where it makes sense (story headlines, `button-label`). In Quick mode, list every kept template text on the review screen ("button: *Swipe* (template text)"), so **Build it** is the operator's explicit OK.
+- `hide` (an operator answer) → hide a field that is not essential (a tagline, a source label): its path goes into the build spec's `hide`.
 - List slots (`list` set): bullets come from the template; strip typed `1.` / `•`.
-- Auto slots: `page-number` = two-digit slide index; `tag-label` keeps its template text (`kept: true` in verify).
+- Auto slots: `page-number` = two-digit slide index (a single post shows "01"; `steps/compose.md` prefers layouts without one); `tag-label` keeps its template text (`kept: true` in verify).
 - Reviews: quote, author name, handle (if the layout shows one), source (Google/Facebook: pick a layout with that platform, or fill `source-label`), star rating (1..`stars`).
 
 ## Over budget
@@ -24,6 +24,10 @@ Every slot with `kind: "text"` that is not `auto` and not `role: "fixed"`.
 - **Never invent** review quotes, names, handles, ratings, statistics, prices, dates or client details. Reviews are always the operator's real text: if a review post has none, ask for it (Detailed mode skips drafting for reviews). Missing facts become a question, not a guess.
 - Record each text with `source: "draft"` (or `typed`, `kept-default`, `auto`).
 
+## Story headlines
+Poll and question story layouts have very short headline slots (4–5 characters, e.g. "Poll Time!"): the question itself goes in Instagram's poll sticker, not on the slide. Keep the template headline (`kept-default`, listed on the review) unless a short word of the operator's fits, and put the question in the review so the operator can paste it into the sticker.
+
 ## Caption
+Stories have no caption: skip it for stories and story sets (the call to action goes on the slide or into the sticker text).
 - At most `config.instagram.hashtagsMax` hashtags; caption ≤ `config.instagram.captionMaxChars`.
 - Detailed mode asks: Write my own · Draft it for me · Skip; Quick mode drafts it. Show the draft and let the operator use, edit or skip it.

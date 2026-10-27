@@ -1,5 +1,5 @@
 // build-run.js — create or update one run's Section on the Generated page. Run via use_figma.
-// Before sending, replace the whole `const ARGS = { … };` declaration (lines 5–16) with the build spec
+// Before sending, replace the whole ARGS declaration below (from its first line up to its closing `};`) with the build spec
 // (see .claude/skills/new-post/steps/build.md → "2. Build spec", at the repository root).
 // Re-runnable: slides are replaced by name, and the summary card is re-rendered when `card` is given.
 // Slides are component instances with overrides only; nothing is detached and template styling is never changed.
