@@ -1,0 +1,84 @@
+{
+  "runId": "BG-20261027-1239-nick-zaitsev",
+  "status": "verified",
+  "requestedBy": { "handle": "Nick Zaitsev", "email": "design@theroom.boutique" },
+  "created": { "local": "2026-10-27 12:39", "tz": "Etc/UTC", "iso": "2026-10-27T12:39:01+00:00" },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Carousel article",
+  "color": "Light",
+  "contentMode": "draft",
+  "brief": {
+    "topic": "You Shoot. We Edit. You Grow.",
+    "keyMessage": "Outsourcing editing to Bride&Groom.video gives wedding filmmakers their time back",
+    "audience": "Wedding filmmakers overwhelmed by editing backlogs",
+    "tone": "Warm and friendly",
+    "callToAction": "Send us your first project"
+  },
+  "slides": [
+    { "index": 1, "label": "01 Cover · Photo Top · Dark", "group": "Cover / Photo Top", "color": "Dark", "colorFallback": "Light → Dark", "component": { "name": "Cover / Photo Top / Dark", "key": "055f463118cf2516c3a3390722903ee1a7574ca3" }, "text": { "tagline": { "value": "Outsource", "source": "draft" }, "title": { "value": "You Shoot. We Edit.", "source": "draft" }, "title-accent": { "value": "You Grow.", "source": "draft" } }, "hidden": [], "rating": null, "images": { "photo": { "source": "file", "path": "images/1.webp", "file": "1.png", "width": 987, "height": 1481, "bytes": 1982646, "crop": 0.5 } } },
+    { "index": 2, "label": "02 Title + Pagination · Light", "group": "Carousel / Title + Pagination", "color": "Light", "colorFallback": null, "component": { "name": "Carousel / Title + Pagination / Light", "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116" }, "text": { "tagline": { "value": "The editing backlog", "source": "draft" }, "title": { "value": "Love the shoot, dread the edit?", "source": "draft" }, "title-accent": { "value": "Sound familiar?", "source": "draft" }, "body": { "value": "Weekends on the camera, weeknights in the timeline. The backlog grows while the next wedding is already booked.", "source": "draft" }, "page-number": { "value": "02", "source": "auto" }, "tag-label": { "value": "kept", "source": "kept-default" } }, "hidden": [], "rating": null, "images": {} },
+    { "index": 3, "label": "03 Title + Pagination · Light", "group": "Carousel / Title + Pagination", "color": "Light", "colorFallback": null, "component": { "name": "Carousel / Title + Pagination / Light", "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116" }, "text": { "tagline": { "value": "Here's the fix", "source": "draft" }, "title": { "value": "You shoot it. We edit it.", "source": "draft" }, "title-accent": { "value": "Simple as that.", "source": "draft" }, "body": { "value": "Send us your footage and we hand back a polished film in your style, ready to deliver to your couple.", "source": "draft" }, "page-number": { "value": "03", "source": "auto" }, "tag-label": { "value": "kept", "source": "kept-default" } }, "hidden": [], "rating": null, "images": {} },
+    { "index": 4, "label": "04 Intro List · Light", "group": "Carousel / Intro List", "color": "Light", "colorFallback": null, "component": { "name": "Carousel / Intro List / Light", "key": "7407d5a26976b8b689625fbec607b30a83caa336" }, "text": { "title": { "value": "Reclaim", "source": "draft" }, "title-accent": { "value": "time.", "source": "draft" }, "body": { "value": "More time for what you love about wedding films.", "source": "draft" }, "bullet-1": { "value": "Shoot more weddings without the editing backlog", "source": "draft" }, "bullet-2": { "value": "You Grow: we handle the post-production", "source": "draft" }, "page-number": { "value": "04", "source": "auto" }, "tag-label": { "value": "kept", "source": "kept-default" } }, "hidden": [], "rating": null, "images": {} },
+    { "index": 5, "label": "05 Outro · Light", "group": "Carousel / Outro", "color": "Light", "colorFallback": null, "component": { "name": "Carousel / Outro / Light", "key": "746bb2be18e784a9662490fe25d91b067d6448a3" }, "text": { "title": { "value": "Your first", "source": "draft" }, "title-accent": { "value": "project.", "source": "draft" }, "page-number": { "value": "05", "source": "auto" }, "tag-label": { "value": "kept", "source": "kept-default" } }, "hidden": [], "rating": null, "images": {} }
+  ],
+  "caption": "",
+  "hashtags": [],
+  "warnings": [
+    { "slide": 1, "kind": "color-fallback", "detail": "Light → Dark: no Light cover with a photo and a tagline longer than 9 characters" },
+    { "slide": 1, "kind": "image-crop", "detail": "photo: portrait photo in a 1.32:1 slot, about 50% cropped; operator chose Use this photo anyway" },
+    { "slide": 1, "kind": "low-resolution", "detail": "photo: 987 px wide, best >= 1028 px" },
+    { "slide": 1, "kind": "grayscale", "detail": "this layout shows photos in black and white" },
+    { "slide": 3, "kind": "orphan-word", "detail": "title wraps with \"it.\" alone on line 2; operator chose Keep as is" },
+    { "slide": 5, "kind": "text-budget", "detail": "Outro holds 18 characters, so the full call to action \"Send us your first project\" is not on the slides; caption skipped" }
+  ],
+  "answers": [
+    { "step": "1/9", "question": "Which format?", "answer": "Carousel" },
+    { "step": "2/9", "question": "What kind of carousel is it?", "answer": "Carousel article" },
+    { "step": "3/9", "question": "Which color?", "answer": "Light (11 layouts)" },
+    { "step": "4/9", "question": "How many slides?", "answer": "5 (Recommended)" },
+    { "step": "4/9", "question": "Use the suggested sequence?", "answer": "Manual" },
+    { "step": "4/9", "question": "Slide 01 layout", "answer": "Photo Card" },
+    { "step": "4/9", "question": "Slide 02 layout", "answer": "Title + Pagination" },
+    { "step": "4/9", "question": "Slide 03 layout", "answer": "Title + Pagination" },
+    { "step": "4/9", "question": "Slide 04 layout", "answer": "Intro List (operator asked for something unique)" },
+    { "step": "4/9", "question": "Slide 05 layout", "answer": "Outro" },
+    { "step": "5/9", "question": "How do you want to provide the text?", "answer": "Draft it from a brief" },
+    { "step": "5/9", "question": "Brief: topic and objective", "answer": "You Shoot. We Edit. You Grow.; show wedding filmmakers the benefits of outsourcing editing" },
+    { "step": "5/9", "question": "Brief: tone", "answer": "Warm and friendly" },
+    { "step": "5/9", "question": "Brief: call to action", "answer": "Send us your first project" },
+    { "step": "5/9", "question": "Use this draft?", "answer": "Use this draft" },
+    { "step": "7/9", "question": "Slide 01 photo (portrait 4:5, best >= 1080 px)", "answer": "1.webp 987x1481" },
+    { "step": "7/9", "question": "Photo is under 1080 px wide", "answer": "Use it" },
+    { "step": "8/9", "question": "Caption?", "answer": "Skip" },
+    { "step": "9/9", "question": "Build it?", "answer": "Build it" },
+    { "step": "fix", "question": "Check: tagline \"Outsource\" is 79 px wide, the Photo Card tagline gives 69 px. Which way?", "answer": "Pick another layout" },
+    { "step": "fix", "question": "Light photo covers all have a 69 px tagline. Slide 01?", "answer": "Photo Top cover in Dark" },
+    { "step": "fix", "question": "Photo Top: grayscale, photo is portrait in a 1.32:1 slot (about 50% crop). Photo?", "answer": "Use this photo anyway" },
+    { "step": "fix", "question": "Slide 03 title leaves \"it.\" alone on line 2. Handle?", "answer": "Keep as is" }
+  ],
+  "figma": {
+    "sectionId": "2432:1217",
+    "summaryCardId": "2438:1272",
+    "slides": [
+      { "index": 1, "name": "BG-20261027-1239-nick-zaitsev_01", "nodeId": "2436:1322" },
+      { "index": 2, "name": "BG-20261027-1239-nick-zaitsev_02", "nodeId": "2432:1271" },
+      { "index": 3, "name": "BG-20261027-1239-nick-zaitsev_03", "nodeId": "2432:1285" },
+      { "index": 4, "name": "BG-20261027-1239-nick-zaitsev_04", "nodeId": "2432:1299" },
+      { "index": 5, "name": "BG-20261027-1239-nick-zaitsev_05", "nodeId": "2432:1314" }
+    ],
+    "mediaSectionId": "2431:1390",
+    "media": [{ "file": "1.png", "nodeId": "2434:1442", "imageHash": "6a0d39e9cfd299e86b02ad1c0b12975696afb4d8" }]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T13:05:00+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      { "at": "2026-10-27T12:58:00+00:00", "errors": 1, "warnings": 0, "screenshot": "checked" },
+      { "at": "2026-10-27T13:05:00+00:00", "errors": 0, "warnings": 0, "screenshot": "checked" }
+    ]
+  }
+}
