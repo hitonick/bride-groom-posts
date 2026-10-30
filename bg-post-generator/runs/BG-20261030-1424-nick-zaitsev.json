@@ -1,0 +1,353 @@
+{
+  "runId": "BG-20261030-1424-nick-zaitsev",
+  "mode": "quick",
+  "status": "verified",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": "2026-10-30T14:24:29+00:00",
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "carousel",
+  "contentType": "Carousel article",
+  "color": "Light",
+  "contentMode": "draft",
+  "brief": {
+    "text": "5 Signs It's Time to Outsource Your Wedding Video Editing (full brief in chat: key message, 6 slides with content, CTA)",
+    "topic": "5 Signs It's Time to Outsource Your Wedding Video Editing",
+    "keyMessage": "Bride&Groom.video helps videographers eliminate editing backlogs, reclaim their time, deliver faster and grow",
+    "audience": "wedding filmmakers",
+    "tone": "warm, friendly",
+    "callToAction": "Ready to get your time back? Visit bridengroom.video to explore our editing services.",
+    "format": "carousel, 6 slides, 4:5",
+    "color": null
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover",
+      "group": "Cover / Photo Overlay",
+      "color": "Default",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Photo Overlay",
+        "key": "b0e4f205faa14bd63d4e5075cd63c09caaecb65f"
+      },
+      "text": {
+        "tagline": {
+          "value": "For wedding filmmakers",
+          "source": "draft"
+        },
+        "title": {
+          "value": "5 Signs It's Time to Outsource",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "Your Wedding Editing",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "images": {
+        "photo": {
+          "source": "upload",
+          "path": "runs/.cache/BG-20261030-1424-nick-zaitsev/photo-1.png",
+          "file": "photo-1.png",
+          "width": 1364,
+          "height": 1705,
+          "bytes": 1407184,
+          "crop": 0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "label": "02 Sign",
+      "group": "Carousel / Title + Pagination",
+      "color": "Light",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Title + Pagination / Light",
+        "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116"
+      },
+      "text": {
+        "tagline": {
+          "value": "Sign #1",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Your editing backlog",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "keeps growing.",
+          "source": "draft"
+        },
+        "body": {
+          "value": "You're booking new weddings while still editing last month's footage.",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "02",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "images": {}
+    },
+    {
+      "index": 3,
+      "label": "03 Sign",
+      "group": "Carousel / Two Photos + Text",
+      "color": "Light",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Two Photos + Text / Light",
+        "key": "0ac51dadc39d205e31b7aa300fc41f51419be8e2"
+      },
+      "text": {
+        "tagline": {
+          "value": "Sign #2",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Editing,\nnot filming",
+          "source": "draft"
+        },
+        "body": {
+          "value": "You became a filmmaker to create, not to spend every evening behind a computer.",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "images": {
+        "photo[0]": {
+          "source": "upload",
+          "path": "runs/.cache/BG-20261030-1424-nick-zaitsev/photo-2.png",
+          "file": "photo-2.png",
+          "width": 987,
+          "height": 1482,
+          "bytes": 1739351,
+          "crop": 0.06
+        },
+        "photo[1]": {
+          "source": "upload",
+          "path": "runs/.cache/BG-20261030-1424-nick-zaitsev/photo-3.png",
+          "file": "photo-3.png",
+          "width": 989,
+          "height": 1475,
+          "bytes": 2556405,
+          "crop": 0.06
+        }
+      }
+    },
+    {
+      "index": 4,
+      "label": "04 Sign",
+      "group": "Carousel / Title + Pagination",
+      "color": "Light",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Title + Pagination / Light",
+        "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116"
+      },
+      "text": {
+        "tagline": {
+          "value": "Sign #3",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Your turnaround times are",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "getting longer.",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Keeping clients waiting shouldn't be part of your workflow.",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "04",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "images": {}
+    },
+    {
+      "index": 5,
+      "label": "05 Sign",
+      "group": "Carousel / Two Photos + Text",
+      "color": "Light",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Two Photos + Text / Light",
+        "key": "0ac51dadc39d205e31b7aa300fc41f51419be8e2"
+      },
+      "text": {
+        "tagline": {
+          "value": "Sign #4",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Saying no\nto new work",
+          "source": "draft"
+        },
+        "body": {
+          "value": "When editing consumes your schedule, there's little room left to grow.",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "images": {
+        "photo[0]": {
+          "source": "upload",
+          "path": "runs/.cache/BG-20261030-1424-nick-zaitsev/photo-3.png",
+          "file": "photo-3.png",
+          "width": 989,
+          "height": 1475,
+          "bytes": 2556405,
+          "crop": 0.06
+        },
+        "photo[1]": {
+          "source": "upload",
+          "path": "runs/.cache/BG-20261030-1424-nick-zaitsev/photo-2.png",
+          "file": "photo-2.png",
+          "width": 987,
+          "height": 1482,
+          "bytes": 1739351,
+          "crop": 0.06
+        }
+      }
+    },
+    {
+      "index": 6,
+      "label": "06 CTA",
+      "group": "Carousel / Title + Pagination",
+      "color": "Light",
+      "colorFallback": null,
+      "component": {
+        "name": "Carousel / Title + Pagination / Light",
+        "key": "74f7a1c6834ff04a0652a5d63970c5151f36e116"
+      },
+      "text": {
+        "tagline": {
+          "value": "Ready to get your time back?",
+          "source": "draft"
+        },
+        "title": {
+          "value": "You shoot. We edit.",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "You grow.",
+          "source": "draft"
+        },
+        "body": {
+          "value": "Let Bride&Groom.video handle your post-production so you can focus on what you love. Visit bridengroom.video",
+          "source": "draft"
+        },
+        "page-number": {
+          "value": "06",
+          "source": "auto"
+        },
+        "tag-label": {
+          "value": "Bride&Groom.video",
+          "source": "kept-default"
+        }
+      },
+      "hidden": [],
+      "images": {}
+    }
+  ],
+  "caption": "Spending more nights editing than filming? These are the signs it's time to hand off your post-production. 🎬\n\nBride&Groom.video helps wedding filmmakers clear their editing backlog, deliver films faster and grow their business, without losing their creative style.\n\nReady to get your time back? Visit bridengroom.video to explore our editing services.",
+  "hashtags": [
+    "#weddingvideographer",
+    "#weddingfilmmaker",
+    "#videoediting",
+    "#weddingvideo",
+    "#outsourceediting"
+  ],
+  "warnings": [
+    "Title says 5 signs, carousel shows 4",
+    "Photos 2 and 3 carry Unsplash+ watermarks",
+    "Photos 2 and 3 used twice (slides 03 and 05)",
+    "Two Photos + Text template shows photos in black and white"
+  ],
+  "answers": [
+    {
+      "question": "Mode",
+      "answer": "Quick"
+    },
+    {
+      "question": "Format",
+      "answer": "Carousel, 6 slides (brief)"
+    },
+    {
+      "question": "Content type",
+      "answer": "Carousel article (list of signs)"
+    },
+    {
+      "question": "Color",
+      "answer": "Light (clean, most layouts for Carousel)"
+    },
+    {
+      "question": "Layouts",
+      "answer": "Cover Photo Overlay (photo 1 fits 4:5, crop 0%); Title + Pagination for text slides; Two Photos + Text for photos 2 and 3 (crop 6%)"
+    },
+    {
+      "question": "Slide 03 title",
+      "answer": "Shortened after build: Edit more / than you film → Editing, / not filming (wrapped to 3 lines)"
+    },
+    {
+      "question": "Review",
+      "answer": "Build it"
+    }
+  ],
+  "figma": {
+    "sectionId": "2623:2",
+    "summaryCardId": "2623:3",
+    "slides": [
+      "2623:43",
+      "2623:52",
+      "2623:66",
+      "2623:76",
+      "2623:90",
+      "2623:100"
+    ],
+    "mediaSectionId": "2622:2",
+    "media": [
+      "2621:2",
+      "2621:3",
+      "2621:4"
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-30T14:50:00+00:00",
+    "errors": 0,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-30T14:45:00+00:00",
+        "note": "screenshot: slide 03 title wrapped to 3 lines, shortened"
+      },
+      {
+        "at": "2026-10-30T14:50:00+00:00",
+        "errors": 0,
+        "warnings": 0
+      }
+    ]
+  }
+}
