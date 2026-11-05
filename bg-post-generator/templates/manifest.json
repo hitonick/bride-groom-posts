@@ -1,10 +1,10 @@
 {
   "$schema": "./manifest.schema.json",
   "version": 1,
-  "generatedAt": "2026-10-27T20:13:25+00:00",
+  "generatedAt": "2026-10-30T14:37:45+00:00",
   "generatedBy": "Nick Zaitsev",
   "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
-  "templatesPage": "Templates",
+  "templatesPage": "    ⌙ Social Templates",
   "scanArgs": {
     "ignoreMarker": "(CLAUDE - IGNORE)",
     "decorContainers": [
@@ -30,19 +30,19 @@
     "templatesPerCall": 10
   },
   "hash": "d2af0a88c5ede3c3",
-  "lookHash": "7444fb8786bee508",
+  "lookHash": "e81f065c2e74bc7b",
   "scannerVersion": 5,
   "componentCount": 109,
   "templateCount": 40,
   "fontWidthRatios": {
-    "DM Sans/Medium": 0.537,
     "DM Sans/Regular": 0.539,
+    "Brygada 1918/Bold Italic": 0.512,
+    "DM Sans/Bold": 0.498,
+    "DM Sans/Medium": 0.537,
     "Switzer/Medium": 0.469,
     "Switzer/Semibold": 0.495,
     "Switzer/Regular": 0.481,
-    "PP Neue Montreal/Medium": 0.52,
-    "DM Sans/Bold": 0.498,
-    "Brygada 1918/Bold Italic": 0.512
+    "PP Neue Montreal/Medium": 0.52
   },
   "summary": {
     "byType": {
@@ -1276,7 +1276,7 @@
           "name": "Review / Hashtag / Light Blue",
           "key": "f415305cff68ea9a6c58537018cc032edfdde191",
           "nodeId": "2016:192",
-          "look": "e0fc1df8a3e2664d",
+          "look": "38c543fc850a99ad",
           "preview": "previews/f415305cff68ea9a6c58537018cc032edfdde191.png"
         },
         {
@@ -1284,7 +1284,7 @@
           "name": "Review / Hashtag / Light Pink",
           "key": "5106b07355b29f0f8eef47637e7353eeb437a765",
           "nodeId": "2016:193",
-          "look": "a00e64018df49a38",
+          "look": "ea7f5171f9c508ac",
           "preview": "previews/5106b07355b29f0f8eef47637e7353eeb437a765.png"
         },
         {
@@ -1292,7 +1292,7 @@
           "name": "Review / Hashtag / Light Purple",
           "key": "b387107d01408ae36d653b117d72849d79ab3e32",
           "nodeId": "2016:194",
-          "look": "0ddab653ed787c38",
+          "look": "c8a318afdea157a8",
           "preview": "previews/b387107d01408ae36d653b117d72849d79ab3e32.png"
         },
         {
@@ -1300,7 +1300,7 @@
           "name": "Review / Hashtag / Yellow",
           "key": "4274ee1128b5ae111daa26c062dd672f960f6c38",
           "nodeId": "2016:195",
-          "look": "78dbf758eb88a67b",
+          "look": "7da1fc7877532dab",
           "preview": "previews/4274ee1128b5ae111daa26c062dd672f960f6c38.png"
         },
         {
@@ -1308,7 +1308,7 @@
           "name": "Review / Hashtag / Blue",
           "key": "ddaa816667797bd1942e291779fc10eb30f32900",
           "nodeId": "2016:196",
-          "look": "769b33929420f1dd",
+          "look": "db0efae2eb5e52bd",
           "preview": "previews/ddaa816667797bd1942e291779fc10eb30f32900.png"
         },
         {
@@ -1316,7 +1316,7 @@
           "name": "Review / Hashtag / Pink",
           "key": "6e18ff64fe7bd03812288cf45bc3face6453deb3",
           "nodeId": "2016:197",
-          "look": "294a8884f7395db7",
+          "look": "65b715d46854eda7",
           "preview": "previews/6e18ff64fe7bd03812288cf45bc3face6453deb3.png"
         },
         {
@@ -1324,7 +1324,7 @@
           "name": "Review / Hashtag / Dark",
           "key": "82a18d22a7957c0bb1065e5a3f0854cac5c1f392",
           "nodeId": "2016:198",
-          "look": "4017096ea355fe81",
+          "look": "ce1172aa332eb51d",
           "preview": "previews/82a18d22a7957c0bb1065e5a3f0854cac5c1f392.png"
         },
         {
@@ -1332,7 +1332,7 @@
           "name": "Review / Hashtag / Purple",
           "key": "a98a613bae0c64ba7a589e7846432e6d62f1d3ce",
           "nodeId": "2016:199",
-          "look": "0a29a1a10a6f35de",
+          "look": "25b61e9515480cbe",
           "preview": "previews/a98a613bae0c64ba7a589e7846432e6d62f1d3ce.png"
         }
       ]
@@ -5488,6 +5488,137 @@
     }
   ],
   "palettes": {
+    "Story / Photo Talk": [
+      "Dark"
+    ],
+    "Story / Share Opinion": [
+      "Blue",
+      "Yellow",
+      "Pink",
+      "Purple"
+    ],
+    "Story / What Do You Think": [
+      "Purple",
+      "Pink",
+      "Yellow",
+      "Blue"
+    ],
+    "Story / Question Card": [
+      "Blue",
+      "Yellow",
+      "Pink",
+      "Purple"
+    ],
+    "Story / Poll Time": [
+      "Purple",
+      "Pink",
+      "Yellow",
+      "Blue"
+    ],
+    "Story / Poll & Vote": [
+      "Blue",
+      "Yellow",
+      "Pink",
+      "Purple"
+    ],
+    "Story / Poll Card": [
+      "Purple",
+      "Pink",
+      "Yellow",
+      "Blue"
+    ],
+    "Story / Poll Pattern": [
+      "Blue",
+      "Yellow",
+      "Pink",
+      "Purple"
+    ],
+    "Story / Photo Poll": [
+      "Dark"
+    ],
+    "Carousel / Title + Pagination": [
+      "Light",
+      "Dark"
+    ],
+    "Carousel / Photo + Title + Pagination": [
+      "Light",
+      "Dark"
+    ],
+    "Carousel / Outro": [
+      "Light",
+      "Light Yellow",
+      "Light Pink",
+      "Light Purple",
+      "Light Blue",
+      "Yellow",
+      "Pink",
+      "Blue",
+      "Purple",
+      "Dark"
+    ],
+    "Carousel / Photo + Body": [
+      "Light",
+      "Light Color",
+      "Dark"
+    ],
+    "Carousel / Photo + Title": [
+      "Light",
+      "Light Color",
+      "Dark"
+    ],
+    "Carousel / Two Photos + Text": [
+      "Light",
+      "Light Color",
+      "Dark"
+    ],
+    "Carousel / Photo + Text": [
+      "Light",
+      "Light Color",
+      "Dark"
+    ],
+    "Carousel / Thank You": [
+      "Light"
+    ],
+    "Carousel / Photo Collage": [
+      "Dark"
+    ],
+    "Carousel / Intro List": [
+      "Light"
+    ],
+    "Cover / Photo Short": [
+      "Light",
+      "Dark"
+    ],
+    "Cover / Photo Card": [
+      "Light"
+    ],
+    "Cover / Photo Card Tall": [
+      "Light Purple",
+      "Purple"
+    ],
+    "Cover / Swipe Centered": [
+      "Purple"
+    ],
+    "Cover / Swipe": [
+      "Pink"
+    ],
+    "Cover / Text + Body": [
+      "Light Blue"
+    ],
+    "Cover / Text": [
+      "Pink",
+      "Light Yellow",
+      "Dark"
+    ],
+    "Cover / Quote": [
+      "Purple"
+    ],
+    "Cover / Photo Top": [
+      "Dark"
+    ],
+    "Cover / Photo Overlay": [
+      "Default"
+    ],
     "Review / UI Dark": [
       "Light Blue",
       "Light Purple",
@@ -5545,161 +5676,15 @@
     ],
     "Review / Photo Overlay": [
       "Default"
-    ],
-    "Cover / Photo Short": [
-      "Light",
-      "Dark"
-    ],
-    "Cover / Photo Card": [
-      "Light"
-    ],
-    "Cover / Photo Card Tall": [
-      "Light Purple",
-      "Purple"
-    ],
-    "Cover / Swipe Centered": [
-      "Purple"
-    ],
-    "Cover / Swipe": [
-      "Pink"
-    ],
-    "Cover / Text + Body": [
-      "Light Blue"
-    ],
-    "Cover / Text": [
-      "Pink",
-      "Light Yellow",
-      "Dark"
-    ],
-    "Cover / Quote": [
-      "Purple"
-    ],
-    "Cover / Photo Top": [
-      "Dark"
-    ],
-    "Cover / Photo Overlay": [
-      "Default"
-    ],
-    "Carousel / Title + Pagination": [
-      "Light",
-      "Dark"
-    ],
-    "Carousel / Photo + Title + Pagination": [
-      "Light",
-      "Dark"
-    ],
-    "Carousel / Outro": [
-      "Light",
-      "Light Yellow",
-      "Light Pink",
-      "Light Purple",
-      "Light Blue",
-      "Yellow",
-      "Pink",
-      "Blue",
-      "Purple",
-      "Dark"
-    ],
-    "Carousel / Photo + Body": [
-      "Light",
-      "Light Color",
-      "Dark"
-    ],
-    "Carousel / Photo + Title": [
-      "Light",
-      "Light Color",
-      "Dark"
-    ],
-    "Carousel / Two Photos + Text": [
-      "Light",
-      "Light Color",
-      "Dark"
-    ],
-    "Carousel / Photo + Text": [
-      "Light",
-      "Light Color",
-      "Dark"
-    ],
-    "Carousel / Thank You": [
-      "Light"
-    ],
-    "Carousel / Photo Collage": [
-      "Dark"
-    ],
-    "Carousel / Intro List": [
-      "Light"
-    ],
-    "Story / Photo Talk": [
-      "Dark"
-    ],
-    "Story / Share Opinion": [
-      "Blue",
-      "Yellow",
-      "Pink",
-      "Purple"
-    ],
-    "Story / What Do You Think": [
-      "Purple",
-      "Pink",
-      "Yellow",
-      "Blue"
-    ],
-    "Story / Question Card": [
-      "Blue",
-      "Yellow",
-      "Pink",
-      "Purple"
-    ],
-    "Story / Poll Time": [
-      "Purple",
-      "Pink",
-      "Yellow",
-      "Blue"
-    ],
-    "Story / Poll & Vote": [
-      "Blue",
-      "Yellow",
-      "Pink",
-      "Purple"
-    ],
-    "Story / Poll Card": [
-      "Purple",
-      "Pink",
-      "Yellow",
-      "Blue"
-    ],
-    "Story / Poll Pattern": [
-      "Blue",
-      "Yellow",
-      "Pink",
-      "Purple"
-    ],
-    "Story / Photo Poll": [
-      "Dark"
     ]
   },
   "colorsByType": {
-    "Review": {
-      "Light Blue": 4,
-      "Light Purple": 4,
-      "Light Pink": 4,
-      "Purple": 4,
-      "Pink": 4,
-      "Blue": 3,
-      "Yellow": 3,
-      "Default": 7,
+    "Story": {
       "Dark": 2,
-      "Light Yellow": 1
-    },
-    "Cover": {
-      "Light": 2,
-      "Light Purple": 1,
-      "Purple": 3,
-      "Pink": 2,
-      "Dark": 3,
-      "Light Blue": 1,
-      "Light Yellow": 1,
-      "Default": 1
+      "Blue": 7,
+      "Yellow": 7,
+      "Pink": 7,
+      "Purple": 7
     },
     "Carousel": {
       "Light": 9,
@@ -5714,66 +5699,30 @@
       "Purple": 1,
       "Light Color": 4
     },
-    "Story": {
+    "Cover": {
+      "Light": 2,
+      "Light Purple": 1,
+      "Purple": 3,
+      "Pink": 2,
+      "Dark": 3,
+      "Light Blue": 1,
+      "Light Yellow": 1,
+      "Default": 1
+    },
+    "Review": {
+      "Light Blue": 4,
+      "Light Purple": 4,
+      "Light Pink": 4,
+      "Purple": 4,
+      "Pink": 4,
+      "Blue": 3,
+      "Yellow": 3,
+      "Default": 7,
       "Dark": 2,
-      "Blue": 7,
-      "Yellow": 7,
-      "Pink": 7,
-      "Purple": 7
+      "Light Yellow": 1
     }
   },
   "irregularities": [
-    {
-      "issue": "Third name segment \"Facebook Photo\" is a sub-layout, not a color; parsed as layout \"Platform / Facebook Photo\", color \"Default\"",
-      "proposal": "Rename to \"Review / Platform / Facebook Photo\" or move the variant into the layout segment",
-      "components": [
-        "Review / Platform / Facebook Photo"
-      ]
-    },
-    {
-      "issue": "Third name segment \"Google Photo\" is a sub-layout, not a color; parsed as layout \"Platform / Google Photo\", color \"Default\"",
-      "proposal": "Rename to \"Review / Platform / Google Photo\" or move the variant into the layout segment",
-      "components": [
-        "Review / Platform / Google Photo"
-      ]
-    },
-    {
-      "issue": "Third name segment \"Double\" is a sub-layout, not a color; parsed as layout \"Platform / Double\", color \"Default\"",
-      "proposal": "Rename to \"Review / Platform / Double\" or move the variant into the layout segment",
-      "components": [
-        "Review / Platform / Double"
-      ]
-    },
-    {
-      "issue": "Name has only Type / Layout; color treated as \"Default\"",
-      "proposal": null,
-      "components": [
-        "Review / Framed Photo",
-        "Review / Photo Overlay",
-        "Cover / Photo Overlay"
-      ]
-    },
-    {
-      "issue": "Third name segment \"Text Bottom\" is a sub-layout, not a color; parsed as layout \"Split / Text Bottom\", color \"Default\"",
-      "proposal": "Rename to \"Review / Split / Text Bottom\" or move the variant into the layout segment",
-      "components": [
-        "Review / Split / Text Bottom"
-      ]
-    },
-    {
-      "issue": "Third name segment \"Text Top\" is a sub-layout, not a color; parsed as layout \"Split / Text Top\", color \"Default\"",
-      "proposal": "Rename to \"Review / Split / Text Top\" or move the variant into the layout segment",
-      "components": [
-        "Review / Split / Text Top"
-      ]
-    },
-    {
-      "issue": "Text layer \"title\" mixes fonts in one node (DM Sans/Bold + Brygada 1918/Bold Italic); build must re-apply the accent font to the last line",
-      "proposal": "Split the accent into its own \"-accent\" text layer",
-      "components": [
-        "Cover / Swipe Centered / Purple"
-      ]
-    },
     {
       "issue": "Slide background is a template photo with no photo slot; exposed as the optional \"background\" image slot (operators may keep it)",
       "proposal": null,
@@ -5802,6 +5751,57 @@
         "Story / Poll Card / Pink",
         "Story / Poll Card / Yellow",
         "Story / Poll Card / Blue"
+      ]
+    },
+    {
+      "issue": "Text layer \"title\" mixes fonts in one node (DM Sans/Bold + Brygada 1918/Bold Italic); build must re-apply the accent font to the last line",
+      "proposal": "Split the accent into its own \"-accent\" text layer",
+      "components": [
+        "Cover / Swipe Centered / Purple"
+      ]
+    },
+    {
+      "issue": "Name has only Type / Layout; color treated as \"Default\"",
+      "proposal": null,
+      "components": [
+        "Cover / Photo Overlay",
+        "Review / Framed Photo",
+        "Review / Photo Overlay"
+      ]
+    },
+    {
+      "issue": "Third name segment \"Facebook Photo\" is a sub-layout, not a color; parsed as layout \"Platform / Facebook Photo\", color \"Default\"",
+      "proposal": "Rename to \"Review / Platform / Facebook Photo\" or move the variant into the layout segment",
+      "components": [
+        "Review / Platform / Facebook Photo"
+      ]
+    },
+    {
+      "issue": "Third name segment \"Google Photo\" is a sub-layout, not a color; parsed as layout \"Platform / Google Photo\", color \"Default\"",
+      "proposal": "Rename to \"Review / Platform / Google Photo\" or move the variant into the layout segment",
+      "components": [
+        "Review / Platform / Google Photo"
+      ]
+    },
+    {
+      "issue": "Third name segment \"Double\" is a sub-layout, not a color; parsed as layout \"Platform / Double\", color \"Default\"",
+      "proposal": "Rename to \"Review / Platform / Double\" or move the variant into the layout segment",
+      "components": [
+        "Review / Platform / Double"
+      ]
+    },
+    {
+      "issue": "Third name segment \"Text Bottom\" is a sub-layout, not a color; parsed as layout \"Split / Text Bottom\", color \"Default\"",
+      "proposal": "Rename to \"Review / Split / Text Bottom\" or move the variant into the layout segment",
+      "components": [
+        "Review / Split / Text Bottom"
+      ]
+    },
+    {
+      "issue": "Third name segment \"Text Top\" is a sub-layout, not a color; parsed as layout \"Split / Text Top\", color \"Default\"",
+      "proposal": "Rename to \"Review / Split / Text Top\" or move the variant into the layout segment",
+      "components": [
+        "Review / Split / Text Top"
       ]
     }
   ]
