@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Prints {"path","bytes","mime","width","height"} for one image file, or {"path","error"} if it can't be read.
+# Prints {"path","bytes","mime","width","height","complete"} for one image file, or {"path","error"} if it can't be read.
+# complete=false: the file is cut off or damaged (JPEG without its end marker, PNG without IEND, WebP shorter than its
+# RIFF header says). Figma accepts such files but shows them grey, so they must be rejected before upload.
 # Usage: scripts/image-info.sh <file>     — one image
 #        scripts/image-info.sh <folder>   — every PNG/JPG/WebP directly in the folder (one line each); other files are listed as skipped
 set -uo pipefail
@@ -7,7 +9,7 @@ f="$1"
 if [ -d "$f" ]; then
   find "$f" -maxdepth 1 -type f | sort | while IFS= read -r x; do
     case "$(printf '%s' "$x" | tr '[:upper:]' '[:lower:]')" in
-      *.png|*.jpg|*.jpeg|*.webp) "$0" "$x" ;;
+      *.png|*.jpg|*.jpeg|*.webp) bash "$0" "$x" ;;
       *) printf '{"path":"%s","skipped":"not a PNG/JPG/WebP file"}\n' "$x" ;;
     esac
   done
@@ -46,4 +48,10 @@ print(w, h)
 PY
 )
 fi
-printf '{"path":"%s","bytes":%s,"mime":"%s","width":%s,"height":%s}\n' "$f" "$bytes" "$mime" "${w:-null}" "${h:-null}"
+complete=true
+case "$mime" in
+  image/jpeg) tail -c 2048 "$f" | od -An -tx1 | tr -d ' \n' | grep -q 'ffd9' || complete=false ;;
+  image/png)  tail -c 16 "$f" | LC_ALL=C grep -aq 'IEND' || complete=false ;;
+  image/webp) riff=$(od -An -tu4 -j4 -N4 "$f" | tr -d ' '); [ -n "$riff" ] && [ $((riff + 8)) -le "$bytes" ] || complete=false ;;
+esac
+printf '{"path":"%s","bytes":%s,"mime":"%s","width":%s,"height":%s,"complete":%s}\n' "$f" "$bytes" "$mime" "${w:-null}" "${h:-null}" "$complete"

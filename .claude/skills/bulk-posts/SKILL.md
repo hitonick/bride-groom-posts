@@ -49,14 +49,14 @@ It is a separate skill (not a mode of `/new-post`) because its input, plan table
 ## 3. Plan
 For every entry: `steps/compose.md` → *Deciding automatically*, then `steps/copy.md` (draft) and `steps/images.md` (assign photos, checks).
 Across the batch:
-- Vary layouts and colors over the week: never the same template (group) on two consecutive posts, and no color more than twice in a row, unless the brief asks for it.
+- Vary layouts and colors over the week: two consecutive posts never open with the same template (group) (for a carousel, its first slide), and no color more than twice in a row, unless the brief asks for it.
 - Keep each post's own fallbacks and warnings.
 
 Show **one** plan:
-1. For each post, its strip (`steps/previews.md`, `--strip`, labelled `NN · <date> · <format>`); for many posts, one contact sheet with each post's first slide (labels `NN · <date> · <template> · <color>`).
+1. Up to 5 posts: one strip per post (`steps/previews.md`, `--strip`, `--title "NN · <date> · <format>"`, tiles labelled as in `steps/review.md`). More than 5: one contact sheet of every post's first slide (labels `NN · <date>` + line break + `<template> · <color>`).
 2. One table: `# · date · format · template + color · headline · photos · warnings`.
 3. Ask: **Build all** · **Change a post** · **Cancel**.
-   - Change a post → "which post and what?" in plain words; apply, show that post's review (`steps/review.md`, Quick options without *Switch to detailed*), then the plan again.
+   - Change a post → "which post and what?" in plain words; apply, show that post's new strip and the changed lines (before → after), then the whole plan again.
    - Heavy-crop and low-resolution photos are listed in the warnings column and need a decision (Use it · Another image · Pick another layout) before Build all.
 
 ## 4. Build
@@ -66,7 +66,7 @@ Show **one** plan:
 4. Write `runs/<runId>.json` for every post (`mode: "quick"`, `batchId`, `brief`) as in `steps/build.md` § 6.
 
 ## 5. Batch index
-Write `runs/batch-<batchId>.json` (schema: `runs/batch.schema.json`): `batchId, createdBy, created, brief (file path or "pasted"), posts: [{ n, runId, date, label, format, template, color, status, sectionId, link, warnings, caption, hashtags }], summary { built, verified, failed }`.
+Write `runs/batch-<batchId>.json` (schema: `runs/batch.schema.json`): `batchId, createdBy, created, brief (file path or "pasted"), posts: [{ n, runId, date, label, format, template, color, status, sectionId, link, warnings, caption, hashtags }], summary { built, verified, failed }`. `template` = the slide layouts joined with " → "; `label` = the brief's label, else `Post N`.
 
 ## 6. Report
 "Done. M of N posts verified." Then per post: `NN · date · format · template` + the Section link (`https://www.figma.com/design/<fileKey>/?node-id=<sectionId with ":" → "-">`) + its warnings, one line each + its caption and hashtags ready to copy. Failed posts: what went wrong and the choices (try again · change the post · skip it). End with "Export: open each link, select the slides (not the card) → Export." and the batch file path.

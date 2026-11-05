@@ -1,0 +1,179 @@
+{
+  "runId": "BG-20261027-2123-nick-zaitsev-02",
+  "mode": "quick",
+  "batchId": "BG-20261027-2123-nick-zaitsev",
+  "status": "failed",
+  "requestedBy": {
+    "handle": "Nick Zaitsev",
+    "email": "design@theroom.boutique"
+  },
+  "created": {
+    "local": "2026-10-27 21:23",
+    "tz": "Etc/UTC",
+    "iso": "2026-10-27T21:23:44+00:00"
+  },
+  "fileKey": "kjSjiNXV1FhVk8UBF9NY8t",
+  "manifestHash": "d2af0a88c5ede3c3",
+  "format": "feed",
+  "contentType": "Cover",
+  "color": "Dark",
+  "contentMode": "draft",
+  "brief": {
+    "text": "## Post 2\ndate: Wed 4 Nov\nformat: feed\ntopic: Our editing calendar for spring 2027 is open\nmessage: Book your spring editing slot early\ncta: Send us your first project\nphotos: post2/bad-tiny-broken.jpg",
+    "topic": "Our editing calendar for spring 2027 is open",
+    "keyMessage": "Book your spring editing slot early",
+    "audience": "Bride&Groom audience (assumed)",
+    "tone": "warm, friendly (assumed)",
+    "callToAction": "Send us your first project",
+    "format": "feed",
+    "date": "Wed 4 Nov",
+    "label": "Post 2"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "label": "01 Cover",
+      "group": "Cover / Photo Top",
+      "color": "Dark",
+      "colorFallback": null,
+      "component": {
+        "name": "Cover / Photo Top / Dark",
+        "key": "055f463118cf2516c3a3390722903ee1a7574ca3"
+      },
+      "text": {
+        "tagline": {
+          "value": "Spring 2027 is open",
+          "source": "draft"
+        },
+        "title": {
+          "value": "Book your spring editing",
+          "source": "draft"
+        },
+        "title-accent": {
+          "value": "slot early",
+          "source": "draft"
+        }
+      },
+      "hidden": [],
+      "rating": null,
+      "images": {
+        "photo": {
+          "source": "file",
+          "path": "runs/.cache/test/bulk/post2/bad-tiny-broken.jpg",
+          "file": "bad-tiny-broken.jpg",
+          "width": 180,
+          "height": 120,
+          "bytes": 2600,
+          "crop": 0.12,
+          "imageHash": "528438d4d9469dbc613d7b317b3c3df2d8133765",
+          "mediaNodeId": "2495:22"
+        }
+      }
+    }
+  ],
+  "caption": "Our editing calendar for spring 2027 is open. Book your spring editing slot early to get the dates you need. Send us your first project and we'll take it from there.",
+  "hashtags": [
+    "#weddingvideo",
+    "#weddingeditor",
+    "#videoediting",
+    "#weddingfilm",
+    "#spring2027"
+  ],
+  "warnings": [
+    {
+      "slide": 1,
+      "kind": "low-resolution",
+      "detail": "bad-tiny-broken.jpg is 180×120 px; the slot needs about 1028 px wide (operator: Use it)"
+    },
+    {
+      "slide": 1,
+      "kind": "grayscale",
+      "detail": "This layout shows the photo in black and white"
+    }
+  ],
+  "answers": [
+    {
+      "step": "decide",
+      "question": "Format",
+      "answer": "Feed post (brief: format feed)"
+    },
+    {
+      "step": "decide",
+      "question": "Content type",
+      "answer": "Cover (an announcement)"
+    },
+    {
+      "step": "decide",
+      "question": "Color",
+      "answer": "Dark (no color in brief; most Cover layouts usable for a single post: Dark 3 vs Purple 2, Swipe covers excluded)"
+    },
+    {
+      "step": "decide",
+      "question": "Layout",
+      "answer": "Cover / Photo Top (lowest crop for the 3:2 photo: 12%; no page number; grayscale photo)"
+    },
+    {
+      "step": "decide",
+      "question": "Photos",
+      "answer": "photo ← bad-tiny-broken.jpg (landscape, crop 12%)"
+    },
+    {
+      "step": "photo-check",
+      "question": "bad-tiny-broken.jpg is 180×120 px, the slot needs ~1028 px (low resolution): Use it · Another image · Pick another layout",
+      "answer": "Use it"
+    },
+    {
+      "step": "draft",
+      "question": "Text",
+      "answer": "All slide text drafted from the brief; CTA in the caption (no button slot)"
+    },
+    {
+      "step": "review",
+      "question": "Plan: Build all · Change a post · Cancel",
+      "answer": "Change a post → post 3: use a different color, not purple; then Build all"
+    }
+  ],
+  "figma": {
+    "sectionId": "2500:1729",
+    "summaryCardId": "2502:1736",
+    "slides": [
+      {
+        "index": 1,
+        "name": "BG-20261027-2123-nick-zaitsev-02_01",
+        "nodeId": "2500:1769"
+      }
+    ],
+    "mediaSectionId": "2496:21",
+    "media": [
+      {
+        "file": "bad-tiny-broken.jpg",
+        "nodeId": "2495:22",
+        "imageHash": "528438d4d9469dbc613d7b317b3c3df2d8133765"
+      }
+    ]
+  },
+  "revisions": [],
+  "verification": {
+    "at": "2026-10-27T21:50:00+00:00",
+    "errors": 1,
+    "warnings": 0,
+    "history": [
+      {
+        "at": "2026-10-27T21:50:00+00:00",
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "checked": 1,
+        "note": "verify-run.js passed (it cannot see image decoding)"
+      },
+      {
+        "at": "2026-10-27T21:50:00+00:00",
+        "check": "screenshot",
+        "errors": 1,
+        "detail": "Slide 01 photo: flat grey / partly decoded image (damaged file)",
+        "screenshot": "runs/.cache/BG-20261027-2123-nick-zaitsev-02/screenshot-section.png"
+      }
+    ]
+  },
+  "error": "The photo bad-tiny-broken.jpg (180×120 px) did not decode in Figma: the upload succeeded, but the screenshot shows only a thin pixelated strip at the top and the rest of the photo area is flat grey. The file is damaged (cut off), so it cannot be used. The slide and card were kept as built."
+}
